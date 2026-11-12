@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://kulaklikkontrol.github.io/sitemap.xml
