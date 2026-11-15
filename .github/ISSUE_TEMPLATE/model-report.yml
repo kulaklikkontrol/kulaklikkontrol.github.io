@@ -1,0 +1,58 @@
+name: Model report
+description: Tell us how Headphone Control works with your Sony headphones
+title: "Model report: "
+labels: ["model report"]
+body:
+  - type: dropdown
+    id: model
+    attributes:
+      label: Headphone model
+      options:
+        - WH-1000XM4
+        - WH-1000XM5
+        - WH-1000XM6
+        - WF-1000XM4
+        - WF-1000XM5
+        - WF-1000XM6
+        - LinkBuds S
+        - LinkBuds Fit
+        - LinkBuds Open
+        - WH-CH720N
+        - ULT WEAR
+        - Other
+    validations:
+      required: true
+  - type: input
+    id: firmware
+    attributes:
+      label: Firmware version (if you know it)
+  - type: input
+    id: mac
+    attributes:
+      label: Mac model and macOS version
+      placeholder: "MacBook Air M2, macOS 15.3"
+  - type: dropdown
+    id: connected
+    attributes:
+      label: Did it connect?
+      options:
+        - "Yes"
+        - "No"
+        - "Sometimes"
+    validations:
+      required: true
+  - type: textarea
+    id: worked
+    attributes:
+      label: What worked
+      placeholder: "Noise cancelling, EQ presets, battery..."
+  - type: textarea
+    id: broken
+    attributes:
+      label: What didn't work
+  - type: textarea
+    id: log
+    attributes:
+      label: Connection log (optional)
+      description: Settings → About → "Advanced: connection log"
+      render: text
