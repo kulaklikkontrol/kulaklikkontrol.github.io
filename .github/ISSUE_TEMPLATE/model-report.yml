@@ -54,5 +54,5 @@ body:
     id: log
     attributes:
       label: Connection log (optional)
-      description: Settings → About → "Advanced: connection log"
+      description: 'Settings → About → "Advanced: connection log"'
       render: text
