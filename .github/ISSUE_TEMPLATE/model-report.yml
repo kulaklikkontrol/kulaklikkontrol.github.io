@@ -31,6 +31,14 @@ body:
     attributes:
       label: Mac model and macOS version
       placeholder: "MacBook Air M2, macOS 15.3"
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Headphone Control version / build
+      description: "Shown in TestFlight, or Settings > About in the app"
+      placeholder: "1.1 (2)"
   - type: dropdown
     id: connected
     attributes:
@@ -45,7 +53,12 @@ body:
     id: worked
     attributes:
       label: What worked
-      placeholder: "Noise cancelling, EQ presets, battery..."
+      description: "Please say worked / failed / not tried for each: noise cancelling, ambient sound, EQ, battery"
+      value: |
+        Noise cancelling:
+        Ambient sound:
+        EQ:
+        Battery:
   - type: textarea
     id: broken
     attributes:
@@ -54,5 +67,5 @@ body:
     id: log
     attributes:
       label: Connection log (optional)
-      description: 'Settings → About → "Advanced: connection log"'
+      description: 'Settings → About → "Advanced: connection log". Issues are public, so review the log before pasting.'
       render: text
