@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sony WH-1000XM5 on Zoom, Teams &amp; Meet (Mac): Fix Muffled Audio &amp; Mic | Headphone Control</title>
+  <meta name="description" content="Why Sony WH-1000XM5 sound muffled in Zoom, Teams and Google Meet on Mac, and how to fix it: input device choice, HFP vs A2DP, multipoint call pickup and an automatic noise-mode rule for calls.">
+  <link rel="canonical" href="https://kulaklikkontrol.github.io/guides/sony-xm5-zoom-teams-calls-mac/">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://kulaklikkontrol.github.io/guides/sony-xm5-zoom-teams-calls-mac/">
+  <meta property="og:title" content="Sony WH-1000XM5 on Zoom, Teams &amp; Meet (Mac): Fix Muffled Audio &amp; Mic">
+  <meta property="og:description" content="Muffled music after a call, tiny mic, or audio stuck on your phone? A step-by-step Mac fix list for Sony WH-1000XM5 in Zoom, Teams and Meet.">
+  <meta property="og:image" content="https://kulaklikkontrol.github.io/assets/xm5-calls-guide-card.png">
+  <meta property="og:image:width" content="2400">
+  <meta property="og:image:height" content="1260">
+  <meta property="og:image:alt" content="Guide card: Sony WH-1000XM5 on Zoom and Teams calls on Mac, with a real Headphone Control screenshot.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Sony WH-1000XM5 on Zoom, Teams &amp; Meet (Mac): Fix Muffled Audio &amp; Mic">
+  <meta name="twitter:description" content="Fix muffled sound, weak mic and phone/Mac multipoint conflicts when taking calls on a Mac with Sony WH-1000XM5.">
+  <meta name="twitter:image" content="https://kulaklikkontrol.github.io/assets/xm5-calls-guide-card.png">
+  <link rel="icon" href="../../icon.png">
+  <link rel="stylesheet" href="../../style.css?v=20261116-tour">
+  <link rel="stylesheet" href="../sony-wh-1000xm5-mac/guide.css?v=20261116-xm5b">
+  <link rel="stylesheet" href="../sony-wh-1000xm4-xm5-xm6-mac/multi.css?v=20261116-a">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "Sony WH-1000XM5 on Zoom, Teams and Google Meet (Mac): fixing muffled audio, weak mic and multipoint conflicts",
+    "description": "Practical macOS troubleshooting for Sony WH-1000XM5 on video calls: Bluetooth call profile quality drop, choosing the right input device, multipoint pickup between phone and Mac, and switching noise mode automatically during calls.",
+    "inLanguage": "en",
+    "datePublished": "2026-11-16",
+    "dateModified": "2026-11-16",
+    "url": "https://kulaklikkontrol.github.io/guides/sony-xm5-zoom-teams-calls-mac/",
+    "mainEntityOfPage": "https://kulaklikkontrol.github.io/guides/sony-xm5-zoom-teams-calls-mac/",
+    "image": "https://kulaklikkontrol.github.io/assets/xm5-calls-guide-card.png",
+    "publisher": {"@type": "Organization", "name": "Headphone Control", "url": "https://kulaklikkontrol.github.io/"}
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Why does my Sony WH-1000XM5 sound muffled in Zoom or Teams on a Mac?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "As soon as an app opens the headphone microphone, macOS moves Bluetooth from the high-quality stereo profile (A2DP) to the hands-free call profile (HFP), which is lower bandwidth. Everything you hear sounds thinner until the microphone is released. Selecting the Mac's built-in microphone as input keeps the headphones on stereo playback."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Why does music stay muffled after I leave a call?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Some call apps keep the microphone open for a while or stay in the background. Quit the app completely, then reselect the headphones as output in Control Center -> Sound or System Settings -> Sound. Toggling the headphones' Bluetooth connection in System Settings also resets the profile."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can Headphone Control change noise canceling automatically when I join a call?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. In the tested WH-1000XM5 setup you can add an automatic rule that changes the noise mode or EQ while the Mac's microphone is in use, and the previous settings are restored when the rule ends. Headphone Control reads the system mic-in-use state without accessing the microphone itself."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does this guide apply to other Sony models?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The Bluetooth call-profile behavior is a macOS trait that applies to most Bluetooth headsets, but Headphone Control has only been verified on real hardware with the WH-1000XM5. Other Sony models are implemented from the protocol and still need hardware reports."
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+<body class="xm5-guide">
+  <a class="skip-link" href="#guide">Skip to guide</a>
+  <header class="top">
+    <div class="wrap">
+      <img src="../../icon.png" alt="" width="28" height="28">
+      <a class="guide-brand" href="../../?lang=en">Headphone Control</a>
+      <nav aria-label="Main navigation">
+        <a href="../../?lang=en">The app</a>
+        <a href="#fixes">Fixes</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap" id="guide">
+    <article>
+      <header class="guide-intro">
+        <h1>Sony WH-1000XM5 on Zoom, Teams &amp; Meet (Mac)</h1>
+        <p>Muffled sound after a call, a thin microphone, or audio that stays on your phone: why it happens on macOS and the fastest fixes.</p>
+        <div class="cta-row">
+          <a class="btn" id="beta" href="https://testflight.apple.com/join/e7S1TqA1">Join the free beta</a>
+          <a class="btn ghost" href="#fixes">Jump to the fixes</a>
+        </div>
+      </header>
+
+      <aside class="guide-scope" aria-label="Testing status and requirements">
+        <p><strong>Honest testing status (macOS 14+ · Free · Closed source):</strong> Headphone Control has been verified on real hardware with the <strong>Sony WH-1000XM5</strong> only. The macOS call-profile behavior described below is a Bluetooth trait, not something the app causes or can remove.</p>
+      </aside>
+
+      <nav class="guide-contents" aria-label="On this page">
+        <a href="#why">Why calls sound worse</a>
+        <a href="#fixes">Step-by-step fixes</a>
+        <a href="#multipoint-calls">Phone + Mac calls</a>
+        <a href="#auto-rule">Auto noise mode</a>
+        <a href="#references">Sources</a>
+      </nav>
+
+      <section id="why">
+        <h2>Why Bluetooth headphones sound worse on calls</h2>
+        <p>Bluetooth headphones use two very different modes. Music uses the stereo <strong>A2DP</strong> profile. A call needs a microphone, so the headset switches to the hands-free <strong>HFP</strong> profile, which carries much less audio data. On a Mac, the switch happens as soon as an app opens the headphone microphone, and everything you hear drops in quality until the microphone is released. Apple describes this in <a href="https://support.apple.com/en-us/102217">If sound quality is reduced with Bluetooth headphones</a>.</p>
+        <p>That is why the problem appears in Zoom, Microsoft Teams, Google Meet or FaceTime but not in Apple Music, and why it can linger after you leave the meeting if the app keeps the microphone open.</p>
+      </section>
+
+      <section id="fixes">
+        <h2>Fixes, in the order worth trying</h2>
+        <ol class="setup-steps">
+          <li><strong>Use the Mac's own microphone.</strong> In <strong>System Settings → Sound → Input</strong> choose <em>MacBook Pro Microphone</em> (or your Mac's built-in mic) instead of the headphones. In Zoom, Teams or Meet pick the same device in the audio settings. The headphones stay on stereo playback; your voice goes through the Mac mic. Trade-off: the Mac mic hears the room, so it works best in a quiet space.</li>
+          <li><strong>Or accept HFP for the call, and recover afterwards.</strong> If you want the headphone microphone (for example when you are walking around), leave it selected, then after the call quit the app completely and reselect the headphones in <strong>Control Center → Sound</strong>.</li>
+          <li><strong>Stop apps from grabbing the mic in the background.</strong> Check <strong>System Settings → Privacy &amp; Security → Microphone</strong> and the orange mic indicator in the menu bar. If it stays lit after a call, quit that app.</li>
+          <li><strong>Reset the link if sound stays thin.</strong> In <strong>System Settings → Bluetooth</strong> disconnect and reconnect the headphones. This forces a fresh profile negotiation.</li>
+          <li><strong>Check the output device.</strong> In <strong>System Settings → Sound → Output</strong> make sure the headphones, not a display or the Mac speakers, are selected after the call.</li>
+        </ol>
+        <p class="small muted">None of these are specific to Headphone Control; they are macOS and Bluetooth behavior. The app only changes the headphone's own settings (noise mode, ambient level, EQ, multipoint).</p>
+      </section>
+
+      <section id="multipoint-calls">
+        <h2>Phone and Mac both connected (multipoint)</h2>
+        <p>With multipoint, the XM5 stays connected to your phone and your Mac at the same time. Calls on the phone take priority over music, and a call app on the Mac can compete with the phone for the audio route.</p>
+        <div class="symptoms">
+          <details open>
+            <summary>A video call opens on the Mac but I hear nothing in the headphones</summary>
+            <p>Pause or end any audio on the phone first; an app that still holds the stream keeps focus. Then reselect the headphones in <strong>Control Center → Sound</strong>. In Headphone Control, the multipoint list shows which device currently holds the connection, and <strong>Play on Mac</strong> pulls playback to the Mac with one click.</p>
+          </details>
+          <details>
+            <summary>My phone rings during a Mac call</summary>
+            <p>A phone call usually takes over the headphones. After hanging up, the Mac audio can come back on its own or may need <strong>Play on Mac</strong> or a reselect in Sound settings.</p>
+          </details>
+          <details>
+            <summary>Settings control does not respond during a call</summary>
+            <p>Only one app at a time should talk to the headset's control channel. Close Sony's headphone app on the phone, then use <strong>Scan again</strong> in Headphone Control.</p>
+          </details>
+        </div>
+      </section>
+
+      <section id="auto-rule">
+        <h2>Switch noise mode automatically when a call starts</h2>
+        <div class="control-layout">
+          <div>
+            <p>On tested WH-1000XM5 hardware, Headphone Control can apply a <strong>Profile</strong> automatically while the Mac's microphone is in use, for example Ambient Sound on so you hear your own surroundings during a meeting, or Noise Canceling on for a focus call. It reads the macOS mic-in-use state without accessing the microphone, and restores your previous noise mode and EQ when the rule ends.</p>
+            <p>Rules can also trigger when a chosen app is open or when the screen locks.</p>
+            <p class="small muted">Only WH-1000XM5 screenshots are shown. Other Sony models await real-hardware confirmation.</p>
+          </div>
+          <figure class="panel-shot">
+            <a href="../../press/assets/screenshot-anc.png" aria-label="Open full-size WH-1000XM5 screenshot"><img src="../../press/assets/screenshot-anc.png" width="696" height="820" alt="Real WH-1000XM5 screenshot of Headphone Control showing Connected, battery level, Noise Canceling selected and EQ controls." decoding="async" loading="lazy"></a>
+            <figcaption>Real WH-1000XM5 capture in Headphone Control.</figcaption>
+          </figure>
+        </div>
+
+        <div class="bottom-cta">
+          <h3>Try Headphone Control 1.1 on your Mac</h3>
+          <p class="muted">Free · Closed source · macOS 14+ · Tested on WH-1000XM5; hardware feedback needed for other Sony models.</p>
+          <div class="cta-row">
+            <a class="btn" href="https://testflight.apple.com/join/e7S1TqA1">Join the free beta</a>
+            <a class="btn ghost" href="https://youtu.be/uqtUES3l6HQ">Watch 88s XM5 demo</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="references" class="guide-references">
+        <h2>Verified help &amp; related guides</h2>
+        <ul>
+          <li><a href="../sony-wh-1000xm5-mac/">WH-1000XM5 on Mac: full setup, ANC &amp; EQ walkthrough</a></li>
+          <li><a href="../sony-wh-1000xm4-xm5-xm6-mac/">WH-1000XM4, XM5 &amp; XM6 on Mac: multipoint and a 2-minute hardware check</a></li>
+          <li><a href="../headphone-control-vs-sonybridge-open-sound-connect/">Headphone Control vs SonyBridge vs Open Sound Connect</a></li>
+          <li><a href="https://support.apple.com/en-us/102217">Apple: If sound quality is reduced with Bluetooth headphones</a></li>
+          <li><a href="https://support.apple.com/guide/mac-help/change-the-sound-output-settings-mchlp2256/mac">Apple: Change the sound output settings on Mac</a></li>
+          <li><a href="https://helpguide.sony.net/mdr/wh1000xm5/v1/en/contents/TP1000536739.html">Sony WH-1000XM5 Help Guide: Pairing and connecting with a Mac</a></li>
+        </ul>
+      </section>
+    </article>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <p>Headphone Control is not affiliated with, endorsed or sponsored by Sony Group Corporation. Sony and WH-1000XM are Sony trademarks. Mac is an Apple trademark.</p>
+      <p><a href="../../?lang=en">Headphone Control</a> · <a href="../sony-wh-1000xm5-mac/">XM5 guide</a> · <a href="../sony-wh-1000xm4-xm5-xm6-mac/">XM4/XM5/XM6 guide</a> · <a href="../headphone-control-vs-sonybridge-open-sound-connect/">Compare Mac apps</a> · <a href="../../press/?lang=en">Press kit</a> · <a href="../../privacy.html?lang=en">Privacy</a></p>
+    </div>
+  </footer>
+</body>
+</html>
