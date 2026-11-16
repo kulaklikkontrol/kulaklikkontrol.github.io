@@ -138,6 +138,7 @@
     border: 0;
     padding: 8px 0 6px;
     font-size: 17px;
+    width: auto;
   }
   .model-table td {
     border: 0;
