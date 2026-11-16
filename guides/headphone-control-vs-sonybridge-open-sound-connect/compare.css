@@ -19,6 +19,7 @@
 .compare-sources li { margin-bottom: 12px; }
 @media (max-width: 760px) {
   .compare-table, .compare-table tbody, .compare-table tr, .compare-table th, .compare-table td { display: block; width: auto; }
+  .compare-table caption { display: block; }
   .compare-table thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
   .compare-table tr { padding: 6px 0 14px; border-top: 1px solid var(--line); }
   .compare-table tbody th { border: 0; padding: 12px 0 4px; width: auto; font-size: 17px; }
