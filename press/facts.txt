@@ -6,6 +6,7 @@ Website: https://kulaklikkontrol.github.io/
 Free beta: https://testflight.apple.com/join/e7S1TqA1
 Full demo: https://youtu.be/uqtUES3l6HQ
 Press kit: https://kulaklikkontrol.github.io/press/
+Setup guide (WH-1000XM5 on Mac): https://kulaklikkontrol.github.io/guides/sony-wh-1000xm5-mac/
 Contact: ruzgarnos@gmail.com
 Requires: macOS 14 or later
 Price: Free in beta and in the planned App Store release
