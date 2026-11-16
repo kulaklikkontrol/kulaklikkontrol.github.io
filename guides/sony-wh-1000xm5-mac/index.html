@@ -67,7 +67,14 @@
       <section id="setup">
         <h2>Start with the Mac connection</h2>
         <ol class="setup-steps">
-          <li><strong>Install the beta.</strong> Get <a href="https://apps.apple.com/app/testflight/id899247664">Apple’s TestFlight app</a> on your Mac, then open the beta invitation above. Accept the invitation and choose <strong>Install</strong>. Accepting alone does not install Headphone Control.</li>
+          <li><strong>Install the beta (macOS 14 or later).</strong>
+            <ol class="install-substeps">
+              <li>Get <a href="https://apps.apple.com/app/testflight/id899247664">Apple’s TestFlight app</a> from the Mac App Store and open it once.</li>
+              <li>Open the beta invitation above and choose <strong>Accept</strong>. Accepting alone does not install Headphone Control.</li>
+              <li>In TestFlight, select <strong>Headphone Control</strong> and click <strong>Install</strong>, then <strong>Open</strong>. No Install button usually means the Mac is older than macOS 14 (Apple’s generic page says macOS 13, but this app needs 14).</li>
+              <li>On first launch, click <strong>Allow</strong> when macOS asks for Bluetooth access.</li>
+            </ol>
+          </li>
           <li><strong>Pair the XM5.</strong> On the Mac, open <strong>System Settings → Bluetooth</strong>. If the headphones are already listed, connect them. Otherwise, put the XM5 in pairing mode: a new or reset pair does this when first turned on; if it already knows another device, hold the power button for about 5 seconds until the blue light flashes twice repeatedly. Then choose <strong>WH-1000XM5 → Connect</strong> on the Mac. Details are in <a href="https://helpguide.sony.net/mdr/wh1000xm5/v1/en/contents/TP1000536739.html">Sony’s Mac pairing page</a>.</li>
           <li><strong>Open Headphone Control.</strong> Allow Bluetooth access if macOS asks. If you previously denied it, check <strong>System Settings → Privacy &amp; Security → Bluetooth</strong>. Open the headphone icon in the menu bar.</li>
           <li><strong>Check the device name.</strong> Look for <strong>WH-1000XM5</strong> and <strong>Connected</strong> at the top of the panel. For music, also select the XM5 in <strong>System Settings → Sound → Output</strong>. Audio output and the app’s settings connection are separate checks.</li>
