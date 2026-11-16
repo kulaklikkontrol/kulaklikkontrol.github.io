@@ -68,7 +68,7 @@
         <h2>Start with the Mac connection</h2>
         <ol class="setup-steps">
           <li><strong>Install the beta.</strong> Get <a href="https://apps.apple.com/app/testflight/id899247664">Apple’s TestFlight app</a> on your Mac, then open the beta invitation above. Accept the invitation and choose <strong>Install</strong>. Accepting alone does not install Headphone Control.</li>
-          <li><strong>Pair the XM5.</strong> On the Mac, open <strong>System Settings → Bluetooth</strong>. If the headphones are already listed, connect them. Otherwise, use the Mac pairing instructions in <a href="https://helpguide.sony.net/mdr/wh1000xm5/v1/en/index.html">Sony’s WH-1000XM5 Help Guide</a>, then choose <strong>WH-1000XM5 → Connect</strong> on the Mac.</li>
+          <li><strong>Pair the XM5.</strong> On the Mac, open <strong>System Settings → Bluetooth</strong>. If the headphones are already listed, connect them. Otherwise, put the XM5 in pairing mode: a new or reset pair does this when first turned on; if it already knows another device, hold the power button for about 5 seconds until the blue light flashes twice repeatedly. Then choose <strong>WH-1000XM5 → Connect</strong> on the Mac. Details are in <a href="https://helpguide.sony.net/mdr/wh1000xm5/v1/en/contents/TP1000536739.html">Sony’s Mac pairing page</a>.</li>
           <li><strong>Open Headphone Control.</strong> Allow Bluetooth access if macOS asks. If you previously denied it, check <strong>System Settings → Privacy &amp; Security → Bluetooth</strong>. Open the headphone icon in the menu bar.</li>
           <li><strong>Check the device name.</strong> Look for <strong>WH-1000XM5</strong> and <strong>Connected</strong> at the top of the panel. For music, also select the XM5 in <strong>System Settings → Sound → Output</strong>. Audio output and the app’s settings connection are separate checks.</li>
         </ol>
@@ -124,7 +124,7 @@
         <div class="symptoms">
           <details open>
             <summary>The XM5 is missing from Mac Bluetooth settings</summary>
-            <p>Keep the headphones near the Mac, check that Bluetooth is on, and follow <a href="https://helpguide.sony.net/mdr/wh1000xm5/v1/en/index.html">Sony’s Mac pairing instructions</a>. Open <strong>System Settings → Bluetooth</strong> and connect the XM5 there before scanning in Headphone Control.</p>
+            <p>Keep the headphones near the Mac, check that Bluetooth is on, and follow <a href="https://helpguide.sony.net/mdr/wh1000xm5/v1/en/contents/TP1000536739.html">Sony’s Mac pairing instructions</a>. Sony notes pairing mode ends after 5 minutes; if that happens, turn the XM5 off and start again. Open <strong>System Settings → Bluetooth</strong> and connect the XM5 there before scanning in Headphone Control.</p>
           </details>
           <details>
             <summary>Music works, but the app cannot find the XM5</summary>
@@ -137,7 +137,11 @@
           </details>
           <details>
             <summary>A noise mode changes back, or sound pauses when I speak</summary>
-            <p>Note whether the change follows speech, a call or opening an app. Check <strong>Speak-to-Chat</strong>, plus any profiles or automatic rules you enabled in Headphone Control. Temporarily turn those off and try one manual mode change, then report whether it stays selected.</p>
+            <p>Note whether the change follows speech, a call or opening an app. Check <a href="https://helpguide.sony.net/mdr/wh1000xm5/v1/en/contents/TP1000536742.html">Speak-to-Chat</a> (Sony: hold two fingers on the touch panel to switch it on or off), plus any profiles or automatic rules you enabled in Headphone Control. Temporarily turn those off and try one manual mode change, then report whether it stays selected.</p>
+          </details>
+          <details>
+            <summary>Music sounds flat or quiet during a call</summary>
+            <p>When an app uses the XM5 microphone, macOS switches Bluetooth to a call mode with lower audio quality. Quit video call or chat apps, then reselect the XM5 in <strong>Control Center → Sound</strong>. <a href="https://support.apple.com/en-us/102217">Apple explains this here</a>. This is a Bluetooth limitation, not an EQ setting.</p>
           </details>
           <details>
             <summary>EQ changes or reconnecting are inconsistent</summary>
@@ -173,10 +177,13 @@ After reconnecting:</pre>
       <section id="references" class="guide-references">
         <h2>Manufacturer help</h2>
         <p>For Bluetooth pairing and Mac audio settings, use the manufacturer’s instructions. Headphone Control’s menu bar controls are described separately above.</p>
+        <p class="small muted">Sony and Apple pages last checked on 16 November 2026.</p>
         <ul>
-          <li><a href="https://helpguide.sony.net/mdr/wh1000xm5/v1/en/index.html">Sony WH-1000XM5 Help Guide</a>: look for “Pairing and connecting with a computer (Mac),” noise canceling and Ambient Sound Mode.</li>
-          <li><a href="https://support.apple.com/guide/mac-help/connect-a-bluetooth-device-blth1004/mac">Apple: Connect a Bluetooth device with your Mac</a>.</li>
+          <li><a href="https://helpguide.sony.net/mdr/wh1000xm5/v1/en/contents/TP1000536739.html">Sony: Pairing and connecting with a computer (Mac)</a>.</li>
+          <li><a href="https://helpguide.sony.net/mdr/wh1000xm5/v1/en/contents/TP1000541015.html">Sony: Ambient Sound Mode</a>. Sony notes that Ambient Sound settings changed in its app are stored in the headset.</li>
+          <li><a href="https://support.apple.com/guide/mac-help/connect-a-wireless-accessory-blth1004/mac">Apple: Connect a Bluetooth device with your Mac</a>.</li>
           <li><a href="https://support.apple.com/guide/mac-help/change-the-sound-output-settings-mchlp2256/mac">Apple: Change the sound output settings on Mac</a>.</li>
+          <li><a href="https://support.apple.com/en-us/102217">Apple: If sound quality is reduced with Bluetooth headphones</a>.</li>
         </ul>
       </section>
     </article>
