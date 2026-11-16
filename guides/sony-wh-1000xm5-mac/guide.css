@@ -1,0 +1,77 @@
+/* Preserve the existing site: system type, blue accent, auto theme, 16px surfaces.
+   A reading guide needs little motion. VARIANCE 4 / MOTION 1 / DENSITY 4. */
+.xm5-guide { --guide-link: #0756d4; }
+@media (prefers-color-scheme: dark) {
+  .xm5-guide { --guide-link: #73adff; }
+}
+.xm5-guide a { color: var(--guide-link); }
+.xm5-guide .btn, .xm5-guide .mail { color: var(--button-fg); }
+.xm5-guide .wrap { max-width: 960px; }
+.guide-brand { color: var(--fg) !important; font-weight: 650; white-space: nowrap; }
+.xm5-guide header.top nav { gap: 20px; }
+.skip-link { position: fixed; left: 16px; top: -100px; z-index: 10; background: var(--card); padding: 10px 16px; border: 2px solid var(--guide-link); border-radius: 8px; }
+.skip-link:focus { top: 8px; }
+.guide-intro { padding: 52px 0 26px; max-width: 760px; }
+.guide-intro h1 { font-size: clamp(32px, 4.7vw, 46px); line-height: 1.12; letter-spacing: -.035em; margin: 0 0 20px; }
+.guide-intro p { font-size: 21px; line-height: 1.5; color: var(--muted); max-width: 620px; margin: 0 0 22px; }
+.guide-intro .btn { margin: 0; white-space: nowrap; }
+.guide-scope { border-left: 3px solid var(--guide-link); padding: 2px 0 2px 18px; max-width: 760px; }
+.guide-scope p { margin: 0; font-size: 15px; }
+.guide-contents { display: flex; flex-wrap: wrap; gap: 10px 24px; margin: 28px 0 38px; padding-bottom: 20px; border-bottom: 1px solid var(--line); font-size: 15px; }
+.guide-contents a { padding: 5px 0; }
+.xm5-guide section { margin: 52px 0; scroll-margin-top: 80px; }
+.xm5-guide h2 { font-size: clamp(25px, 3.5vw, 30px); line-height: 1.2; letter-spacing: -.025em; }
+.xm5-guide section > p { max-width: 68ch; }
+.setup-steps { display: grid; gap: 18px; padding-left: 26px; max-width: 760px; }
+.setup-steps li { margin: 0; padding-left: 8px; }
+.setup-steps li::marker, .eq-steps li::marker { color: var(--guide-link); font-weight: 650; }
+.control-layout { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 348px); gap: 36px; align-items: start; margin-top: 28px; }
+.control-layout > *, .ambient-example > * { min-width: 0; }
+.control-definitions { margin: 0; }
+.control-definitions dt { font-weight: 650; margin: 0 0 5px; }
+.control-definitions dd { margin: 0 0 24px; }
+.panel-shot { margin: 0; }
+.panel-shot img, .ambient-example img { display: block; max-width: 100%; height: auto; border-radius: 16px; border: 1px solid var(--line); }
+.panel-shot img { width: 348px; }
+.xm5-guide figcaption { color: var(--muted); font-size: 14px; line-height: 1.5; margin-top: 12px; }
+.ambient-example { display: grid; grid-template-columns: minmax(0, 356px) minmax(0, 1fr); gap: 32px; align-items: center; margin: 38px 0 0; padding: 28px; background: var(--card); border: 1px solid var(--line); border-radius: 16px; }
+.ambient-example img { width: 356px; }
+.ambient-example figcaption { font-size: 17px; margin: 0; }
+.ambient-example figcaption strong { display: block; color: var(--fg); margin-bottom: 12px; }
+.eq-steps { margin: 0; padding-left: 25px; display: grid; gap: 18px; }
+.eq-steps li { padding-left: 6px; margin: 0; }
+.symptoms { border-top: 1px solid var(--line); }
+.symptoms details { padding: 19px 0; border-bottom: 1px solid var(--line); }
+.symptoms summary { font-weight: 650; cursor: pointer; padding: 3px 8px 3px 0; }
+.symptoms summary::marker { color: var(--guide-link); }
+.symptoms p { max-width: 72ch; margin: 14px 0 0; }
+.symptoms summary:focus-visible { outline: 3px solid var(--guide-link); outline-offset: 4px; }
+.report-template { max-width: 100%; white-space: pre-wrap; overflow-wrap: anywhere; font: 14px/1.8 ui-monospace, SFMono-Regular, Menlo, monospace; padding: 24px; background: var(--card); border: 1px solid var(--line); border-radius: 16px; }
+.xm5-guide .mail { margin-top: 0; }
+.guide-references { font-size: 15px; }
+.guide-references li { margin-bottom: 12px; }
+.xm5-guide footer a { overflow-wrap: anywhere; }
+@media (max-width: 700px) {
+  .control-layout, .ambient-example { grid-template-columns: minmax(0, 1fr); gap: 24px; }
+  .panel-shot { max-width: 356px; justify-self: center; }
+  .ambient-example { padding: 20px; }
+  .ambient-example > a { max-width: 356px; justify-self: center; }
+  .ambient-example figcaption { font-size: 16px; }
+  .guide-intro { padding-top: 36px; }
+  .guide-intro p { font-size: 19px; }
+  .xm5-guide section { margin: 40px 0; }
+}
+@media (max-width: 420px) {
+  .xm5-guide header.top .wrap { gap: 9px; }
+  .guide-brand { font-size: 14px; }
+  .xm5-guide header.top nav { gap: 12px; font-size: 14px; }
+  .xm5-guide header.top img { width: 24px; height: 24px; }
+  .report-template { padding: 16px; font-size: 13px; }
+}
+@media print {
+  .xm5-guide header.top, .guide-contents, .guide-intro .btn, .skip-link { display: none; }
+  .xm5-guide { background: white; color: black; }
+  .xm5-guide .wrap { max-width: none; }
+  .xm5-guide section { break-inside: auto; }
+  .panel-shot, .ambient-example { break-inside: avoid; }
+}

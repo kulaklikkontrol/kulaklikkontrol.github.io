@@ -1,0 +1,23 @@
+Headphone Control: XM5 Mac beta report
+
+Headphones: Sony WH-1000XM5
+Firmware (if known):
+Mac model / macOS version:
+Headphone Control version / build (in TestFlight):
+Phone or second device connected: yes / no
+
+Mac Bluetooth connected: yes / no
+Music plays from the Mac: yes / no
+App shows Connected: yes / no
+ANC / ambient / EQ: what worked, what failed
+
+Steps to reproduce:
+Expected result:
+What happened:
+After reconnecting:
+
+Optional: Settings > About > Advanced: connection log.
+Review logs before sharing. GitHub reports are public.
+
+Email: ruzgarnos@gmail.com
+Or use Send Beta Feedback in TestFlight.

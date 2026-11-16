@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sony WH-1000XM5 on Mac: setup, ANC &amp; EQ | Headphone Control</title>
+  <meta name="description" content="Pair your Sony WH-1000XM5 with a Mac, use Headphone Control for ANC, ambient sound and EQ, and troubleshoot connection problems with a useful beta report.">
+  <link rel="canonical" href="https://kulaklikkontrol.github.io/guides/sony-wh-1000xm5-mac/">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://kulaklikkontrol.github.io/guides/sony-wh-1000xm5-mac/">
+  <meta property="og:title" content="Sony WH-1000XM5 on Mac: setup, ANC &amp; EQ">
+  <meta property="og:description" content="A practical XM5 guide with real app screenshots, connection checks and a beta report template. Free, closed-source Mac app; macOS 14+.">
+  <meta property="og:image" content="https://kulaklikkontrol.github.io/assets/social-card.png">
+  <meta property="og:image:width" content="2400">
+  <meta property="og:image:height" content="1260">
+  <meta property="og:image:alt" content="The real WH-1000XM5 noise control panel in Headphone Control for Mac.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Sony WH-1000XM5 on Mac: setup, ANC &amp; EQ">
+  <meta name="twitter:description" content="Pair, adjust noise control and EQ, and troubleshoot your XM5 on a Mac.">
+  <meta name="twitter:image" content="https://kulaklikkontrol.github.io/assets/social-card.png">
+  <meta name="twitter:image:alt" content="The real WH-1000XM5 noise control panel in Headphone Control for Mac.">
+  <link rel="icon" href="../../icon.png">
+  <link rel="stylesheet" href="../../style.css?v=20261116-tour">
+  <link rel="stylesheet" href="guide.css?v=20261116-xm5">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "Sony WH-1000XM5 on Mac: setup, ANC and EQ",
+    "description": "Pairing, noise control, equalizer settings and connection troubleshooting for WH-1000XM5 owners using Headphone Control on a Mac.",
+    "inLanguage": "en",
+    "datePublished": "2026-11-16",
+    "dateModified": "2026-11-16",
+    "url": "https://kulaklikkontrol.github.io/guides/sony-wh-1000xm5-mac/",
+    "mainEntityOfPage": "https://kulaklikkontrol.github.io/guides/sony-wh-1000xm5-mac/",
+    "image": "https://kulaklikkontrol.github.io/press/assets/screenshot-anc.png",
+    "publisher": {"@type": "Organization", "name": "Headphone Control", "url": "https://kulaklikkontrol.github.io/"}
+  }
+  </script>
+</head>
+<body class="xm5-guide">
+  <a class="skip-link" href="#guide">Skip to guide</a>
+  <header class="top">
+    <div class="wrap">
+      <img src="../../icon.png" alt="" width="28" height="28">
+      <a class="guide-brand" href="../../?lang=en">Headphone Control</a>
+      <nav aria-label="Main navigation"><a href="../../?lang=en">The app</a><a href="#troubleshooting">Help</a></nav>
+    </div>
+  </header>
+
+  <main class="wrap" id="guide">
+    <article>
+      <header class="guide-intro">
+        <h1>Sony WH-1000XM5 on Mac</h1>
+        <p>Pair your headphones, change ANC and EQ from the menu bar, and work through connection problems.</p>
+        <a class="btn" id="beta" href="https://testflight.apple.com/join/e7S1TqA1">Join the free beta</a>
+      </header>
+
+      <aside class="guide-scope" aria-label="Requirements and testing status">
+        <p><strong>macOS 14+ · Free · Closed source.</strong> This guide uses Headphone Control, an independent app with real WH-1000XM5 hardware testing. Other models have not been tested on hardware.</p>
+      </aside>
+
+      <nav class="guide-contents" aria-label="On this page">
+        <a href="#setup">Set up</a><a href="#noise-control">ANC &amp; ambient</a><a href="#equalizer">EQ</a><a href="#troubleshooting">Connection help</a><a href="#report">Report a problem</a>
+      </nav>
+
+      <section id="setup">
+        <h2>Start with the Mac connection</h2>
+        <ol class="setup-steps">
+          <li><strong>Install the beta.</strong> Get <a href="https://apps.apple.com/app/testflight/id899247664">Apple’s TestFlight app</a> on your Mac, then open the beta invitation above. Accept the invitation and choose <strong>Install</strong>. Accepting alone does not install Headphone Control.</li>
+          <li><strong>Pair the XM5.</strong> On the Mac, open <strong>System Settings → Bluetooth</strong>. If the headphones are already listed, connect them. Otherwise, use the Mac pairing instructions in <a href="https://helpguide.sony.net/mdr/wh1000xm5/v1/en/index.html">Sony’s WH-1000XM5 Help Guide</a>, then choose <strong>WH-1000XM5 → Connect</strong> on the Mac.</li>
+          <li><strong>Open Headphone Control.</strong> Allow Bluetooth access if macOS asks. If you previously denied it, check <strong>System Settings → Privacy &amp; Security → Bluetooth</strong>. Open the headphone icon in the menu bar.</li>
+          <li><strong>Check the device name.</strong> Look for <strong>WH-1000XM5</strong> and <strong>Connected</strong> at the top of the panel. For music, also select the XM5 in <strong>System Settings → Sound → Output</strong>. Audio output and the app’s settings connection are separate checks.</li>
+        </ol>
+        <p class="small muted">The app’s demo mode uses sample data. A change in demo mode is not a hardware test.</p>
+      </section>
+
+      <section id="noise-control">
+        <h2>Choose what you want to hear</h2>
+        <div class="control-layout">
+          <div>
+            <dl class="control-definitions">
+              <dt>Noise Canceling</dt>
+              <dd>Select it in the top row for ANC. The selected button is blue in these screenshots.</dd>
+              <dt>Ambient Sound</dt>
+              <dd>Select it to reveal the ambient level slider. Adjust the level while listening; try <strong>Focus on voice</strong> separately to hear the difference.</dd>
+              <dt>Off</dt>
+              <dd>Switches off ANC and ambient processing. It does not turn the headphones off or disconnect Bluetooth.</dd>
+            </dl>
+            <p>Make one change at a time and listen for the result. A highlighted button shows the app’s selected state; your listening check confirms what the headphones did.</p>
+          </div>
+          <figure class="panel-shot">
+            <a href="../../press/assets/screenshot-anc.png" aria-label="Open the full-size noise canceling screenshot"><img src="../../press/assets/screenshot-anc.png" width="696" height="820" alt="WH-1000XM5 connected in Headphone Control, with Noise Canceling selected and Equalizer set to Off." loading="lazy" decoding="async"></a>
+            <figcaption>ANC selected. The device name and connection status are above the three noise buttons.</figcaption>
+          </figure>
+        </div>
+        <figure class="ambient-example">
+          <a href="../../press/assets/screenshot-ambient.png" aria-label="Open the full-size ambient sound screenshot"><img src="../../press/assets/screenshot-ambient.png" width="712" height="960" alt="Ambient Sound selected on a WH-1000XM5, revealing the level slider at 10 and Focus on voice enabled." loading="lazy" decoding="async"></a>
+          <figcaption><strong>When Ambient Sound is selected:</strong> the level slider and Focus on voice appear below the mode buttons. Level 10 is the captured example, not a recommended setting.</figcaption>
+        </figure>
+      </section>
+
+      <section id="equalizer">
+        <h2>Try a preset, then compare with Off</h2>
+        <p>Keep the same track and volume while comparing settings. You do not need a custom curve to check that EQ is working.</p>
+        <div class="control-layout">
+          <ol class="eq-steps">
+            <li>Open the <strong>Equalizer</strong> menu below noise control.</li>
+            <li>Choose a preset. The real capture here shows <strong>Bass Boost</strong>; the Bass value is <strong>+7</strong>.</li>
+            <li>Listen, then select <strong>Off</strong> for comparison.</li>
+            <li>For custom adjustments, choose <strong>Edit</strong> below the bands and change one setting at a time.</li>
+          </ol>
+          <figure class="panel-shot">
+            <a href="../../press/assets/screenshot-eq.png" aria-label="Open the full-size equalizer screenshot"><img src="../../press/assets/screenshot-eq.png" width="696" height="820" alt="WH-1000XM5 equalizer with Bass Boost selected, Bass at plus 7, and the Edit button beneath the bands." loading="lazy" decoding="async"></a>
+            <figcaption>Bass Boost selected in the app. The curve is a captured example, not a tuning recommendation.</figcaption>
+          </figure>
+        </div>
+        <p class="small muted">All three images are existing screenshots from a real XM5 session, not a live recording. For the separate recorded demo, <a href="https://youtu.be/uqtUES3l6HQ">watch the app on YouTube</a>.</p>
+      </section>
+
+      <section id="troubleshooting">
+        <h2>Find the part that is not connecting</h2>
+        <p>Start with the symptom you see. These checks help isolate a beta problem; they are not a guaranteed fix.</p>
+        <div class="symptoms">
+          <details open>
+            <summary>The XM5 is missing from Mac Bluetooth settings</summary>
+            <p>Keep the headphones near the Mac, check that Bluetooth is on, and follow <a href="https://helpguide.sony.net/mdr/wh1000xm5/v1/en/index.html">Sony’s Mac pairing instructions</a>. Open <strong>System Settings → Bluetooth</strong> and connect the XM5 there before scanning in Headphone Control.</p>
+          </details>
+          <details>
+            <summary>Music works, but the app cannot find the XM5</summary>
+            <p>Check the app’s Bluetooth permission in <strong>Privacy &amp; Security → Bluetooth</strong>. Close the headphone control app on your phone while testing, then choose <strong>Scan again</strong> in Headphone Control. If needed, disconnect and reconnect the XM5 in Mac Bluetooth settings, then reopen Headphone Control.</p>
+            <p>If music still works but settings do not, include that distinction in your report.</p>
+          </details>
+          <details>
+            <summary>The panel says Connected, but music is silent</summary>
+            <p>Choose WH-1000XM5 in <strong>System Settings → Sound → Output</strong>, check the Mac and player volume, and start playback on the Mac. If a phone is also connected, pause playback there while testing. A settings connection does not confirm which device is supplying audio.</p>
+          </details>
+          <details>
+            <summary>A noise mode changes back, or sound pauses when I speak</summary>
+            <p>Note whether the change follows speech, a call or opening an app. Check <strong>Speak-to-Chat</strong>, plus any profiles or automatic rules you enabled in Headphone Control. Temporarily turn those off and try one manual mode change, then report whether it stays selected.</p>
+          </details>
+          <details>
+            <summary>EQ changes or reconnecting are inconsistent</summary>
+            <p>Try one preset, compare with Off, then reconnect and repeat. Record what the app displayed and what you heard separately. If another device is connected, repeat once with only the Mac connected and include both results.</p>
+          </details>
+        </div>
+      </section>
+
+      <section id="report">
+        <h2>A short report that helps reproduce it</h2>
+        <p>Include the app version and build shown in TestFlight. “Connected for music, but ANC did not change” is more useful than “doesn’t work.”</p>
+        <pre class="report-template">Headphones: Sony WH-1000XM5
+Firmware (if known):
+Mac model / macOS version:
+Headphone Control version / build:
+Phone or second device connected: yes / no
+
+Mac Bluetooth connected: yes / no
+Music plays from the Mac: yes / no
+App shows Connected: yes / no
+ANC / ambient / EQ: what worked, what failed
+
+Steps to reproduce:
+Expected result:
+What happened:
+After reconnecting:</pre>
+        <p><a class="mail" href="mailto:ruzgarnos@gmail.com?subject=XM5%20Mac%20beta%20report&amp;body=Headphones%3A%20Sony%20WH-1000XM5%0AFirmware%20%28if%20known%29%3A%0AMac%20model%20%2F%20macOS%20version%3A%0AHeadphone%20Control%20version%20%2F%20build%3A%0APhone%20or%20second%20device%20connected%3A%0A%0AMac%20Bluetooth%20connected%3A%0AMusic%20plays%20from%20the%20Mac%3A%0AApp%20shows%20Connected%3A%0AANC%20%2F%20ambient%20%2F%20EQ%3A%0A%0ASteps%20to%20reproduce%3A%0AExpected%20result%3A%0AWhat%20happened%3A%0AAfter%20reconnecting%3A%0A">Email a report</a></p>
+        <p>You can also use <strong>Send Beta Feedback</strong> in TestFlight or <a href="https://github.com/kulaklikkontrol/kulaklikkontrol.github.io/issues/new?template=model-report.yml">open a GitHub model report</a>. No GitHub account is needed to email us.</p>
+        <p class="small muted">For connection failures, optionally include <strong>Settings → About → Advanced: connection log</strong> from the app. Review it before sharing; GitHub issues are public.</p>
+        <p class="small"><a href="report-template.txt" download>Download the report template</a></p>
+      </section>
+
+      <section id="references" class="guide-references">
+        <h2>Manufacturer help</h2>
+        <p>For Bluetooth pairing and Mac audio settings, use the manufacturer’s instructions. Headphone Control’s menu bar controls are described separately above.</p>
+        <ul>
+          <li><a href="https://helpguide.sony.net/mdr/wh1000xm5/v1/en/index.html">Sony WH-1000XM5 Help Guide</a>: look for “Pairing and connecting with a computer (Mac),” noise canceling and Ambient Sound Mode.</li>
+          <li><a href="https://support.apple.com/guide/mac-help/connect-a-bluetooth-device-blth1004/mac">Apple: Connect a Bluetooth device with your Mac</a>.</li>
+          <li><a href="https://support.apple.com/guide/mac-help/change-the-sound-output-settings-mchlp2256/mac">Apple: Change the sound output settings on Mac</a>.</li>
+        </ul>
+      </section>
+    </article>
+  </main>
+  <footer><div class="wrap">
+    <p>Headphone Control is not affiliated with, endorsed or sponsored by Sony. Sony and WH-1000XM5 are Sony trademarks. Mac is an Apple trademark.</p>
+    <p><a href="../../?lang=en">Headphone Control</a> · <a href="../../privacy.html?lang=en">Privacy</a> · <a href="../../press/?lang=en">Press kit</a></p>
+  </div></footer>
+</body>
+</html>
