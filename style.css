@@ -1,11 +1,12 @@
 :root {
   --bg: #f5f5f7; --card: #ffffff; --fg: #1d1d1f; --muted: #6e6e73; --line: #d2d2d7;
   --accent: #0a66ff; --accent-soft: #0a66ff14;
+  --button-bg: #0756d4; --button-fg: #f5f5f7;
   color-scheme: light;
 }
 @media (prefers-color-scheme: dark) {
   :root { --bg: #0d0d10; --card: #1a1a1f; --fg: #f5f5f7; --muted: #a1a1a6; --line: #2e2e35;
-          --accent: #5a9bff; --accent-soft: #5a9bff1f; color-scheme: dark; }
+          --accent: #5a9bff; --accent-soft: #5a9bff1f; --button-bg: #73adff; --button-fg: #0d0d10; color-scheme: dark; }
 }
 * { box-sizing: border-box; }
 html { -webkit-text-size-adjust: 100%; }
@@ -27,7 +28,7 @@ header.top nav { margin-left: auto; display: flex; gap: 18px; font-size: 15px; a
 .lang { display: inline-flex; border: 1px solid var(--line); border-radius: 999px; overflow: hidden; }
 .lang button { border: 0; background: transparent; color: var(--muted); font: inherit; font-size: 13px;
   padding: 3px 10px; cursor: pointer; }
-.lang button.on { background: var(--accent); color: #fff; }
+.lang button.on { background: var(--button-bg); color: var(--button-fg); }
 
 .hero { text-align: center; padding: 64px 0 28px; }
 .hero img.icon { width: 112px; height: 112px; border-radius: 26px; box-shadow: 0 10px 30px #0003; }
@@ -39,6 +40,15 @@ header.top nav { margin-left: auto; display: flex; gap: 18px; font-size: 15px; a
   color: #fff; font-weight: 600; border: 1px solid var(--accent); }
 .btn.ghost { background: transparent; color: var(--accent); }
 .btn:hover { text-decoration: none; opacity: .92; }
+.btn:not(.ghost), .mail { background: var(--button-bg); color: var(--button-fg); }
+a:focus-visible, button:focus-visible, video:focus-visible { outline: 3px solid var(--accent); outline-offset: 4px; }
+.btn:active, .lang button:active { transform: scale(.98); }
+.product-tour { margin: 32px 0 0; }
+.product-tour video { display: block; width: 100%; height: auto; aspect-ratio: 1270 / 760; border-radius: 16px; background: var(--card); border: 1px solid var(--line); }
+.product-tour figcaption { margin-top: 10px; line-height: 1.5; }
+.quick-start { display: grid; gap: 16px; max-width: 700px; }
+.quick-start li { padding-left: 8px; }
+.quick-start li::marker { color: var(--accent); font-weight: 650; }
 .shot { display: block; width: 100%; border-radius: 14px; margin: 36px 0 8px; box-shadow: 0 20px 50px #0004; }
 
 section { margin: 44px 0; }
@@ -51,8 +61,8 @@ h3 { font-size: 18px; margin: 22px 0 6px; }
 .grid h3 { margin-top: 0; }
 .muted { color: var(--muted); }
 .small { font-size: 14px; }
-.mail { display: inline-block; margin-top: 6px; padding: 10px 18px; border-radius: 999px; background: var(--accent);
-  color: #fff; font-weight: 600; }
+.mail { display: inline-block; margin-top: 6px; padding: 10px 18px; border-radius: 999px; background: var(--button-bg);
+  color: var(--button-fg); font-weight: 600; }
 .mail:hover { text-decoration: none; opacity: .92; }
 ul, ol { padding-left: 20px; } li { margin: 4px 0; }
 footer { border-top: 1px solid var(--line); margin-top: 60px; padding: 24px 0 40px; font-size: 14px; color: var(--muted); }
