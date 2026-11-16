@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sony WH-1000XM4, XM5 &amp; XM6 on Mac: Multipoint, ANC &amp; Troubleshooting | Headphone Control</title>
+  <meta name="description" content="Use Sony WH-1000XM4, WH-1000XM5 and WH-1000XM6 on Mac: multipoint switching, Bluetooth audio vs control, call mic quality fixes and 2-minute XM4/XM6 hardware testing.">
+  <link rel="canonical" href="https://kulaklikkontrol.github.io/guides/sony-wh-1000xm4-xm5-xm6-mac/">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://kulaklikkontrol.github.io/guides/sony-wh-1000xm4-xm5-xm6-mac/">
+  <meta property="og:title" content="Sony WH-1000XM4, XM5 &amp; XM6 on Mac: Multipoint, ANC &amp; Troubleshooting">
+  <meta property="og:description" content="How Bluetooth multipoint, ANC control and call audio behave on Mac, plus a 2-minute hardware check for WH-1000XM4 and WH-1000XM6 owners.">
+  <meta property="og:image" content="https://kulaklikkontrol.github.io/assets/xm4-xm5-xm6-guide-card.png">
+  <meta property="og:image:width" content="2400">
+  <meta property="og:image:height" content="1260">
+  <meta property="og:image:alt" content="Sony XM4, XM5 and XM6 on Mac guide card with real WH-1000XM5 screenshots of noise canceling and ambient sound in Headphone Control.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Sony WH-1000XM4, XM5 &amp; XM6 on Mac: Multipoint, ANC &amp; Troubleshooting">
+  <meta name="twitter:description" content="Multipoint, ANC and connection help for Sony WH-1000XM4, XM5 and XM6 on macOS 14+, plus XM4/XM6 hardware tester checklist.">
+  <meta name="twitter:image" content="https://kulaklikkontrol.github.io/assets/xm4-xm5-xm6-guide-card.png">
+  <meta name="twitter:image:alt" content="Sony XM4, XM5 and XM6 on Mac guide card with real WH-1000XM5 screenshots of noise canceling and ambient sound in Headphone Control.">
+  <link rel="icon" href="../../icon.png">
+  <link rel="stylesheet" href="../../style.css?v=20261116-tour">
+  <link rel="stylesheet" href="../sony-wh-1000xm5-mac/guide.css?v=20261116-xm5b">
+  <link rel="stylesheet" href="multi.css?v=20261116-a">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "Sony WH-1000XM4, XM5 and XM6 on Mac: Multipoint, ANC and Connection Troubleshooting",
+    "description": "Practical Mac guide for Sony WH-1000XM4, WH-1000XM5 and WH-1000XM6 covering Bluetooth multipoint, control channel conflicts, call audio quality drops and real-hardware beta testing.",
+    "inLanguage": "en",
+    "datePublished": "2026-11-16",
+    "dateModified": "2026-11-16",
+    "url": "https://kulaklikkontrol.github.io/guides/sony-wh-1000xm4-xm5-xm6-mac/",
+    "mainEntityOfPage": "https://kulaklikkontrol.github.io/guides/sony-wh-1000xm4-xm5-xm6-mac/",
+    "image": "https://kulaklikkontrol.github.io/assets/xm4-xm5-xm6-guide-card.png",
+    "publisher": {"@type": "Organization", "name": "Headphone Control", "url": "https://kulaklikkontrol.github.io/"}
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Has Headphone Control been tested on WH-1000XM4 and WH-1000XM6?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. Only the Sony WH-1000XM5 has been tested on real hardware so far. WH-1000XM4, WH-1000XM6, WF-1000XM4/XM5/XM6, LinkBuds, WH-CH720N and ULT WEAR are implemented from the Sony Bluetooth protocol and still need hardware reports from owners."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Why does music play on Mac while Headphone Control cannot find my Sony headphones?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Mac audio playback and settings control use separate Bluetooth layers. Check System Settings -> Privacy & Security -> Bluetooth for Headphone Control, close Sony's headphone app on your phone so it does not hold the control channel, then click Scan again."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Why do Sony WH-1000XM headphones sound flat or muffled on Mac during calls?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "When an app uses the headphone microphone, macOS switches Bluetooth to a lower-bandwidth call profile. Quit the call app or select the Mac's built-in microphone for input, then reselect the headphones in Sound Output."
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+<body class="xm5-guide">
+  <a class="skip-link" href="#guide">Skip to guide</a>
+  <header class="top">
+    <div class="wrap">
+      <img src="../../icon.png" alt="" width="28" height="28">
+      <a class="guide-brand" href="../../?lang=en">Headphone Control</a>
+      <nav aria-label="Main navigation">
+        <a href="../../?lang=en">The app</a>
+        <a href="#tester-checklist">Test</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap" id="guide">
+    <article>
+      <header class="guide-intro">
+        <h1>Sony WH-1000XM4, XM5 &amp; XM6 on Mac</h1>
+        <p>How Bluetooth multipoint, ANC control and call audio work on macOS, plus a 2-minute hardware check for WH-1000XM4 and WH-1000XM6 owners.</p>
+        <div class="cta-row">
+          <a class="btn" id="beta" href="https://testflight.apple.com/join/e7S1TqA1">Join the free beta</a>
+          <a class="btn ghost" href="#tester-checklist">2-minute XM4/XM6 check</a>
+        </div>
+      </header>
+
+      <aside class="guide-scope" aria-label="Hardware testing status and requirements">
+        <p><strong>Honest testing status (macOS 14+ · Free · Closed source):</strong> Only the <strong>Sony WH-1000XM5</strong> has been verified on real hardware. <strong>WH-1000XM4</strong>, <strong>WH-1000XM6</strong>, <strong>WF-1000XM4/XM5/XM6</strong>, <strong>LinkBuds</strong>, <strong>WH-CH720N</strong> and <strong>ULT WEAR</strong> are implemented from the Sony protocol and remain <strong>untested</strong>. If you own an XM4 or XM6, treat the beta as a hardware check rather than guaranteed support.</p>
+      </aside>
+
+      <nav class="guide-contents" aria-label="On this page">
+        <a href="#status">Model status</a>
+        <a href="#multipoint">Multipoint &amp; audio layers</a>
+        <a href="#troubleshooting">Troubleshooting</a>
+        <a href="#tester-checklist">2-minute hardware test</a>
+        <a href="#compare">Compare apps</a>
+        <a href="#references">Sources</a>
+      </nav>
+
+      <section id="status">
+        <h2>Which Sony models are tested vs. waiting for reports</h2>
+        <p>Headphone Control talks directly over a Bluetooth RFCOMM channel using macOS IOBluetooth, with no Sony account and no internet access. Because Sony firmware and protocol fields vary between generations, each model needs real-device verification.</p>
+        <table class="model-table">
+          <caption>Current verification status in Headphone Control 1.1 beta (macOS 14+)</caption>
+          <thead>
+            <tr>
+              <th scope="col">Model</th>
+              <th scope="col">Hardware status</th>
+              <th scope="col">What we need from owners</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">WH-1000XM5</th>
+              <td data-label="Hardware status"><span class="status-pill tested">Tested on real hardware</span></td>
+              <td data-label="What we need">Report edge-case firmware bugs or multipoint quirks; see the <a href="../sony-wh-1000xm5-mac/">WH-1000XM5 setup guide</a>.</td>
+            </tr>
+            <tr>
+              <th scope="row">WH-1000XM4</th>
+              <td data-label="Hardware status"><span class="status-pill">Implemented, untested</span></td>
+              <td data-label="What we need">Confirm connection, Noise Canceling / Ambient / Off toggles, EQ presets, battery reading and multipoint switching.</td>
+            </tr>
+            <tr>
+              <th scope="row">WH-1000XM6</th>
+              <td data-label="Hardware status"><span class="status-pill">Implemented, untested</span></td>
+              <td data-label="What we need">Confirm Bluetooth RFCOMM detection, ANC/ambient sliders, EQ bands, battery estimate and whether any toggles fail silently.</td>
+            </tr>
+            <tr>
+              <th scope="row">WF-1000XM4 / XM5 / XM6, LinkBuds S / Fit / Open, WH-CH720N, ULT WEAR</th>
+              <td data-label="Hardware status"><span class="status-pill">Implemented, untested</span></td>
+              <td data-label="What we need">Even a short note saying "it didn't connect" with your Mac model, macOS version and firmware helps narrow protocol differences.</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section id="multipoint">
+        <h2>Why Sony headphones behave unpredictably across phone and Mac</h2>
+        <p>Most Mac + Sony headaches happen because Bluetooth splits audio playback, microphone calls and settings control into three separate layers. Changing one does not automatically fix the other two.</p>
+        <div class="layer-cards">
+          <div class="layer-card">
+            <h3>1. Stereo Audio (A2DP)</h3>
+            <p>Plays music and video from whichever multipoint device currently holds playback focus. Controlled in <strong>System Settings → Sound → Output</strong> on Mac.</p>
+          </div>
+          <div class="layer-card">
+            <h3>2. Call Mic Profile (HFP)</h3>
+            <p>Turns on automatically whenever Zoom, Meet or FaceTime opens the headset microphone, temporarily dropping music quality to low-bandwidth mono.</p>
+          </div>
+          <div class="layer-card">
+            <h3>3. Settings Control (RFCOMM)</h3>
+            <p>Carries ANC, ambient level, EQ and battery state. Close Sony's phone app while testing so the Mac can open the control channel cleanly.</p>
+          </div>
+        </div>
+
+        <div class="control-layout">
+          <div>
+            <h3>Switching multipoint &amp; profiles without grabbing your phone</h3>
+            <p>On tested WH-1000XM5 hardware, Headphone Control lets you inspect paired multipoint devices from the menu bar, pull playback over to your Mac with one click (<strong>Play on Mac</strong>, also available via a keyboard shortcut or Control Center on macOS 26), or switch automatically when the Mac starts playing audio.</p>
+            <p>You can also save <strong>Profiles</strong> and add automatic rules that change noise mode or EQ during a call (reading macOS mic-in-use state without accessing the mic), while a chosen app is open, or when the screen locks. Your previous settings restore when the rule ends.</p>
+            <p class="small muted">Only WH-1000XM5 screenshots are shown here. We will add XM4/XM6 notes only after real hardware testing.</p>
+          </div>
+          <figure class="panel-shot">
+            <a href="../../press/assets/screenshot-anc.png" aria-label="Open full-size WH-1000XM5 Noise Canceling screenshot"><img src="../../press/assets/screenshot-anc.png" width="696" height="820" alt="Real WH-1000XM5 screenshot of Headphone Control showing Connected AAC, 39% battery, Noise Canceling selected and EQ controls." decoding="async"></a>
+            <figcaption>Real WH-1000XM5 capture in Headphone Control. XM4 and XM6 control panels await real-hardware confirmation.</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section id="troubleshooting">
+        <h2>Common Mac connection, multipoint &amp; audio fixes</h2>
+        <p>Work through the symptom that matches what you hear. These isolate macOS Bluetooth behavior from beta bugs.</p>
+        <div class="symptoms">
+          <details open>
+            <summary>Music plays on Mac, but Headphone Control cannot find my XM4 / XM5 / XM6</summary>
+            <p>1) Verify the headphones are connected in <strong>System Settings → Bluetooth</strong>. 2) Open <strong>System Settings → Privacy &amp; Security → Bluetooth</strong> and make sure Headphone Control is allowed. 3) Force-close Sony's companion app on your iPhone or Android phone (only one settings app should talk to the headset at once). 4) Click <strong>Scan again</strong> in Headphone Control. If audio works while control still fails, report that exact split.</p>
+          </details>
+          <details>
+            <summary>Multipoint audio stays stuck on my phone when I press play on Mac</summary>
+            <p>Pause playback and close active audio apps on the phone first; some apps keep holding the A2DP stream silently. In Headphone Control, check the multipoint device list or trigger <strong>Play on Mac</strong>. If the Mac shows Connected in Bluetooth settings but no sound plays, verify <strong>System Settings → Sound → Output</strong>.</p>
+          </details>
+          <details>
+            <summary>Audio sounds flat, hollow or muffled during calls or after hanging up</summary>
+            <p>When macOS activates the headset microphone, Bluetooth drops from high-quality stereo to call profile. Apple documents this behavior in <a href="https://support.apple.com/en-us/102217">If sound quality is reduced with Bluetooth headphones</a>. To keep stereo music quality while working, set <strong>System Settings → Sound → Input</strong> to your Mac's built-in microphone, or quit the call app and reselect your headphones in Control Center → Sound.</p>
+          </details>
+          <details>
+            <summary>TestFlight says Accepted, or shows macOS 13, but there is no Install button</summary>
+            <p>Clicking <strong>Accept</strong> on the web invitation does not install a Mac app. First download Apple's free <a href="https://apps.apple.com/app/testflight/id899247664">TestFlight app from the Mac App Store</a>, open it, select <strong>Headphone Control</strong> and click <strong>Install</strong>. Note: Apple's generic join page displays "macOS 13 or later", but Headphone Control requires <strong>macOS 14 Sonoma or later</strong>.</p>
+          </details>
+          <details>
+            <summary>I don't have my Sony headphones at my desk right now</summary>
+            <p>Open Headphone Control and click <strong>Try demo mode</strong> on the "Not connected" screen to inspect the interface, profiles and EQ controls with sample data. Note that demo mode does not test Bluetooth hardware compatibility.</p>
+          </details>
+        </div>
+      </section>
+
+      <section id="tester-checklist">
+        <h2>2-minute hardware test for XM4, XM6 &amp; earbud owners</h2>
+        <p>If you own an untested Sony model and a Mac on macOS 14+, you can give us actionable hardware signal in four quick steps:</p>
+        <ol class="setup-steps">
+          <li><strong>Install via TestFlight:</strong> Get <a href="https://apps.apple.com/app/testflight/id899247664">Apple TestFlight for Mac</a>, open the <a href="https://testflight.apple.com/join/e7S1TqA1">beta link</a>, click <strong>Accept</strong>, then click <strong>Install</strong> and allow Bluetooth access on first launch.</li>
+          <li><strong>Prepare Bluetooth:</strong> Pair and connect your headphones in <strong>System Settings → Bluetooth</strong>, close Sony's phone app, and open the headphone icon in the Mac menu bar.</li>
+          <li><strong>Run 4 fast checks:</strong> Does your model show <strong>Connected</strong>? Do <strong>Noise Canceling / Ambient Sound / Off</strong> switch audibly? Does an <strong>EQ preset</strong> (e.g. Bass Boost vs Off) change sound? Do <strong>Multipoint</strong> devices and <strong>Battery %</strong> show accurately?</li>
+          <li><strong>Send your result (even if it failed to connect):</strong> Pick your model below to open a pre-filled email, use <strong>Send Beta Feedback</strong> inside TestFlight, or <a href="https://github.com/kulaklikkontrol/kulaklikkontrol.github.io/issues/new?template=model-report.yml">open a GitHub model report</a>.</li>
+        </ol>
+
+        <div class="report-grid">
+          <a class="mail" href="mailto:ruzgarnos@gmail.com?subject=Model%20report%3A%20WH-1000XM4&amp;body=Headphones%3A%20Sony%20WH-1000XM4%0AFirmware%20%28if%20known%29%3A%0AMac%20model%20%2F%20macOS%20version%3A%0AHeadphone%20Control%20version%20%2F%20build%3A%0APhone%20or%20second%20device%20connected%3A%0A%0AMac%20Bluetooth%20connected%3A%0AMusic%20plays%20from%20the%20Mac%3A%0AApp%20shows%20Connected%3A%0AMultipoint%20%2F%20ANC%20%2F%20EQ%20%2F%20battery%3A%0A%0ASteps%20to%20reproduce%3A%0AWhat%20happened%3A%0A">Report WH-1000XM4</a>
+          <a class="mail" href="mailto:ruzgarnos@gmail.com?subject=Model%20report%3A%20WH-1000XM6&amp;body=Headphones%3A%20Sony%20WH-1000XM6%0AFirmware%20%28if%20known%29%3A%0AMac%20model%20%2F%20macOS%20version%3A%0AHeadphone%20Control%20version%20%2F%20build%3A%0APhone%20or%20second%20device%20connected%3A%0A%0AMac%20Bluetooth%20connected%3A%0AMusic%20plays%20from%20the%20Mac%3A%0AApp%20shows%20Connected%3A%0AMultipoint%20%2F%20ANC%20%2F%20EQ%20%2F%20battery%3A%0A%0ASteps%20to%20reproduce%3A%0AWhat%20happened%3A%0A">Report WH-1000XM6</a>
+          <a class="mail" href="mailto:ruzgarnos@gmail.com?subject=Model%20report%3A%20WF%20%2F%20LinkBuds%20%2F%20Other&amp;body=Headphones%3A%20%0AFirmware%20%28if%20known%29%3A%0AMac%20model%20%2F%20macOS%20version%3A%0AHeadphone%20Control%20version%20%2F%20build%3A%0APhone%20or%20second%20device%20connected%3A%0A%0AMac%20Bluetooth%20connected%3A%0AMusic%20plays%20from%20the%20Mac%3A%0AApp%20shows%20Connected%3A%0AMultipoint%20%2F%20ANC%20%2F%20EQ%20%2F%20battery%3A%0A%0ASteps%20to%20reproduce%3A%0AWhat%20happened%3A%0A">Report WF / LinkBuds / Other</a>
+        </div>
+        <p class="small muted">Optionally include <strong>Settings → About → Advanced: connection log</strong> when reporting connection issues. <a href="../sony-wh-1000xm5-mac/report-template.txt" download>Download plain-text report template</a>.</p>
+      </section>
+
+      <section id="compare">
+        <h2>Also looking at SonyBridge or Open Sound Connect?</h2>
+        <p>If you want open-source code, Windows/Linux support, or macOS 12–13 compatibility, read our side-by-side <a href="../headphone-control-vs-sonybridge-open-sound-connect/">comparison of Headphone Control, SonyBridge and Open Sound Connect</a> (including where the other two apps are stronger).</p>
+
+        <div class="bottom-cta">
+          <h3>Try Headphone Control 1.1 on your Mac</h3>
+          <p class="muted">Free · Closed source · macOS 14+ · Tested on WH-1000XM5; hardware feedback needed for XM4, XM6 and Sony earbuds.</p>
+          <div class="cta-row">
+            <a class="btn" href="https://testflight.apple.com/join/e7S1TqA1">Join the free beta</a>
+            <a class="btn ghost" href="https://youtu.be/uqtUES3l6HQ">Watch 88s XM5 demo</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="references" class="guide-references">
+        <h2>Verified help &amp; related guides</h2>
+        <ul>
+          <li><a href="../sony-wh-1000xm5-mac/">WH-1000XM5 on Mac: full setup, ANC &amp; EQ walkthrough</a></li>
+          <li><a href="../headphone-control-vs-sonybridge-open-sound-connect/">Headphone Control vs SonyBridge vs Open Sound Connect</a></li>
+          <li><a href="../../?lang=en#models">Full 9-model compatibility &amp; report links</a></li>
+          <li><a href="https://support.apple.com/guide/mac-help/connect-a-wireless-accessory-blth1004/mac">Apple: Connect a Bluetooth device with your Mac</a></li>
+          <li><a href="https://support.apple.com/guide/mac-help/change-the-sound-output-settings-mchlp2256/mac">Apple: Change the sound output settings on Mac</a></li>
+          <li><a href="https://support.apple.com/en-us/102217">Apple: If sound quality is reduced with Bluetooth headphones</a></li>
+          <li><a href="https://helpguide.sony.net/mdr/wh1000xm5/v1/en/contents/TP1000536739.html">Sony WH-1000XM5 Help Guide: Pairing and connecting with a Mac</a></li>
+        </ul>
+      </section>
+    </article>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <p>Headphone Control is not affiliated with, endorsed or sponsored by Sony Group Corporation. Sony, WH-1000XM, WF-1000XM, LinkBuds and ULT WEAR are Sony trademarks. Mac is an Apple trademark.</p>
+      <p><a href="../../?lang=en">Headphone Control</a> · <a href="../sony-wh-1000xm5-mac/">XM5 guide</a> · <a href="../headphone-control-vs-sonybridge-open-sound-connect/">Compare Mac apps</a> · <a href="../../press/?lang=en">Press kit</a> · <a href="../../privacy.html?lang=en">Privacy</a></p>
+    </div>
+  </footer>
+</body>
+</html>

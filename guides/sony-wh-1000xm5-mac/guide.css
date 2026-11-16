@@ -5,7 +5,8 @@
   .xm5-guide { --guide-link: #73adff; }
 }
 .xm5-guide a { color: var(--guide-link); }
-.xm5-guide .btn, .xm5-guide .mail { color: var(--button-fg); }
+.xm5-guide .btn:not(.ghost), .xm5-guide .mail { color: var(--button-fg); }
+.xm5-guide .btn.ghost { background: transparent; color: var(--guide-link); border-color: var(--guide-link); }
 .xm5-guide .wrap { max-width: 960px; }
 .guide-brand { color: var(--fg) !important; font-weight: 650; white-space: nowrap; }
 .xm5-guide header.top nav { gap: 20px; }
