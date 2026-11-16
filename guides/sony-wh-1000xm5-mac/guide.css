@@ -26,18 +26,16 @@
 .setup-steps li { margin: 0; padding-left: 8px; }
 .setup-steps li::marker, .eq-steps li::marker { color: var(--guide-link); font-weight: 650; }
 .control-layout { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 348px); gap: 36px; align-items: start; margin-top: 28px; }
-.control-layout > *, .ambient-example > * { min-width: 0; }
+.control-layout > * { min-width: 0; }
+.control-layout.flip { grid-template-columns: minmax(0, 348px) minmax(0, 1fr); }
 .control-definitions { margin: 0; }
 .control-definitions dt { font-weight: 650; margin: 0 0 5px; }
 .control-definitions dd { margin: 0 0 24px; }
 .panel-shot { margin: 0; }
-.panel-shot img, .ambient-example img { display: block; max-width: 100%; height: auto; border-radius: 16px; border: 1px solid var(--line); }
-.panel-shot img { width: 348px; }
+.panel-shot img { display: block; width: 348px; max-width: 100%; height: auto; border-radius: 16px; border: 1px solid var(--line); }
 .xm5-guide figcaption { color: var(--muted); font-size: 14px; line-height: 1.5; margin-top: 12px; }
-.ambient-example { display: grid; grid-template-columns: minmax(0, 356px) minmax(0, 1fr); gap: 32px; align-items: center; margin: 38px 0 0; padding: 28px; background: var(--card); border: 1px solid var(--line); border-radius: 16px; }
-.ambient-example img { width: 356px; }
-.ambient-example figcaption { font-size: 17px; margin: 0; }
-.ambient-example figcaption strong { display: block; color: var(--fg); margin-bottom: 12px; }
+.ambient-copy p { margin: 0 0 14px; }
+.ambient-copy h3 { margin-top: 0; }
 .eq-steps { margin: 0; padding-left: 25px; display: grid; gap: 18px; }
 .eq-steps li { padding-left: 6px; margin: 0; }
 .symptoms { border-top: 1px solid var(--line); }
@@ -52,11 +50,8 @@
 .guide-references li { margin-bottom: 12px; }
 .xm5-guide footer a { overflow-wrap: anywhere; }
 @media (max-width: 700px) {
-  .control-layout, .ambient-example { grid-template-columns: minmax(0, 1fr); gap: 24px; }
+  .control-layout, .control-layout.flip { grid-template-columns: minmax(0, 1fr); gap: 24px; }
   .panel-shot { max-width: 356px; justify-self: center; }
-  .ambient-example { padding: 20px; }
-  .ambient-example > a { max-width: 356px; justify-self: center; }
-  .ambient-example figcaption { font-size: 16px; }
   .guide-intro { padding-top: 36px; }
   .guide-intro p { font-size: 19px; }
   .xm5-guide section { margin: 40px 0; }
@@ -73,5 +68,5 @@
   .xm5-guide { background: white; color: black; }
   .xm5-guide .wrap { max-width: none; }
   .xm5-guide section { break-inside: auto; }
-  .panel-shot, .ambient-example { break-inside: avoid; }
+  .panel-shot { break-inside: avoid; }
 }
