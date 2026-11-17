@@ -1,2 +1,7 @@
 .frame-*.jpg
 .preview-*.jpg
+__pycache__/
+campaign-2026-11-16/
+qa/
+content/
+scripts/

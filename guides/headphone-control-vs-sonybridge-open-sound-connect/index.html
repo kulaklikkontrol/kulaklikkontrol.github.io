@@ -63,11 +63,11 @@
         <a href="#short">Short version</a><a href="#table">Side by side</a><a href="#strengths">Strengths</a><a href="#choose">Which to pick</a><a href="#sources">Sources</a>
       </nav>
 
-      <section id="short">
+      <!-- T64 comparison --><p>Also considering Sony’s iPhone app or the built-in Mac Bluetooth menu? <a href="/guides/sony-headphones-mac-apps/">Compare all five options</a> · <a href="/tr/guides/sony-headphones-mac-apps/" lang="tr">Türkçe karşılaştırma</a>.</p><section id="short">
         <h2>The short version</h2>
         <ul class="compare-picks">
-          <li><strong>SonyBridge: open source and widest platform reach.</strong> MIT license, macOS 12+, plus Windows (beta) and Linux. It lists the most models, but its README says only the WH-CH720N is fully hardware-verified.</li>
-          <li><strong>Open Sound Connect: the most features on paper, and the only paid one.</strong> Open source (MIT), $9.99, macOS 15+, scenes, Speak-to-Chat, 18 languages, and the WH-1000XM2 to XM6 headsets listed.</li>
+          <li><strong>SonyBridge: open source across three platforms.</strong> MIT license, macOS 12+, plus Windows (beta) and Linux. Its table marks WH-CH720N and ULT WEAR verified, while its paragraph says only WH-CH720N is fully hardware-verified. Read both notes before choosing.</li>
+          <li><strong>Open Sound Connect: documented scenes and a paid download.</strong> Open source (MIT), $9.99, macOS 15+, scenes, Speak-to-Chat, a published over-ear model list, with experimental XM5/XM6 support in its source README.</li>
           <li><strong>Headphone Control: free, with real XM5 testing.</strong> Closed source, macOS 14+, installed through Apple’s TestFlight beta. It has been tried on one model, the WH-1000XM5, and nothing else.</li>
         </ul>
       </section>
@@ -102,8 +102,8 @@
             <tr>
               <th scope="row">How you install it</th>
               <td data-label="Headphone Control">Apple’s TestFlight beta: install TestFlight, accept the invitation, then install.</td>
-              <td data-label="SonyBridge">Homebrew or a direct .app download. The app is ad-hoc signed, not notarized, so macOS needs a Gatekeeper workaround.</td>
-              <td data-label="Open Sound Connect">Direct download after purchase.</td>
+              <td data-label="SonyBridge">Homebrew or a direct .app download. The app is ad-hoc signed, not notarized, so review the project’s current installation notes before downloading.</td>
+              <td data-label="Open Sound Connect">Website download after purchase and license activation; MIT source and repository builds are also available.</td>
             </tr>
             <tr>
               <th scope="row">Models listed</th>
@@ -115,13 +115,13 @@
               <th scope="row">Hardware testing</th>
               <td data-label="Headphone Control">WH-1000XM5 only, on real hardware. Everything else untested.</td>
               <td data-label="SonyBridge">README: “Only the WH-CH720N is fully hardware-verified.”</td>
-              <td data-label="Open Sound Connect">The page does not say which models were tested on hardware.</td>
+              <td data-label="Open Sound Connect">Source README: WH-1000XM4 hardware checks (firmware 2.6.0). WH-1000XM5/XM6 are experimental and not verified on hardware. Some XM4 controls and automatic triggers still need validation.</td>
             </tr>
             <tr>
               <th scope="row">Controls</th>
               <td data-label="Headphone Control">Noise canceling, ambient sound with level, EQ presets, Clear Bass and custom bands, battery, switching audio between Mac and phone, a keyboard shortcut for noise modes, demo mode.</td>
               <td data-label="SonyBridge">Noise cancelling, ambient sound, Focus on Voice, EQ (presets and manual), DSEE, battery levels, codec and firmware readout, auto-connect, multipoint switching, three themes.</td>
-              <td data-label="Open Sound Connect">Noise canceling, wind reduction, ambient sound with level, Focus on Voice, EQ with saved curves, DSEE, Speak-to-Chat, scenes (menu bar, shortcut, on connect, on a schedule or when an app opens), an activity log, 18 languages.</td>
+              <td data-label="Open Sound Connect">Noise canceling, wind reduction, ambient sound with level, Focus on Voice, EQ with saved curves, DSEE, Speak-to-Chat, scenes (menu bar, shortcut, on connect, on a schedule or when an app opens), an activity log.</td>
             </tr>
             <tr>
               <th scope="row">Privacy</th>
@@ -141,19 +141,19 @@
             <h3>What the other two do better</h3>
             <ul>
               <li><strong>Open source.</strong> You can read the code and build it yourself with SonyBridge or Open Sound Connect. Headphone Control is closed source.</li>
-              <li><strong>More models.</strong> Both list far more models than our one tested headphone, and SonyBridge covers earbuds and older headsets too.</li>
+              <li><strong>Different model coverage.</strong> Compare each project’s testing notes, not just the model list. SonyBridge also documents earbuds and older headsets. A listed model is not necessarily hardware-tested.</li>
               <li><strong>Other systems.</strong> SonyBridge runs beyond the Mac (Windows beta, Linux from source) and supports macOS 12 and 13, which Headphone Control does not.</li>
               <li><strong>Feature depth.</strong> Open Sound Connect documents scenes, Speak-to-Chat, DSEE and an activity log. SonyBridge adds a codec and firmware readout.</li>
-              <li><strong>A normal install.</strong> A direct download or Homebrew is simpler than TestFlight’s accept-then-install steps.</li>
+              <li><strong>Installation options.</strong> SonyBridge offers Homebrew and direct downloads; Open Sound Connect has a licensed website download and repository builds. Our beta uses TestFlight.</li>
             </ul>
           </div>
           <div>
             <h3>Where Headphone Control may suit you</h3>
             <ul>
-              <li><strong>Free.</strong> Open Sound Connect costs $9.99; this one doesn’t, though it is a beta.</li>
+              <li><strong>Free.</strong> Open Sound Connect’s website download costs $9.99; its MIT source and repository builds are separate options. Headphone Control’s TestFlight beta is free.</li>
               <li><strong>You own an XM5.</strong> That is the one model with real hardware testing behind it. For every other model we can’t tell you it works.</li>
               <li><strong>macOS 14.</strong> It runs on macOS 14, which is below Open Sound Connect’s macOS 15 minimum.</li>
-              <li><strong>No Gatekeeper workaround.</strong> TestFlight delivers the app through Apple, unlike SonyBridge’s ad-hoc signed build.</li>
+              <li><strong>Apple beta distribution.</strong> TestFlight delivers this beta through Apple. Review the other projects’ signing and installation notes separately.</li>
             </ul>
           </div>
         </div>
@@ -164,7 +164,7 @@
         <ul>
           <li><strong>Want to read or modify the code, or run it on Windows or Linux?</strong> SonyBridge.</li>
           <li><strong>On macOS 12 or 13?</strong> SonyBridge is the only one of the three that supports your Mac.</li>
-          <li><strong>Want scenes, Speak-to-Chat and a finished app, and happy to pay $9.99?</strong> Open Sound Connect.</li>
+          <li><strong>Want scenes and Speak-to-Chat on macOS 15+?</strong> Open Sound Connect.</li>
           <li><strong>Own a WH-1000XM5, run macOS 14 or later, and want something free?</strong> Headphone Control is worth a try, knowing it is a closed-source beta.</li>
           <li><strong>Own a different model?</strong> Check each project’s own supported list first. If you try Headphone Control on it, a short report helps us.</li>
         </ul>
@@ -186,6 +186,6 @@
   <footer><div class="wrap">
     <p>Headphone Control is not affiliated with, endorsed or sponsored by Sony, SonyBridge or Open Sound Connect. Sony and WH-1000XM5 are Sony trademarks. Mac is an Apple trademark.</p>
     <p><a href="../../?lang=en">Headphone Control</a> · <a href="../sony-wh-1000xm5-mac/">XM5 guide</a> · <a href="../sony-wh-1000xm4-xm5-xm6-mac/">XM4/XM5/XM6 guide</a> · <a href="../../privacy.html?lang=en">Privacy</a> · <a href="../../press/?lang=en">Press kit</a></p>
-  </div></footer>
+  <!-- T64 hub --><p><a href="/guides/">Sony headphones on Mac: all guides (EN)</a> · <a href="/tr/guides/">Mac’te Sony kulaklık rehberleri (TR)</a></p><!-- /T64 hub --></div></footer>
 </body>
 </html>

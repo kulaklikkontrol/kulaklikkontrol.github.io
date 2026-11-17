@@ -1,10 +1,153 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://kulaklikkontrol.github.io/</loc><lastmod>2026-11-16</lastmod></url>
-  <url><loc>https://kulaklikkontrol.github.io/privacy.html</loc><lastmod>2026-11-11</lastmod></url>
-  <url><loc>https://kulaklikkontrol.github.io/press/</loc><lastmod>2026-11-16</lastmod></url>
-  <url><loc>https://kulaklikkontrol.github.io/guides/sony-wh-1000xm5-mac/</loc><lastmod>2026-11-16</lastmod></url>
-  <url><loc>https://kulaklikkontrol.github.io/guides/sony-wh-1000xm4-xm5-xm6-mac/</loc><lastmod>2026-11-16</lastmod></url>
-  <url><loc>https://kulaklikkontrol.github.io/guides/sony-xm5-zoom-teams-calls-mac/</loc><lastmod>2026-11-16</lastmod></url>
-  <url><loc>https://kulaklikkontrol.github.io/guides/headphone-control-vs-sonybridge-open-sound-connect/</loc><lastmod>2026-11-16</lastmod></url>
+<?xml version='1.0' encoding='utf-8'?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://kulaklikkontrol.github.io/</loc>
+    <lastmod>2026-11-16</lastmod>
+  </url>
+  <url>
+    <loc>https://kulaklikkontrol.github.io/blog/why-headphone-control/</loc>
+    <lastmod>2026-11-16</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kulaklikkontrol.github.io/blog/why-headphone-control/" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://kulaklikkontrol.github.io/tr/blog/why-headphone-control/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kulaklikkontrol.github.io/blog/why-headphone-control/" />
+  </url>
+  <url>
+    <loc>https://kulaklikkontrol.github.io/guides/</loc>
+    <lastmod>2026-11-16</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kulaklikkontrol.github.io/guides/" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://kulaklikkontrol.github.io/tr/guides/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kulaklikkontrol.github.io/guides/" />
+  </url>
+  <url>
+    <loc>https://kulaklikkontrol.github.io/guides/headphone-control-vs-sonybridge-open-sound-connect/</loc>
+    <lastmod>2026-11-16</lastmod>
+  </url>
+  <url>
+    <loc>https://kulaklikkontrol.github.io/guides/sony-anc-eq-mac/</loc>
+    <lastmod>2026-11-16</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kulaklikkontrol.github.io/guides/sony-anc-eq-mac/" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://kulaklikkontrol.github.io/tr/guides/sony-anc-eq-mac/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kulaklikkontrol.github.io/guides/sony-anc-eq-mac/" />
+  </url>
+  <url>
+    <loc>https://kulaklikkontrol.github.io/guides/sony-headphones-connect-mac/</loc>
+    <lastmod>2026-11-16</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kulaklikkontrol.github.io/guides/sony-headphones-connect-mac/" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://kulaklikkontrol.github.io/tr/guides/sony-headphones-connect-mac/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kulaklikkontrol.github.io/guides/sony-headphones-connect-mac/" />
+  </url>
+  <url>
+    <loc>https://kulaklikkontrol.github.io/guides/sony-headphones-mac-apps/</loc>
+    <lastmod>2026-11-16</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kulaklikkontrol.github.io/guides/sony-headphones-mac-apps/" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://kulaklikkontrol.github.io/tr/guides/sony-headphones-mac-apps/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kulaklikkontrol.github.io/guides/sony-headphones-mac-apps/" />
+  </url>
+  <url>
+    <loc>https://kulaklikkontrol.github.io/guides/sony-wf-1000xm5-mac/</loc>
+    <lastmod>2026-11-16</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kulaklikkontrol.github.io/guides/sony-wf-1000xm5-mac/" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://kulaklikkontrol.github.io/tr/guides/sony-wf-1000xm5-mac/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kulaklikkontrol.github.io/guides/sony-wf-1000xm5-mac/" />
+  </url>
+  <url>
+    <loc>https://kulaklikkontrol.github.io/guides/sony-wh-1000xm4-mac/</loc>
+    <lastmod>2026-11-16</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kulaklikkontrol.github.io/guides/sony-wh-1000xm4-mac/" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://kulaklikkontrol.github.io/tr/guides/sony-wh-1000xm4-mac/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kulaklikkontrol.github.io/guides/sony-wh-1000xm4-mac/" />
+  </url>
+  <url>
+    <loc>https://kulaklikkontrol.github.io/guides/sony-wh-1000xm4-xm5-xm6-mac/</loc>
+    <lastmod>2026-11-16</lastmod>
+  </url>
+  <url>
+    <loc>https://kulaklikkontrol.github.io/guides/sony-wh-1000xm5-mac/</loc>
+    <lastmod>2026-11-16</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kulaklikkontrol.github.io/guides/sony-wh-1000xm5-mac/" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://kulaklikkontrol.github.io/tr/guides/sony-wh-1000xm5-mac/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kulaklikkontrol.github.io/guides/sony-wh-1000xm5-mac/" />
+  </url>
+  <url>
+    <loc>https://kulaklikkontrol.github.io/guides/sony-wh-1000xm6-mac/</loc>
+    <lastmod>2026-11-16</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kulaklikkontrol.github.io/guides/sony-wh-1000xm6-mac/" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://kulaklikkontrol.github.io/tr/guides/sony-wh-1000xm6-mac/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kulaklikkontrol.github.io/guides/sony-wh-1000xm6-mac/" />
+  </url>
+  <url>
+    <loc>https://kulaklikkontrol.github.io/guides/sony-xm5-zoom-teams-calls-mac/</loc>
+    <lastmod>2026-11-16</lastmod>
+  </url>
+  <url>
+    <loc>https://kulaklikkontrol.github.io/press/</loc>
+    <lastmod>2026-11-16</lastmod>
+  </url>
+  <url>
+    <loc>https://kulaklikkontrol.github.io/privacy.html</loc>
+    <lastmod>2026-11-11</lastmod>
+  </url>
+  <url>
+    <loc>https://kulaklikkontrol.github.io/tr/blog/why-headphone-control/</loc>
+    <lastmod>2026-11-16</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kulaklikkontrol.github.io/blog/why-headphone-control/" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://kulaklikkontrol.github.io/tr/blog/why-headphone-control/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kulaklikkontrol.github.io/blog/why-headphone-control/" />
+  </url>
+  <url>
+    <loc>https://kulaklikkontrol.github.io/tr/guides/</loc>
+    <lastmod>2026-11-16</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kulaklikkontrol.github.io/guides/" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://kulaklikkontrol.github.io/tr/guides/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kulaklikkontrol.github.io/guides/" />
+  </url>
+  <url>
+    <loc>https://kulaklikkontrol.github.io/tr/guides/sony-anc-eq-mac/</loc>
+    <lastmod>2026-11-16</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kulaklikkontrol.github.io/guides/sony-anc-eq-mac/" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://kulaklikkontrol.github.io/tr/guides/sony-anc-eq-mac/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kulaklikkontrol.github.io/guides/sony-anc-eq-mac/" />
+  </url>
+  <url>
+    <loc>https://kulaklikkontrol.github.io/tr/guides/sony-headphones-connect-mac/</loc>
+    <lastmod>2026-11-16</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kulaklikkontrol.github.io/guides/sony-headphones-connect-mac/" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://kulaklikkontrol.github.io/tr/guides/sony-headphones-connect-mac/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kulaklikkontrol.github.io/guides/sony-headphones-connect-mac/" />
+  </url>
+  <url>
+    <loc>https://kulaklikkontrol.github.io/tr/guides/sony-headphones-mac-apps/</loc>
+    <lastmod>2026-11-16</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kulaklikkontrol.github.io/guides/sony-headphones-mac-apps/" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://kulaklikkontrol.github.io/tr/guides/sony-headphones-mac-apps/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kulaklikkontrol.github.io/guides/sony-headphones-mac-apps/" />
+  </url>
+  <url>
+    <loc>https://kulaklikkontrol.github.io/tr/guides/sony-wf-1000xm5-mac/</loc>
+    <lastmod>2026-11-16</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kulaklikkontrol.github.io/guides/sony-wf-1000xm5-mac/" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://kulaklikkontrol.github.io/tr/guides/sony-wf-1000xm5-mac/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kulaklikkontrol.github.io/guides/sony-wf-1000xm5-mac/" />
+  </url>
+  <url>
+    <loc>https://kulaklikkontrol.github.io/tr/guides/sony-wh-1000xm4-mac/</loc>
+    <lastmod>2026-11-16</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kulaklikkontrol.github.io/guides/sony-wh-1000xm4-mac/" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://kulaklikkontrol.github.io/tr/guides/sony-wh-1000xm4-mac/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kulaklikkontrol.github.io/guides/sony-wh-1000xm4-mac/" />
+  </url>
+  <url>
+    <loc>https://kulaklikkontrol.github.io/tr/guides/sony-wh-1000xm5-mac/</loc>
+    <lastmod>2026-11-16</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kulaklikkontrol.github.io/guides/sony-wh-1000xm5-mac/" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://kulaklikkontrol.github.io/tr/guides/sony-wh-1000xm5-mac/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kulaklikkontrol.github.io/guides/sony-wh-1000xm5-mac/" />
+  </url>
+  <url>
+    <loc>https://kulaklikkontrol.github.io/tr/guides/sony-wh-1000xm6-mac/</loc>
+    <lastmod>2026-11-16</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kulaklikkontrol.github.io/guides/sony-wh-1000xm6-mac/" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://kulaklikkontrol.github.io/tr/guides/sony-wh-1000xm6-mac/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kulaklikkontrol.github.io/guides/sony-wh-1000xm6-mac/" />
+  </url>
 </urlset>
