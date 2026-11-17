@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mac’te Zoom, Teams ve Meet’te Sony WH-1000XM5: boğuk ses ve mikrofon sorunu çözümü | Kulaklık Kontrol</title>
+  <meta name="description" content="Sony WH-1000XM5 Mac’te Zoom, Teams ve Google Meet’te neden boğuk duyulur ve nasıl düzeltilir: giriş aygıtı seçimi, HFP ve A2DP farkı, multipoint’te arama yönetimi ve aramalar için otomatik gürültü modu kuralı.">
+  <link rel="canonical" href="https://kulaklikkontrol.github.io/tr/guides/sony-xm5-zoom-teams-calls-mac/">
+  <link rel="alternate" hreflang="en" href="https://kulaklikkontrol.github.io/guides/sony-xm5-zoom-teams-calls-mac/">
+  <link rel="alternate" hreflang="tr" href="https://kulaklikkontrol.github.io/tr/guides/sony-xm5-zoom-teams-calls-mac/">
+  <link rel="alternate" hreflang="x-default" href="https://kulaklikkontrol.github.io/guides/sony-xm5-zoom-teams-calls-mac/">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://kulaklikkontrol.github.io/tr/guides/sony-xm5-zoom-teams-calls-mac/">
+  <meta property="og:title" content="Mac’te Zoom, Teams ve Meet’te Sony WH-1000XM5: boğuk ses ve mikrofon sorunu çözümü">
+  <meta property="og:description" content="Aramadan sonra boğuk müzik, zayıf mikrofon ya da telefonda takılı kalan ses mi? Zoom, Teams ve Meet’te Sony WH-1000XM5 için adım adım Mac çözümleri.">
+  <meta property="og:locale" content="tr_TR">
+  <meta property="og:locale:alternate" content="en_US">
+  <meta property="og:image" content="https://kulaklikkontrol.github.io/assets/xm5-calls-guide-card.png">
+  <meta property="og:image:width" content="2400">
+  <meta property="og:image:height" content="1260">
+  <meta property="og:image:alt" content="Rehber kartı: Mac’te Zoom ve Teams aramalarında Sony WH-1000XM5, gerçek bir Kulaklık Kontrol ekran görüntüsüyle.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Mac’te Zoom, Teams ve Meet’te Sony WH-1000XM5: boğuk ses ve mikrofon sorunu çözümü">
+  <meta name="twitter:description" content="Mac’te Sony WH-1000XM5 ile arama yaparken boğuk sesi, zayıf mikrofonu ve telefon/Mac multipoint çakışmalarını düzeltin.">
+  <meta name="twitter:image" content="https://kulaklikkontrol.github.io/assets/xm5-calls-guide-card.png">
+  <meta name="twitter:image:alt" content="Rehber kartı: Mac’te Zoom ve Teams aramalarında Sony WH-1000XM5, gerçek bir Kulaklık Kontrol ekran görüntüsüyle.">
+  <link rel="icon" href="/icon.png">
+  <link rel="stylesheet" href="/style.css?v=20261116-tour">
+  <link rel="stylesheet" href="/guides/sony-wh-1000xm5-mac/guide.css?v=20261116-xm5b">
+  <link rel="stylesheet" href="/guides/sony-wh-1000xm4-xm5-xm6-mac/multi.css?v=20261116-b">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "Mac’te Zoom, Teams ve Google Meet’te Sony WH-1000XM5: boğuk ses, zayıf mikrofon ve multipoint çakışmalarını düzeltme",
+    "description": "Görüntülü aramalarda Sony WH-1000XM5 için pratik macOS sorun giderme: Bluetooth arama profilindeki kalite düşüşü, doğru giriş aygıtını seçme, telefon ile Mac arasında multipoint arama yönetimi ve aramalarda gürültü modunu otomatik değiştirme.",
+    "inLanguage": "tr",
+    "datePublished": "2026-11-17",
+    "dateModified": "2026-11-17",
+    "url": "https://kulaklikkontrol.github.io/tr/guides/sony-xm5-zoom-teams-calls-mac/",
+    "mainEntityOfPage": "https://kulaklikkontrol.github.io/tr/guides/sony-xm5-zoom-teams-calls-mac/",
+    "image": "https://kulaklikkontrol.github.io/assets/xm5-calls-guide-card.png",
+    "publisher": {"@type": "Organization", "name": "Headphone Control", "url": "https://kulaklikkontrol.github.io/"}
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "inLanguage": "tr",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Sony WH-1000XM5 Mac’te Zoom veya Teams’de neden boğuk duyuluyor?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Bir uygulama kulaklığın mikrofonunu açtığı anda macOS, Bluetooth bağlantısını yüksek kaliteli stereo profilden (A2DP) daha düşük bant genişliğine sahip eller serbest arama profiline (HFP) geçirir. Mikrofon bırakılana kadar duyduğunuz her şey daha ince ve boğuk gelir. Giriş olarak Mac’in dahili mikrofonunu seçerseniz kulaklık stereo çalmada kalır."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Aramadan çıktıktan sonra müzik neden boğuk kalıyor?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Bazı arama uygulamaları mikrofonu bir süre açık tutar ya da arka planda çalışmaya devam eder. Uygulamadan tamamen çıkın, ardından Denetim Merkezi -> Ses veya Sistem Ayarları -> Ses bölümünde kulaklığı yeniden çıkış olarak seçin. Sistem Ayarları’nda kulaklığın Bluetooth bağlantısını kesip yeniden bağlamak da profili sıfırlar."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Kulaklık Kontrol bir aramaya katıldığımda gürültü engellemeyi otomatik değiştirebilir mi?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Evet. Test edilen WH-1000XM5 kurulumunda, Mac’in mikrofonu kullanımdayken gürültü modunu veya EQ’yu değiştiren otomatik bir kural ekleyebilirsiniz; kural sona erdiğinde önceki ayarlar geri yüklenir. Kulaklık Kontrol, mikrofonun kendisine erişmeden sistemin mikrofon kullanımda durumunu okur."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Bu rehber diğer Sony modelleri için de geçerli mi?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Bluetooth arama profili davranışı çoğu Bluetooth kulaklık için geçerli olan bir macOS özelliğidir; ancak Kulaklık Kontrol gerçek donanımda yalnızca WH-1000XM5 ile doğrulandı. Diğer Sony modelleri protokolden uygulandı ve hâlâ donanım raporlarına ihtiyaç duyuyor."
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+<body class="xm5-guide">
+  <a class="skip-link" href="#guide">Rehbere geç</a>
+  <header class="top">
+    <div class="wrap">
+      <img src="/icon.png" alt="" width="28" height="28">
+      <a class="guide-brand" href="/?lang=tr">Kulaklık Kontrol</a>
+      <nav aria-label="Gezinme">
+        <a href="/?lang=tr">Uygulama</a>
+        <a href="#fixes">Çözümler</a>
+        <a lang="en" hreflang="en" href="/guides/sony-xm5-zoom-teams-calls-mac/">EN</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap" id="guide">
+    <article>
+      <header class="guide-intro">
+        <h1>Mac’te Zoom, Teams ve Meet’te Sony WH-1000XM5</h1>
+        <p>Aramadan sonra boğuk ses, cılız bir mikrofon ya da telefonda kalan ses: macOS’te bunun neden olduğu ve en hızlı çözümler.</p>
+        <div class="cta-row">
+          <a class="btn" id="beta" href="https://testflight.apple.com/join/e7S1TqA1">Ücretsiz betaya katıl</a>
+          <a class="btn ghost" href="#fixes">Çözümlere geç</a>
+        </div>
+      </header>
+
+      <aside class="guide-scope" aria-label="Test durumu ve gereksinimler">
+        <p><strong>Dürüst test durumu (macOS 14+ · Ücretsiz · Kapalı kaynak):</strong> Kulaklık Kontrol gerçek donanımda yalnızca <strong>Sony WH-1000XM5</strong> ile doğrulandı. Aşağıda anlatılan macOS arama profili davranışı bir Bluetooth özelliğidir; uygulamanın neden olduğu ya da ortadan kaldırabildiği bir şey değildir.</p>
+      </aside>
+
+      <nav class="guide-contents" aria-label="Bu sayfada">
+        <a href="#why">Aramalar neden kötü duyulur</a>
+        <a href="#fixes">Adım adım çözümler</a>
+        <a href="#multipoint-calls">Telefon + Mac aramaları</a>
+        <a href="#auto-rule">Otomatik gürültü modu</a>
+        <a href="#references">Kaynaklar</a>
+      </nav>
+
+      <section id="why">
+        <h2>Bluetooth kulaklıklar aramalarda neden daha kötü duyulur</h2>
+        <p>Bluetooth kulaklıklar birbirinden çok farklı iki mod kullanır. Müzik stereo <strong>A2DP</strong> profilini kullanır. Arama için mikrofon gerekir; bu yüzden kulaklık çok daha az ses verisi taşıyan eller serbest <strong>HFP</strong> profiline geçer. Mac’te bu geçiş, bir uygulama kulaklık mikrofonunu açtığı anda olur ve mikrofon bırakılana kadar duyduğunuz her şeyin kalitesi düşer. Apple bunu <a href="https://support.apple.com/en-us/102217">If sound quality is reduced with Bluetooth headphones</a> (Bluetooth kulaklıklarda ses kalitesi düşerse) sayfasında anlatıyor.</p>
+        <p>Sorunun Apple Music’te değil de Zoom, Microsoft Teams, Google Meet veya FaceTime’da ortaya çıkmasının ve uygulama mikrofonu açık tutarsa toplantıdan çıktıktan sonra da sürebilmesinin nedeni bu.</p>
+      </section>
+
+      <section id="fixes">
+        <h2>Denemeye değer sırayla çözümler</h2>
+        <ol class="setup-steps">
+          <li><strong>Mac’in kendi mikrofonunu kullanın.</strong> <strong>Sistem Ayarları → Ses → Giriş</strong> bölümünde kulaklık yerine <em>MacBook Pro Mikrofonu</em>nu (ya da Mac’inizin dahili mikrofonunu) seçin. Zoom, Teams veya Meet’in ses ayarlarında da aynı aygıtı seçin. Kulaklık stereo çalmada kalır, sesiniz Mac mikrofonundan gider. Bedeli: Mac mikrofonu odayı da duyar, bu yüzden en iyi sessiz bir ortamda çalışır.</li>
+          <li><strong>Ya da arama için HFP’yi kabul edin ve sonrasında toparlayın.</strong> Kulaklık mikrofonunu kullanmak istiyorsanız (örneğin dolaşırken), seçili bırakın; arama bitince uygulamadan tamamen çıkın ve <strong>Denetim Merkezi → Ses</strong> bölümünde kulaklığı yeniden seçin.</li>
+          <li><strong>Uygulamaların mikrofonu arka planda kapmasını engelleyin.</strong> <strong>Sistem Ayarları → Gizlilik ve Güvenlik → Mikrofon</strong> bölümüne ve menü çubuğundaki turuncu mikrofon göstergesine bakın. Aramadan sonra yanmaya devam ediyorsa o uygulamadan çıkın.</li>
+          <li><strong>Ses ince kalmaya devam ederse bağlantıyı sıfırlayın.</strong> <strong>Sistem Ayarları → Bluetooth</strong> bölümünde kulaklığın bağlantısını kesip yeniden bağlayın. Bu, profilin baştan anlaşılmasını sağlar.</li>
+          <li><strong>Çıkış aygıtını kontrol edin.</strong> Aramadan sonra <strong>Sistem Ayarları → Ses → Çıkış</strong> bölümünde bir ekranın ya da Mac hoparlörlerinin değil, kulaklığın seçili olduğundan emin olun.</li>
+        </ol>
+        <p class="small muted">Bunların hiçbiri Kulaklık Kontrol’e özgü değil; macOS ve Bluetooth davranışıdır. Uygulama yalnızca kulaklığın kendi ayarlarını (gürültü modu, ortam sesi seviyesi, EQ, multipoint) değiştirir.</p>
+      </section>
+
+      <section id="multipoint-calls">
+        <h2>Telefon ve Mac aynı anda bağlıyken (multipoint)</h2>
+        <p>Multipoint ile XM5 hem telefonunuza hem Mac’inize aynı anda bağlı kalır. Telefondaki aramalar müziğe göre önceliklidir ve Mac’teki bir arama uygulaması ses yolu için telefonla yarışabilir.</p>
+        <div class="symptoms">
+          <details open>
+            <summary>Mac’te görüntülü arama açılıyor ama kulaklıktan hiçbir şey duymuyorum</summary>
+            <p>Önce telefondaki sesi duraklatın ya da kapatın; akışı hâlâ tutan bir uygulama odağı elinde tutar. Ardından <strong>Denetim Merkezi → Ses</strong> bölümünde kulaklığı yeniden seçin. Kulaklık Kontrol’de multipoint listesi bağlantıyı o anda hangi aygıtın tuttuğunu gösterir; <strong>Sesi Mac’e al</strong> tek tıkla çalmayı Mac’e çeker.</p>
+          </details>
+          <details>
+            <summary>Mac’te görüşürken telefonum çalıyor</summary>
+            <p>Telefon araması genellikle kulaklığı devralır. Telefonu kapattıktan sonra Mac sesi kendiliğinden geri gelebilir ya da <strong>Sesi Mac’e al</strong> veya Ses ayarlarında yeniden seçim gerekebilir.</p>
+          </details>
+          <details>
+            <summary>Arama sırasında ayar kontrolleri yanıt vermiyor</summary>
+            <p>Kulaklığın kontrol kanalıyla aynı anda yalnızca bir uygulama konuşmalı. Telefondaki Sony kulaklık uygulamasını kapatın, ardından Kulaklık Kontrol’de <strong>Yeniden tara</strong>’yı kullanın.</p>
+          </details>
+        </div>
+      </section>
+
+      <section id="auto-rule">
+        <h2>Arama başlayınca gürültü modunu otomatik değiştirin</h2>
+        <div class="control-layout">
+          <div>
+            <p>Test edilen WH-1000XM5 donanımında Kulaklık Kontrol, Mac’in mikrofonu kullanımdayken bir <strong>Profil</strong>i otomatik olarak uygulayabilir: örneğin toplantı sırasında çevrenizi duymak için Ortam Sesi’ni ya da odaklanmanız gereken bir arama için Gürültü Engelleme’yi açabilir. Mikrofona erişmeden macOS’in mikrofon kullanımda durumunu okur ve kural sona erdiğinde önceki gürültü modunuzu ve EQ’nuzu geri yükler.</p>
+            <p>Kurallar seçtiğiniz bir uygulama açıkken ya da ekran kilitlendiğinde de tetiklenebilir.</p>
+            <p class="small muted">Yalnızca WH-1000XM5 ekran görüntüleri gösteriliyor. Diğer Sony modelleri gerçek donanım onayı bekliyor.</p>
+          </div>
+          <figure class="panel-shot">
+            <a href="/press/assets/screenshot-anc.png" aria-label="Tam boyutlu WH-1000XM5 ekran görüntüsünü aç"><img src="/press/assets/screenshot-anc.png" width="696" height="820" alt="Kulaklık Kontrol’ün gerçek WH-1000XM5 ekran görüntüsü: Bağlandı, pil seviyesi, seçili Gürültü Engelleme ve EQ kontrolleri."></a>
+            <figcaption>Kulaklık Kontrol’de gerçek WH-1000XM5 görüntüsü.</figcaption>
+          </figure>
+        </div>
+
+        <div class="bottom-cta">
+          <h3>Kulaklık Kontrol 1.1’i Mac’inizde deneyin</h3>
+          <p class="muted">Ücretsiz · Kapalı kaynak · macOS 14+ · WH-1000XM5’te test edildi; diğer Sony modelleri için donanım geri bildirimi gerekiyor.</p>
+          <div class="cta-row">
+            <a class="btn" href="https://testflight.apple.com/join/e7S1TqA1">Ücretsiz betaya katıl</a>
+            <a class="btn ghost" href="https://youtu.be/uqtUES3l6HQ">88 sn XM5 demosunu izle</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="references" class="guide-references">
+        <h2>Doğrulanmış yardım ve ilgili rehberler</h2>
+        <ul>
+          <li><a href="/tr/guides/sony-headphones-battery-percentage-mac/">Mac’te WH-1000XM5 pil yüzdesi</a></li>
+          <li><a href="/tr/guides/sony-wh-1000xm5-mac/">Mac’te WH-1000XM5: eksiksiz kurulum, ANC ve EQ anlatımı</a></li>
+          <li><a href="/tr/guides/sony-wh-1000xm4-xm5-xm6-mac/">Mac’te WH-1000XM4, XM5 ve XM6: multipoint ve 2 dakikalık donanım kontrolü</a></li>
+          <li><a href="/tr/guides/headphone-control-vs-sonybridge-open-sound-connect/">Kulaklık Kontrol, SonyBridge ve Open Sound Connect karşılaştırması</a></li>
+          <li><a href="https://support.apple.com/en-us/102217">Apple: If sound quality is reduced with Bluetooth headphones (Bluetooth kulaklıklarda ses kalitesi düşerse)</a></li>
+          <li><a href="https://support.apple.com/guide/mac-help/change-the-sound-output-settings-mchlp2256/mac">Apple: Change the sound output settings on Mac (Mac’te ses çıkışı ayarlarını değiştirme)</a></li>
+          <li><a href="https://helpguide.sony.net/mdr/wh1000xm5/v1/en/contents/TP1000536739.html">Sony WH-1000XM5 Yardım Kılavuzu: Mac ile eşleştirme ve bağlanma</a></li>
+        </ul>
+      </section>
+    </article>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <p>Kulaklık Kontrol; Sony Group Corporation ile bağlantılı değildir ve onun tarafından onaylanmamış ya da desteklenmemektedir. Sony ve WH-1000XM, Sony’nin ticari markalarıdır. Mac, Apple’ın ticari markasıdır.</p>
+      <p><a href="/?lang=tr">Kulaklık Kontrol</a> · <a href="/tr/guides/sony-wh-1000xm5-mac/">XM5 rehberi</a> · <a href="/tr/guides/sony-wh-1000xm4-xm5-xm6-mac/">XM4/XM5/XM6 rehberi</a> · <a href="/tr/guides/headphone-control-vs-sonybridge-open-sound-connect/">Mac uygulamalarını karşılaştır</a> · <a href="/press/?lang=tr">Press kit</a> · <a href="/privacy.html?lang=tr">Gizlilik</a></p>
+    <!-- T64 hub --><p><a href="/guides/">Sony headphones on Mac: all guides (EN)</a> · <a href="/tr/guides/">Mac’te Sony kulaklık rehberleri (TR)</a></p><!-- /T64 hub --></div>
+  </footer>
+</body>
+</html>

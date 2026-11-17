@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kulaklık Kontrol, SonyBridge ve Open Sound Connect karşılaştırması | Mac’te Sony kulaklıklar</title>
+  <meta name="description" content="Sony kulaklıklar için üç Mac uygulamasının dürüst karşılaştırması: fiyat, lisans, macOS sürümü, desteklenen modeller ve her birinin güçlü yanları. Bilgiler 16 Kasım 2026’da kontrol edildi.">
+  <link rel="canonical" href="https://kulaklikkontrol.github.io/tr/guides/headphone-control-vs-sonybridge-open-sound-connect/">
+  <link rel="alternate" hreflang="en" href="https://kulaklikkontrol.github.io/guides/headphone-control-vs-sonybridge-open-sound-connect/">
+  <link rel="alternate" hreflang="tr" href="https://kulaklikkontrol.github.io/tr/guides/headphone-control-vs-sonybridge-open-sound-connect/">
+  <link rel="alternate" hreflang="x-default" href="https://kulaklikkontrol.github.io/guides/headphone-control-vs-sonybridge-open-sound-connect/">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://kulaklikkontrol.github.io/tr/guides/headphone-control-vs-sonybridge-open-sound-connect/">
+  <meta property="og:title" content="Kulaklık Kontrol, SonyBridge ve Open Sound Connect karşılaştırması">
+  <meta property="og:description" content="Sony kulaklıklar için üç Mac uygulaması fiyat, lisans, macOS sürümü ve model desteği açısından karşılaştırıldı; diğer ikisinin daha güçlü olduğu yerler dahil.">
+  <meta property="og:locale" content="tr_TR">
+  <meta property="og:locale:alternate" content="en_US">
+  <meta property="og:image" content="https://kulaklikkontrol.github.io/assets/xm5-guide-card.png">
+  <meta property="og:image:width" content="2400">
+  <meta property="og:image:height" content="1260">
+  <meta property="og:image:alt" content="Mac’te Kulaklık Kontrol ve üç gerçek Sony WH-1000XM5 ekran görüntüsü: gürültü engelleme, ortam sesi ve ekolayzer.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Kulaklık Kontrol, SonyBridge ve Open Sound Connect karşılaştırması">
+  <meta name="twitter:description" content="Sony kulaklıklar için üç Mac uygulamasının dürüst karşılaştırması.">
+  <meta name="twitter:image" content="https://kulaklikkontrol.github.io/assets/xm5-guide-card.png">
+  <meta name="twitter:image:alt" content="Mac’te Kulaklık Kontrol ve üç gerçek Sony WH-1000XM5 ekran görüntüsü: gürültü engelleme, ortam sesi ve ekolayzer.">
+  <link rel="icon" href="/icon.png">
+  <link rel="stylesheet" href="/style.css?v=20261116-tour">
+  <link rel="stylesheet" href="/guides/sony-wh-1000xm5-mac/guide.css?v=20261116-xm5b">
+  <link rel="stylesheet" href="/guides/headphone-control-vs-sonybridge-open-sound-connect/compare.css?v=20261116-b">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "Kulaklık Kontrol, SonyBridge ve Open Sound Connect karşılaştırması",
+    "description": "Sony kulaklıklar için üç Mac uygulamasının fiyatı, lisansı, macOS sürümü, desteklenen modelleri ve güçlü yanları; Kulaklık Kontrol geliştiricisi tarafından yazıldı.",
+    "inLanguage": "tr",
+    "datePublished": "2026-11-17",
+    "dateModified": "2026-11-17",
+    "url": "https://kulaklikkontrol.github.io/tr/guides/headphone-control-vs-sonybridge-open-sound-connect/",
+    "mainEntityOfPage": "https://kulaklikkontrol.github.io/tr/guides/headphone-control-vs-sonybridge-open-sound-connect/",
+    "publisher": {"@type": "Organization", "name": "Headphone Control", "url": "https://kulaklikkontrol.github.io/"}
+  }
+  </script>
+</head>
+<body class="xm5-guide">
+  <a class="skip-link" href="#guide">Karşılaştırmaya geç</a>
+  <header class="top">
+    <div class="wrap">
+      <img src="/icon.png" alt="" width="28" height="28">
+      <a class="guide-brand" href="/?lang=tr">Kulaklık Kontrol</a>
+      <nav aria-label="Gezinme"><a href="/?lang=tr">Uygulama</a><a href="/tr/guides/sony-wh-1000xm5-mac/">XM5 rehberi</a><a lang="en" hreflang="en" href="/guides/headphone-control-vs-sonybridge-open-sound-connect/">EN</a></nav>
+    </div>
+  </header>
+
+  <main class="wrap" id="guide">
+    <article>
+      <header class="guide-intro">
+        <h1>Kulaklık Kontrol, SonyBridge ve Open Sound Connect karşılaştırması</h1>
+        <p>Sony kulaklık ayarlarını telefon uygulaması olmadan değiştiren üç Mac uygulaması. Her birinin ne yaptığı, ne kadara mal olduğu ve neyi yapmadığı.</p>
+      </header>
+
+      <aside class="guide-scope" aria-label="Açıklama ve test durumu">
+        <p><strong>Açıklama:</strong> bu sayfa Kulaklık Kontrol’ün geliştiricisi tarafından yazıldı; bunu göz önünde bulundurarak okuyun. Kulaklık Kontrol <strong>ücretsiz, kapalı kaynaklı ve macOS 14+</strong> gerektirir; gerçek donanımda yalnızca <strong>WH-1000XM5</strong> test edildi, diğer modeller test edilmedi. SonyBridge ve Open Sound Connect bilgileri 16 Kasım 2026’da okunan resmi sayfalarından alındı. İki uygulamayı da kendimiz test etmedik.</p>
+      </aside>
+
+      <nav class="guide-contents" aria-label="Bu sayfada">
+        <a href="#short">Kısaca</a><a href="#table">Yan yana</a><a href="#strengths">Güçlü yanlar</a><a href="#choose">Hangisini seçmeli</a><a href="#sources">Kaynaklar</a>
+      </nav>
+
+      <!-- T64 comparison --><p>Sony’nin iPhone uygulamasını veya Mac’in yerleşik Bluetooth menüsünü de mi düşünüyorsunuz? <a href="/tr/guides/sony-headphones-mac-apps/">Beş seçeneğin tamamını karşılaştırın</a> · <a href="/guides/sony-headphones-mac-apps/" lang="en">English comparison</a>.</p><section id="short">
+        <h2>Kısaca</h2>
+        <ul class="compare-picks">
+          <li><strong>SonyBridge: üç platformda açık kaynak.</strong> MIT lisansı, macOS 12+, ayrıca Windows (beta) ve Linux. Tablosu WH-CH720N ve ULT WEAR’ı doğrulanmış olarak işaretliyor, paragrafı ise yalnızca WH-CH720N’in tamamen donanımda doğrulandığını söylüyor. Seçmeden önce iki notu da okuyun.</li>
+          <li><strong>Open Sound Connect: belgelenmiş sahneler ve ücretli indirme.</strong> Açık kaynak (MIT), $9.99, macOS 15+, sahneler, Konuşarak Sohbet, yayımlanmış bir kafa üstü model listesi; kaynak README’sinde XM5/XM6 desteği deneysel.</li>
+          <li><strong>Kulaklık Kontrol: ücretsiz, gerçek XM5 testiyle.</strong> Kapalı kaynak, macOS 14+, Apple’ın TestFlight betasıyla kurulur. Yalnızca tek bir modelde, WH-1000XM5’te denendi; başka hiçbirinde değil.</li>
+        </ul>
+      </section>
+
+      <section id="table">
+        <h2>Yan yana</h2>
+        <p>Her projenin 16 Kasım 2026’da yayımladığı bilgiler. Değişebilirler; karar vermeden önce bağlantılı sayfalara bakın.</p>
+        <table class="compare-table">
+          <caption>Sony kulaklıklar için Mac uygulamaları</caption>
+          <thead>
+            <tr><th scope="col"><span class="sr-only">Konu</span></th><th scope="col" class="us">Kulaklık Kontrol</th><th scope="col">SonyBridge</th><th scope="col">Open Sound Connect</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Fiyat</th>
+              <td data-label="Kulaklık Kontrol">Ücretsiz (beta).</td>
+              <td data-label="SonyBridge">Fiyat belirtilmemiş. GitHub Sponsors üzerinden isteğe bağlı destek.</td>
+              <td data-label="Open Sound Connect">Doğrudan indirme $9.99 (en fazla iki etkin kurulum için lisans). Mac App Store sürümü “yakında” olarak listeleniyor.</td>
+            </tr>
+            <tr>
+              <th scope="row">Kaynak kodu</th>
+              <td data-label="Kulaklık Kontrol">Kapalı kaynak.</td>
+              <td data-label="SonyBridge">Açık kaynak, MIT.</td>
+              <td data-label="Open Sound Connect">Açık kaynak, MIT.</td>
+            </tr>
+            <tr>
+              <th scope="row">Platformlar</th>
+              <td data-label="Kulaklık Kontrol">macOS 14 veya üstü.</td>
+              <td data-label="SonyBridge">macOS 12+ (Apple silicon ve Intel). Windows beta; Linux kaynaktan derleme seçeneği.</td>
+              <td data-label="Open Sound Connect">macOS 15 Sequoia veya üstü (Apple silicon ve Intel).</td>
+            </tr>
+            <tr>
+              <th scope="row">Nasıl kurulur</th>
+              <td data-label="Kulaklık Kontrol">Apple’ın TestFlight betası: TestFlight’ı kurun, daveti kabul edin, ardından yükleyin.</td>
+              <td data-label="SonyBridge">Homebrew veya doğrudan .app indirmesi. Uygulama ad-hoc imzalı, notarize edilmemiş; indirmeden önce projenin güncel kurulum notlarını okuyun.</td>
+              <td data-label="Open Sound Connect">Satın alma ve lisans aktivasyonundan sonra web sitesinden indirme; MIT kaynak kodu ve depo derlemeleri de mevcut.</td>
+            </tr>
+            <tr>
+              <th scope="row">Listelenen modeller</th>
+              <td data-label="Kulaklık Kontrol">WH-1000XM5 (test edildi). Uygulandı ama test edilmedi: WH-1000XM4, WH-1000XM6, WF-1000XM4, WF-1000XM5, WF-1000XM6, LinkBuds S, Fit ve Open, WH-CH720N, ULT WEAR.</td>
+              <td data-label="SonyBridge">Doğrulanmış: WH-CH720N, ULT WEAR. Beklenen: WH-1000XM5, WH-1000XM6, WH-XB910N, WH-CH520. Kulak içi: WF-1000XM4, WF-1000XM5, WF-C700N, LinkBuds S. Eski modeller (yalnızca gürültü kontrolü ve ortam sesi): WH-1000XM2–XM4, WH-XB900N, MDR-XB950BT.</td>
+              <td data-label="Open Sound Connect">MDR-1000X, WH-1000XM2, XM3, XM4, XM5, XM6 ve WH-1000XX. Kulak içi model listelenmemiş.</td>
+            </tr>
+            <tr>
+              <th scope="row">Donanım testi</th>
+              <td data-label="Kulaklık Kontrol">Yalnızca WH-1000XM5, gerçek donanımda. Diğer her şey test edilmedi.</td>
+              <td data-label="SonyBridge">README: “Only the WH-CH720N is fully hardware-verified.” (Yalnızca WH-CH720N tamamen donanımda doğrulandı.)</td>
+              <td data-label="Open Sound Connect">Kaynak README: WH-1000XM4 donanım kontrolleri (firmware 2.6.0). WH-1000XM5/XM6 deneysel ve donanımda doğrulanmamış. Bazı XM4 kontrolleri ve otomatik tetikleyiciler hâlâ doğrulama bekliyor.</td>
+            </tr>
+            <tr>
+              <th scope="row">Kontroller</th>
+              <td data-label="Kulaklık Kontrol">Gürültü engelleme, seviyeli ortam sesi, EQ ön ayarları, Clear Bass ve özel bantlar, pil, sesi Mac ile telefon arasında taşıma, gürültü modları için klavye kısayolu, demo modu.</td>
+              <td data-label="SonyBridge">Gürültü engelleme, ortam sesi, Sese Odaklan (Focus on Voice), EQ (ön ayarlar ve manuel), DSEE, pil seviyeleri, codec ve firmware bilgisi, otomatik bağlanma, multipoint geçişi, üç tema.</td>
+              <td data-label="Open Sound Connect">Gürültü engelleme, rüzgâr azaltma, seviyeli ortam sesi, Sese Odaklan (Focus on Voice), kayıtlı eğrilerle EQ, DSEE, Konuşarak Sohbet, sahneler (menü çubuğu, kısayol, bağlanınca, zamanlamayla veya bir uygulama açılınca), etkinlik günlüğü.</td>
+            </tr>
+            <tr>
+              <th scope="row">Gizlilik</th>
+              <td data-label="Kulaklık Kontrol">Sandbox içinde, ağ erişimi yok, analitik yok (kendi açıklamamız).</td>
+              <td data-label="SonyBridge">Kulaklıkla Bluetooth üzerinden, tersine mühendislikle çözülmüş bir protokolle konuşur. “Use at your own risk.” (Riski size ait olmak üzere kullanın.)</td>
+              <td data-label="Open Sound Connect">Uygulama analitiği yok. Doğrudan indirilen sürüm lisans sağlayıcısıyla iletişim kurar ve güncelleme denetler; App Store sürümü hiç ağ isteği yapmaz.</td>
+            </tr>
+          </tbody>
+        </table>
+        <p class="small muted">Üçünü de Sony yapmıyor. Hepsi Sony’nin kendi uygulamasını kullanmak yerine kulaklıkla Bluetooth üzerinden konuşuyor.</p>
+      </section>
+
+      <section id="strengths">
+        <h2>Hangisi nerede daha güçlü</h2>
+        <div class="compare-two">
+          <div>
+            <h3>Diğer ikisinin daha iyi yaptıkları</h3>
+            <ul>
+              <li><strong>Açık kaynak.</strong> SonyBridge veya Open Sound Connect’te kodu okuyup kendiniz derleyebilirsiniz. Kulaklık Kontrol kapalı kaynaklıdır.</li>
+              <li><strong>Farklı model kapsamı.</strong> Yalnızca model listesini değil, her projenin test notlarını karşılaştırın. SonyBridge kulak içi ve eski kulaklıkları da belgeliyor. Listede olan bir model donanımda test edilmiş olmayabilir.</li>
+              <li><strong>Diğer sistemler.</strong> SonyBridge Mac dışında da çalışır (Windows beta, kaynaktan Linux) ve Kulaklık Kontrol’ün desteklemediği macOS 12 ile 13’ü destekler.</li>
+              <li><strong>Özellik derinliği.</strong> Open Sound Connect sahneleri, Konuşarak Sohbet’i, DSEE’yi ve etkinlik günlüğünü belgeliyor. SonyBridge codec ve firmware bilgisini de gösteriyor.</li>
+              <li><strong>Kurulum seçenekleri.</strong> SonyBridge Homebrew ve doğrudan indirme sunuyor; Open Sound Connect’in lisanslı web indirmesi ve depo derlemeleri var. Bizim betamız TestFlight kullanıyor.</li>
+            </ul>
+          </div>
+          <div>
+            <h3>Kulaklık Kontrol size nerede uygun olabilir</h3>
+            <ul>
+              <li><strong>Ücretsiz.</strong> Open Sound Connect’in web indirmesi $9.99; MIT kaynak kodu ve depo derlemeleri ayrı seçenekler. Kulaklık Kontrol’ün TestFlight betası ücretsiz.</li>
+              <li><strong>XM5’iniz var.</strong> Arkasında gerçek donanım testi olan tek model bu. Diğer modellerin hiçbiri için çalışıyor diyemeyiz.</li>
+              <li><strong>macOS 14.</strong> Open Sound Connect’in alt sınırı olan macOS 15’in altındaki macOS 14’te çalışır.</li>
+              <li><strong>Apple üzerinden beta dağıtımı.</strong> Bu beta size Apple’ın TestFlight’ı üzerinden ulaşır. Diğer projelerin imzalama ve kurulum notlarını ayrıca inceleyin.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="choose">
+        <h2>Hangisini seçmeli</h2>
+        <ul>
+          <li><strong>Kodu okumak, değiştirmek ya da Windows veya Linux’ta çalıştırmak mı istiyorsunuz?</strong> SonyBridge.</li>
+          <li><strong>macOS 12 veya 13 mü kullanıyorsunuz?</strong> Üçü arasında Mac’inizi destekleyen tek uygulama SonyBridge.</li>
+          <li><strong>macOS 15+ üzerinde sahneler ve Konuşarak Sohbet mi istiyorsunuz?</strong> Open Sound Connect.</li>
+          <li><strong>WH-1000XM5’iniz, macOS 14 veya üstü bir Mac’iniz var ve ücretsiz bir şey mi arıyorsunuz?</strong> Kapalı kaynaklı bir beta olduğunu bilerek Kulaklık Kontrol’ü denemeye değer.</li>
+          <li><strong>Başka bir modeliniz mi var?</strong> Önce her projenin kendi desteklenen listesine bakın. Kulaklık Kontrol’ü o modelde denerseniz kısa bir rapor bize çok yardımcı olur.</li>
+        </ul>
+        <p><a class="btn" href="https://testflight.apple.com/join/e7S1TqA1">Ücretsiz Kulaklık Kontrol betasına katıl</a></p>
+        <p class="small muted">Gerçek ekran görüntüleriyle kurulum, ANC ve EQ anlatımı: <a href="/tr/guides/sony-wh-1000xm5-mac/">Mac’te Sony WH-1000XM5</a> · Multipoint ve XM4/XM6 testi: <a href="/tr/guides/sony-wh-1000xm4-xm5-xm6-mac/">Mac’te XM4, XM5 ve XM6</a>.</p>
+      </section>
+
+      <section id="sources" class="guide-references compare-sources">
+        <h2>Kaynaklar</h2>
+        <p class="small muted">16 Kasım 2026’da okundu. Buradaki bir bilgi güncel değilse <a href="mailto:ruzgarnos@gmail.com?subject=Kar%C5%9F%C4%B1la%C5%9Ft%C4%B1rma%20sayfas%C4%B1%20d%C3%BCzeltmesi">ruzgarnos@gmail.com</a> adresine yazın, düzeltelim.</p>
+        <ul>
+          <li><a href="https://github.com/AmitRajput-Dev/SonyBridge">GitHub’da SonyBridge</a>: README (lisans, platformlar, desteklenen kulaklıklar, özellikler, imzalama notları) ve 28 Ekim 2026’da yayımlanan son sürüm v0.4.0.</li>
+          <li><a href="https://opensoundconnect.app/">Open Sound Connect</a>: fiyat, macOS gereksinimi, desteklenen kulaklıklar ve özellikler. Kaynak kodu <a href="https://github.com/rolottr/open-sound-connect">github.com/rolottr/open-sound-connect</a> adresinde (GitHub’da MIT lisansı görünüyor).</li>
+          <li><a href="/?lang=tr#models">Kulaklık Kontrol model uyumluluğu</a>: test edilen ve edilmeyen modellerin kendi listemiz.</li>
+        </ul>
+      </section>
+    </article>
+  </main>
+  <footer><div class="wrap">
+    <p>Kulaklık Kontrol; Sony, SonyBridge veya Open Sound Connect ile bağlantılı değildir ve onlar tarafından onaylanmamış ya da desteklenmemektedir. Sony ve WH-1000XM5, Sony’nin ticari markalarıdır. Mac, Apple’ın ticari markasıdır.</p>
+    <p><a href="/?lang=tr">Kulaklık Kontrol</a> · <a href="/tr/guides/sony-wh-1000xm5-mac/">XM5 rehberi</a> · <a href="/tr/guides/sony-wh-1000xm4-xm5-xm6-mac/">XM4/XM5/XM6 rehberi</a> · <a href="/privacy.html?lang=tr">Gizlilik</a> · <a href="/press/?lang=tr">Press kit</a></p>
+  <!-- T64 hub --><p><a href="/guides/">Sony headphones on Mac: all guides (EN)</a> · <a href="/tr/guides/">Mac’te Sony kulaklık rehberleri (TR)</a></p><!-- /T64 hub --></div></footer>
+</body>
+</html>

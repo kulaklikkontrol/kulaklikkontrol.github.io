@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mac’te Sony WH-1000XM4, XM5 ve XM6: multipoint, ANC ve sorun giderme | Kulaklık Kontrol</title>
+  <meta name="description" content="Sony WH-1000XM4, WH-1000XM5 ve WH-1000XM6’yı Mac’te kullanın: multipoint geçişi, Bluetooth ses ve kontrol katmanları, arama mikrofonu kalitesi çözümleri ve 2 dakikalık XM4/XM6 donanım testi.">
+  <link rel="canonical" href="https://kulaklikkontrol.github.io/tr/guides/sony-wh-1000xm4-xm5-xm6-mac/">
+  <link rel="alternate" hreflang="en" href="https://kulaklikkontrol.github.io/guides/sony-wh-1000xm4-xm5-xm6-mac/">
+  <link rel="alternate" hreflang="tr" href="https://kulaklikkontrol.github.io/tr/guides/sony-wh-1000xm4-xm5-xm6-mac/">
+  <link rel="alternate" hreflang="x-default" href="https://kulaklikkontrol.github.io/guides/sony-wh-1000xm4-xm5-xm6-mac/">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://kulaklikkontrol.github.io/tr/guides/sony-wh-1000xm4-xm5-xm6-mac/">
+  <meta property="og:title" content="Mac’te Sony WH-1000XM4, XM5 ve XM6: multipoint, ANC ve sorun giderme">
+  <meta property="og:description" content="Bluetooth multipoint, ANC kontrolü ve arama sesi Mac’te nasıl davranır; ayrıca WH-1000XM4 ve WH-1000XM6 sahipleri için 2 dakikalık donanım kontrolü.">
+  <meta property="og:locale" content="tr_TR">
+  <meta property="og:locale:alternate" content="en_US">
+  <meta property="og:image" content="https://kulaklikkontrol.github.io/assets/xm4-xm5-xm6-guide-card.png">
+  <meta property="og:image:width" content="2400">
+  <meta property="og:image:height" content="1260">
+  <meta property="og:image:alt" content="Mac’te Sony XM4, XM5 ve XM6 rehber kartı; Kulaklık Kontrol’de gürültü engelleme ve ortam sesinin gerçek WH-1000XM5 ekran görüntüleriyle.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Mac’te Sony WH-1000XM4, XM5 ve XM6: multipoint, ANC ve sorun giderme">
+  <meta name="twitter:description" content="macOS 14+ üzerinde Sony WH-1000XM4, XM5 ve XM6 için multipoint, ANC ve bağlantı yardımı; ayrıca XM4/XM6 donanım testi kontrol listesi.">
+  <meta name="twitter:image" content="https://kulaklikkontrol.github.io/assets/xm4-xm5-xm6-guide-card.png">
+  <meta name="twitter:image:alt" content="Mac’te Sony XM4, XM5 ve XM6 rehber kartı; Kulaklık Kontrol’de gürültü engelleme ve ortam sesinin gerçek WH-1000XM5 ekran görüntüleriyle.">
+  <link rel="icon" href="/icon.png">
+  <link rel="stylesheet" href="/style.css?v=20261116-tour">
+  <link rel="stylesheet" href="/guides/sony-wh-1000xm5-mac/guide.css?v=20261116-xm5b">
+  <link rel="stylesheet" href="/guides/sony-wh-1000xm4-xm5-xm6-mac/multi.css?v=20261116-b">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "Mac’te Sony WH-1000XM4, XM5 ve XM6: multipoint, ANC ve bağlantı sorunlarını giderme",
+    "description": "Sony WH-1000XM4, WH-1000XM5 ve WH-1000XM6 için pratik Mac rehberi: Bluetooth multipoint, kontrol kanalı çakışmaları, aramalarda ses kalitesi düşüşü ve gerçek donanımda beta testi.",
+    "inLanguage": "tr",
+    "datePublished": "2026-11-17",
+    "dateModified": "2026-11-17",
+    "url": "https://kulaklikkontrol.github.io/tr/guides/sony-wh-1000xm4-xm5-xm6-mac/",
+    "mainEntityOfPage": "https://kulaklikkontrol.github.io/tr/guides/sony-wh-1000xm4-xm5-xm6-mac/",
+    "image": "https://kulaklikkontrol.github.io/assets/xm4-xm5-xm6-guide-card.png",
+    "publisher": {"@type": "Organization", "name": "Headphone Control", "url": "https://kulaklikkontrol.github.io/"}
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "inLanguage": "tr",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Kulaklık Kontrol WH-1000XM4 ve WH-1000XM6’da test edildi mi?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Hayır. Şimdiye kadar gerçek donanımda yalnızca Sony WH-1000XM5 test edildi. WH-1000XM4, WH-1000XM6, WF-1000XM4/XM5/XM6, LinkBuds, WH-CH720N ve ULT WEAR, Sony Bluetooth protokolünden uygulandı ve hâlâ sahiplerinden donanım raporlarına ihtiyaç duyuyor."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Müzik Mac’te çalarken Kulaklık Kontrol Sony kulaklığımı neden bulamıyor?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Mac’te ses çalma ve ayar kontrolü ayrı Bluetooth katmanları kullanır. Sistem Ayarları -> Gizlilik ve Güvenlik -> Bluetooth bölümünde Kulaklık Kontrol’e izin verildiğini kontrol edin, kontrol kanalını tutmaması için telefonunuzdaki Sony kulaklık uygulamasını kapatın, ardından Yeniden tara’ya tıklayın."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Sony WH-1000XM kulaklıklar Mac’te aramalar sırasında neden düz veya boğuk duyuluyor?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Bir uygulama kulaklık mikrofonunu kullandığında macOS, Bluetooth’u daha düşük bant genişlikli bir arama profiline geçirir. Arama uygulamasından çıkın ya da giriş olarak Mac’in dahili mikrofonunu seçin, ardından Ses Çıkışı’nda kulaklığınızı yeniden seçin."
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+<body class="xm5-guide">
+  <a class="skip-link" href="#guide">Rehbere geç</a>
+  <header class="top">
+    <div class="wrap">
+      <img src="/icon.png" alt="" width="28" height="28">
+      <a class="guide-brand" href="/?lang=tr">Kulaklık Kontrol</a>
+      <nav aria-label="Gezinme">
+        <a href="/?lang=tr">Uygulama</a>
+        <a href="#tester-checklist">Test</a>
+        <a lang="en" hreflang="en" href="/guides/sony-wh-1000xm4-xm5-xm6-mac/">EN</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap" id="guide">
+    <article>
+      <header class="guide-intro">
+        <h1>Mac’te Sony WH-1000XM4, XM5 ve XM6</h1>
+        <p>Bluetooth multipoint, ANC kontrolü ve arama sesi macOS’te nasıl çalışır; ayrıca WH-1000XM4 ve WH-1000XM6 sahipleri için 2 dakikalık donanım kontrolü.</p>
+        <div class="cta-row">
+          <a class="btn" id="beta" href="https://testflight.apple.com/join/e7S1TqA1">Ücretsiz betaya katıl</a>
+          <a class="btn ghost" href="#tester-checklist">2 dakikalık XM4/XM6 kontrolü</a>
+        </div>
+      </header>
+
+      <aside class="guide-scope" aria-label="Donanım test durumu ve gereksinimler">
+        <p><strong>Dürüst test durumu (macOS 14+ · Ücretsiz · Kapalı kaynak):</strong> Gerçek donanımda yalnızca <strong>Sony WH-1000XM5</strong> doğrulandı. <strong>WH-1000XM4</strong>, <strong>WH-1000XM6</strong>, <strong>WF-1000XM4/XM5/XM6</strong>, <strong>LinkBuds</strong>, <strong>WH-CH720N</strong> ve <strong>ULT WEAR</strong> Sony protokolünden uygulandı ve <strong>test edilmedi</strong>. XM4 veya XM6 sahibiyseniz betayı garantili destek olarak değil, bir donanım kontrolü olarak görün.</p>
+      </aside>
+
+      <nav class="guide-contents" aria-label="Bu sayfada">
+        <a href="#status">Model durumu</a>
+        <a href="#multipoint">Multipoint ve ses katmanları</a>
+        <a href="#troubleshooting">Sorun giderme</a>
+        <a href="#tester-checklist">2 dakikalık donanım testi</a>
+        <a href="#compare">Uygulamaları karşılaştır</a>
+        <a href="#references">Kaynaklar</a>
+      </nav>
+
+      <section id="status">
+        <h2>Hangi Sony modelleri test edildi, hangileri rapor bekliyor</h2>
+        <p>Kulaklık Kontrol, macOS IOBluetooth ile doğrudan bir Bluetooth RFCOMM kanalı üzerinden konuşur; Sony hesabı ve internet erişimi gerekmez. Sony firmware’i ve protokol alanları nesilden nesile değiştiği için her modelin gerçek bir cihazda doğrulanması gerekir.</p>
+        <table class="model-table">
+          <caption>Kulaklık Kontrol 1.1 betasında güncel doğrulama durumu (macOS 14+)</caption>
+          <thead>
+            <tr>
+              <th scope="col">Model</th>
+              <th scope="col">Donanım durumu</th>
+              <th scope="col">Sahiplerinden ihtiyacımız olan</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">WH-1000XM5</th>
+              <td data-label="Donanım durumu"><span class="status-pill tested">Gerçek donanımda test edildi</span></td>
+              <td data-label="İhtiyacımız olan">Uç durumlardaki firmware hatalarını veya multipoint tuhaflıklarını bildirin; <a href="/tr/guides/sony-wh-1000xm5-mac/">WH-1000XM5 kurulum rehberine</a> bakın.</td>
+            </tr>
+            <tr>
+              <th scope="row">WH-1000XM4</th>
+              <td data-label="Donanım durumu"><span class="status-pill">Uygulandı, test edilmedi</span></td>
+              <td data-label="İhtiyacımız olan">Bağlantıyı, Gürültü Engelleme / Ortam Sesi / Kapalı geçişlerini, EQ ön ayarlarını, pil okumasını ve multipoint geçişini doğrulayın.</td>
+            </tr>
+            <tr>
+              <th scope="row">WH-1000XM6</th>
+              <td data-label="Donanım durumu"><span class="status-pill">Uygulandı, test edilmedi</span></td>
+              <td data-label="İhtiyacımız olan">Bluetooth RFCOMM algılamasını, ANC/ortam sesi kaydırıcılarını, EQ bantlarını, pil tahminini ve herhangi bir geçişin sessizce başarısız olup olmadığını doğrulayın.</td>
+            </tr>
+            <tr>
+              <th scope="row">WF-1000XM4 / XM5 / XM6, LinkBuds S / Fit / Open, WH-CH720N, ULT WEAR</th>
+              <td data-label="Donanım durumu"><span class="status-pill">Uygulandı, test edilmedi</span></td>
+              <td data-label="İhtiyacımız olan">Mac modeliniz, macOS sürümünüz ve firmware bilgisiyle birlikte yalnızca “bağlanmadı” diyen kısa bir not bile protokol farklarını daraltmaya yardımcı olur.</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section id="multipoint">
+        <h2>Sony kulaklıklar telefon ve Mac arasında neden tahmin edilemez davranır</h2>
+        <p>Mac + Sony sorunlarının çoğu, Bluetooth’un ses çalmayı, mikrofonlu aramaları ve ayar kontrolünü üç ayrı katmana bölmesinden kaynaklanır. Birini değiştirmek diğer ikisini kendiliğinden düzeltmez.</p>
+        <div class="layer-cards">
+          <div class="layer-card">
+            <h3>1. Stereo ses (A2DP)</h3>
+            <p>Müziği ve videoyu, o anda çalma odağını tutan multipoint aygıttan çalar. Mac’te <strong>Sistem Ayarları → Ses → Çıkış</strong> bölümünden yönetilir.</p>
+          </div>
+          <div class="layer-card">
+            <h3>2. Arama mikrofonu profili (HFP)</h3>
+            <p>Zoom, Meet veya FaceTime kulaklık mikrofonunu her açtığında otomatik devreye girer ve müzik kalitesini geçici olarak düşük bant genişlikli mono sese indirir.</p>
+          </div>
+          <div class="layer-card">
+            <h3>3. Ayar kontrolü (RFCOMM)</h3>
+            <p>ANC, ortam sesi seviyesi, EQ ve pil durumunu taşır. Mac’in kontrol kanalını sorunsuz açabilmesi için test sırasında Sony’nin telefon uygulamasını kapatın.</p>
+          </div>
+        </div>
+
+        <div class="control-layout">
+          <div>
+            <h3>Telefona uzanmadan multipoint ve profiller arasında geçiş</h3>
+            <p>Test edilen WH-1000XM5 donanımında Kulaklık Kontrol, eşleşmiş multipoint aygıtları menü çubuğundan görmenizi, çalmayı tek tıkla Mac’e çekmenizi (<strong>Sesi Mac’e al</strong>; klavye kısayoluyla ya da macOS 26’da Denetim Merkezi’nden de kullanılabilir) veya Mac ses çalmaya başladığında otomatik geçiş yapmanızı sağlar.</p>
+            <p>Ayrıca <strong>Profiller</strong> kaydedebilir ve bir arama sırasında (mikrofona erişmeden macOS’in mikrofon kullanımda durumunu okuyarak), seçtiğiniz bir uygulama açıkken ya da ekran kilitlendiğinde gürültü modunu veya EQ’yu değiştiren otomatik kurallar ekleyebilirsiniz. Kural sona erdiğinde önceki ayarlarınız geri yüklenir.</p>
+            <p class="small muted">Burada yalnızca WH-1000XM5 ekran görüntüleri gösteriliyor. XM4/XM6 notlarını ancak gerçek donanım testinden sonra ekleyeceğiz.</p>
+          </div>
+          <figure class="panel-shot">
+            <a href="/press/assets/screenshot-anc.png" aria-label="Tam boyutlu WH-1000XM5 Gürültü Engelleme ekran görüntüsünü aç"><img src="/press/assets/screenshot-anc.png" width="696" height="820" alt="Kulaklık Kontrol’ün gerçek WH-1000XM5 ekran görüntüsü: Bağlandı AAC, %39 pil, seçili Gürültü Engelleme ve EQ kontrolleri." decoding="async"></a>
+            <figcaption>Kulaklık Kontrol’de gerçek WH-1000XM5 görüntüsü. XM4 ve XM6 kontrol panelleri gerçek donanım onayı bekliyor.</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section id="troubleshooting">
+        <h2>Mac’te sık görülen bağlantı, multipoint ve ses sorunlarının çözümleri</h2>
+        <p>Duyduğunuza uyan belirtiden başlayın. Bu adımlar macOS Bluetooth davranışını beta hatalarından ayırır.</p>
+        <div class="symptoms">
+          <details open>
+            <summary>Müzik Mac’te çalıyor ama Kulaklık Kontrol XM4 / XM5 / XM6’mı bulamıyor</summary>
+            <p>1) Kulaklığın <strong>Sistem Ayarları → Bluetooth</strong> bölümünde bağlı olduğunu doğrulayın. 2) <strong>Sistem Ayarları → Gizlilik ve Güvenlik → Bluetooth</strong> bölümünü açın ve Kulaklık Kontrol’e izin verildiğinden emin olun. 3) iPhone veya Android telefonunuzdaki Sony yardımcı uygulamasını zorla kapatın (kulaklıkla aynı anda yalnızca bir ayar uygulaması konuşmalı). 4) Kulaklık Kontrol’de <strong>Yeniden tara</strong>’ya tıklayın. Ses çalışırken kontrol hâlâ başarısız oluyorsa bu ayrımı olduğu gibi bildirin.</p>
+          </details>
+          <details>
+            <summary>Mac’te oynat’a bastığımda multipoint ses telefonda takılı kalıyor</summary>
+            <p>Önce telefondaki çalmayı duraklatın ve etkin ses uygulamalarını kapatın; bazı uygulamalar A2DP akışını sessizce tutmaya devam eder. Kulaklık Kontrol’de multipoint aygıt listesine bakın ya da <strong>Sesi Mac’e al</strong>’ı kullanın. Mac, Bluetooth ayarlarında Bağlı görünüyor ama ses gelmiyorsa <strong>Sistem Ayarları → Ses → Çıkış</strong> bölümünü kontrol edin.</p>
+          </details>
+          <details>
+            <summary>Aramalar sırasında ya da telefonu kapattıktan sonra ses düz, boş veya boğuk geliyor</summary>
+            <p>macOS kulaklık mikrofonunu etkinleştirdiğinde Bluetooth yüksek kaliteli stereodan arama profiline düşer. Apple bu davranışı <a href="https://support.apple.com/en-us/102217">If sound quality is reduced with Bluetooth headphones</a> (Bluetooth kulaklıklarda ses kalitesi düşerse) sayfasında belgeliyor. Çalışırken stereo müzik kalitesini korumak için <strong>Sistem Ayarları → Ses → Giriş</strong> bölümünde Mac’inizin dahili mikrofonunu seçin ya da arama uygulamasından çıkıp Denetim Merkezi → Ses bölümünde kulaklığınızı yeniden seçin.</p>
+          </details>
+          <details>
+            <summary>TestFlight “Kabul Edildi” diyor ya da macOS 13 gösteriyor ama Yükle düğmesi yok</summary>
+            <p>Web davetinde <strong>Kabul Et</strong>’e tıklamak bir Mac uygulaması yüklemez. Önce Apple’ın ücretsiz <a href="https://apps.apple.com/app/testflight/id899247664">Mac App Store’daki TestFlight uygulamasını</a> indirin, açın, <strong>Headphone Control</strong>’ü seçin ve <strong>Yükle</strong>’ye tıklayın. Not: Apple’ın genel katılım sayfasında “macOS 13 veya üstü” yazıyor, ancak Kulaklık Kontrol <strong>macOS 14 Sonoma veya üstü</strong> gerektirir.</p>
+          </details>
+          <details>
+            <summary>Sony kulaklığım şu an yanımda değil</summary>
+            <p>Kulaklık Kontrol’ü açın ve “Bağlı değil” ekranında <strong>Demo modunu dene</strong>’ye tıklayarak arayüzü, profilleri ve EQ kontrollerini örnek verilerle inceleyin. Demo modunun Bluetooth donanım uyumluluğunu test etmediğini unutmayın.</p>
+          </details>
+        </div>
+      </section>
+
+      <section id="tester-checklist">
+        <h2>XM4, XM6 ve kulak içi kulaklık sahipleri için 2 dakikalık donanım testi</h2>
+        <p>Test edilmemiş bir Sony modeliniz ve macOS 14+ çalıştıran bir Mac’iniz varsa, dört hızlı adımda bize işe yarar donanım bilgisi verebilirsiniz:</p>
+        <ol class="setup-steps">
+          <li><strong>TestFlight ile kurun:</strong> <a href="https://apps.apple.com/app/testflight/id899247664">Mac için Apple TestFlight</a>’ı indirin, <a href="https://testflight.apple.com/join/e7S1TqA1">beta bağlantısını</a> açın, <strong>Kabul Et</strong>’e, ardından <strong>Yükle</strong>’ye tıklayın ve ilk açılışta Bluetooth erişimine izin verin.</li>
+          <li><strong>Bluetooth’u hazırlayın:</strong> Kulaklığınızı <strong>Sistem Ayarları → Bluetooth</strong> bölümünde eşleştirip bağlayın, Sony’nin telefon uygulamasını kapatın ve Mac menü çubuğundaki kulaklık simgesini açın.</li>
+          <li><strong>4 hızlı kontrol yapın:</strong> Modeliniz <strong>Bağlandı</strong> olarak görünüyor mu? <strong>Gürültü Engelleme / Ortam Sesi / Kapalı</strong> duyulur şekilde değişiyor mu? Bir <strong>EQ ön ayarı</strong> (ör. Bass Boost ile Kapalı) sesi değiştiriyor mu? <strong>Multipoint</strong> aygıtları ve <strong>pil yüzdesi</strong> doğru görünüyor mu?</li>
+          <li><strong>Sonucunuzu gönderin (bağlanamasa bile):</strong> Hazır doldurulmuş bir e-posta açmak için aşağıdan modelinizi seçin, TestFlight içinde <strong>Beta Geri Bildirimi Gönder</strong>’i kullanın ya da <a href="https://github.com/kulaklikkontrol/kulaklikkontrol.github.io/issues/new?template=model-report.yml">GitHub’da bir model raporu açın</a>.</li>
+        </ol>
+
+        <div class="report-grid">
+          <a class="mail" href="mailto:ruzgarnos@gmail.com?subject=Model%20raporu%3A%20WH-1000XM4&amp;body=Kulakl%C4%B1k%3A%20Sony%20WH-1000XM4%0AFirmware%20%28biliniyorsa%29%3A%0AMac%20modeli%20%2F%20macOS%20s%C3%BCr%C3%BCm%C3%BC%3A%0AKulakl%C4%B1k%20Kontrol%20s%C3%BCr%C3%BCm%C3%BC%20%2F%20derlemesi%3A%0ABa%C4%9Fl%C4%B1%20telefon%20veya%20ikinci%20ayg%C4%B1t%3A%0A%0AMac%20Bluetooth%20ba%C4%9Fl%C4%B1%20m%C4%B1%3A%0AM%C3%BCzik%20Mac%E2%80%99ten%20%C3%A7al%C4%B1yor%20mu%3A%0AUygulama%20Ba%C4%9Fland%C4%B1%20g%C3%B6steriyor%20mu%3A%0AMultipoint%20%2F%20ANC%20%2F%20EQ%20%2F%20pil%3A%0A%0AYeniden%20olu%C5%9Fturma%20ad%C4%B1mlar%C4%B1%3A%0ANe%20oldu%3A%0A">WH-1000XM4 raporla</a>
+          <a class="mail" href="mailto:ruzgarnos@gmail.com?subject=Model%20raporu%3A%20WH-1000XM6&amp;body=Kulakl%C4%B1k%3A%20Sony%20WH-1000XM6%0AFirmware%20%28biliniyorsa%29%3A%0AMac%20modeli%20%2F%20macOS%20s%C3%BCr%C3%BCm%C3%BC%3A%0AKulakl%C4%B1k%20Kontrol%20s%C3%BCr%C3%BCm%C3%BC%20%2F%20derlemesi%3A%0ABa%C4%9Fl%C4%B1%20telefon%20veya%20ikinci%20ayg%C4%B1t%3A%0A%0AMac%20Bluetooth%20ba%C4%9Fl%C4%B1%20m%C4%B1%3A%0AM%C3%BCzik%20Mac%E2%80%99ten%20%C3%A7al%C4%B1yor%20mu%3A%0AUygulama%20Ba%C4%9Fland%C4%B1%20g%C3%B6steriyor%20mu%3A%0AMultipoint%20%2F%20ANC%20%2F%20EQ%20%2F%20pil%3A%0A%0AYeniden%20olu%C5%9Fturma%20ad%C4%B1mlar%C4%B1%3A%0ANe%20oldu%3A%0A">WH-1000XM6 raporla</a>
+          <a class="mail" href="mailto:ruzgarnos@gmail.com?subject=Model%20raporu%3A%20WF%20%2F%20LinkBuds%20%2F%20Di%C4%9Fer&amp;body=Kulakl%C4%B1k%3A%20%0AFirmware%20%28biliniyorsa%29%3A%0AMac%20modeli%20%2F%20macOS%20s%C3%BCr%C3%BCm%C3%BC%3A%0AKulakl%C4%B1k%20Kontrol%20s%C3%BCr%C3%BCm%C3%BC%20%2F%20derlemesi%3A%0ABa%C4%9Fl%C4%B1%20telefon%20veya%20ikinci%20ayg%C4%B1t%3A%0A%0AMac%20Bluetooth%20ba%C4%9Fl%C4%B1%20m%C4%B1%3A%0AM%C3%BCzik%20Mac%E2%80%99ten%20%C3%A7al%C4%B1yor%20mu%3A%0AUygulama%20Ba%C4%9Fland%C4%B1%20g%C3%B6steriyor%20mu%3A%0AMultipoint%20%2F%20ANC%20%2F%20EQ%20%2F%20pil%3A%0A%0AYeniden%20olu%C5%9Fturma%20ad%C4%B1mlar%C4%B1%3A%0ANe%20oldu%3A%0A">WF / LinkBuds / Diğer raporla</a>
+        </div>
+        <p class="small muted">Bağlantı sorunlarını bildirirken isterseniz <strong>Ayarlar → Hakkında → Gelişmiş: bağlantı günlüğü</strong> çıktısını da ekleyin. <a href="/guides/sony-wh-1000xm5-mac/report-template.txt" download>Düz metin rapor şablonunu indir (İngilizce)</a>.</p>
+      </section>
+
+      <section id="compare">
+        <h2>SonyBridge veya Open Sound Connect’e de mi bakıyorsunuz?</h2>
+        <p>Açık kaynak kod, Windows/Linux desteği ya da macOS 12–13 uyumluluğu istiyorsanız <a href="/tr/guides/headphone-control-vs-sonybridge-open-sound-connect/">Kulaklık Kontrol, SonyBridge ve Open Sound Connect karşılaştırmamızı</a> okuyun (diğer iki uygulamanın daha güçlü olduğu yerler dahil).</p>
+
+        <div class="bottom-cta">
+          <h3>Kulaklık Kontrol 1.1’i Mac’inizde deneyin</h3>
+          <p class="muted">Ücretsiz · Kapalı kaynak · macOS 14+ · WH-1000XM5’te test edildi; XM4, XM6 ve Sony kulak içi kulaklıklar için donanım geri bildirimi gerekiyor.</p>
+          <div class="cta-row">
+            <a class="btn" href="https://testflight.apple.com/join/e7S1TqA1">Ücretsiz betaya katıl</a>
+            <a class="btn ghost" href="https://youtu.be/uqtUES3l6HQ">88 sn XM5 demosunu izle</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="references" class="guide-references">
+        <h2>Doğrulanmış yardım ve ilgili rehberler</h2>
+        <ul>
+          <li><a href="/tr/guides/sony-wh-1000xm5-mac/">Mac’te WH-1000XM5: eksiksiz kurulum, ANC ve EQ anlatımı</a></li>
+          <li><a href="/tr/guides/sony-xm5-zoom-teams-calls-mac/">Zoom, Teams ve Meet’te XM5: boğuk arama sesini düzeltme</a></li>
+          <li><a href="/tr/guides/headphone-control-vs-sonybridge-open-sound-connect/">Kulaklık Kontrol, SonyBridge ve Open Sound Connect karşılaştırması</a></li>
+          <li><a href="/?lang=tr#models">9 modelin tam uyumluluk listesi ve rapor bağlantıları</a></li>
+          <li><a href="https://support.apple.com/guide/mac-help/connect-a-wireless-accessory-blth1004/mac">Apple: Connect a Bluetooth device with your Mac (Mac’e Bluetooth aygıtı bağlama)</a></li>
+          <li><a href="https://support.apple.com/guide/mac-help/change-the-sound-output-settings-mchlp2256/mac">Apple: Change the sound output settings on Mac (Mac’te ses çıkışı ayarlarını değiştirme)</a></li>
+          <li><a href="https://support.apple.com/en-us/102217">Apple: If sound quality is reduced with Bluetooth headphones (Bluetooth kulaklıklarda ses kalitesi düşerse)</a></li>
+          <li><a href="https://helpguide.sony.net/mdr/wh1000xm5/v1/en/contents/TP1000536739.html">Sony WH-1000XM5 Yardım Kılavuzu: Mac ile eşleştirme ve bağlanma</a></li>
+        </ul>
+      </section>
+    </article>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <p>Kulaklık Kontrol; Sony Group Corporation ile bağlantılı değildir ve onun tarafından onaylanmamış ya da desteklenmemektedir. Sony, WH-1000XM, WF-1000XM, LinkBuds ve ULT WEAR, Sony’nin ticari markalarıdır. Mac, Apple’ın ticari markasıdır.</p>
+      <p><a href="/?lang=tr">Kulaklık Kontrol</a> · <a href="/tr/guides/sony-wh-1000xm5-mac/">XM5 rehberi</a> · <a href="/tr/guides/headphone-control-vs-sonybridge-open-sound-connect/">Mac uygulamalarını karşılaştır</a> · <a href="/press/?lang=tr">Press kit</a> · <a href="/privacy.html?lang=tr">Gizlilik</a></p>
+    <!-- T64 hub --><p><a href="/guides/">Sony headphones on Mac: all guides (EN)</a> · <a href="/tr/guides/">Mac’te Sony kulaklık rehberleri (TR)</a></p><!-- /T64 hub --></div>
+  </footer>
+</body>
+</html>
