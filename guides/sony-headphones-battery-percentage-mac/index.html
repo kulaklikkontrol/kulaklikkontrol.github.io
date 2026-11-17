@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sony WH-1000XM5 Battery Percentage on Mac: How to See It in the Menu Bar | Headphone Control</title>
+  <meta name="description" content="How to check Sony WH-1000XM5 battery level on a Mac: why macOS often shows no percentage, the built-in voice prompt, and a free menu bar app that shows battery % with low-battery alerts.">
+  <link rel="canonical" href="https://kulaklikkontrol.github.io/guides/sony-headphones-battery-percentage-mac/">
+  <link rel="alternate" hreflang="en" href="https://kulaklikkontrol.github.io/guides/sony-headphones-battery-percentage-mac/">
+  <link rel="alternate" hreflang="tr" href="https://kulaklikkontrol.github.io/tr/guides/sony-headphones-battery-percentage-mac/">
+  <link rel="alternate" hreflang="x-default" href="https://kulaklikkontrol.github.io/guides/sony-headphones-battery-percentage-mac/">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://kulaklikkontrol.github.io/guides/sony-headphones-battery-percentage-mac/">
+  <meta property="og:title" content="Sony WH-1000XM5 Battery Percentage on Mac: How to See It in the Menu Bar">
+  <meta property="og:description" content="macOS rarely shows Sony battery levels. Here is how to see WH-1000XM5 battery % on a Mac, plus low-battery alerts.">
+  <meta property="og:image" content="https://kulaklikkontrol.github.io/assets/xm5-guide-card.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Sony WH-1000XM5 Battery Percentage on Mac: How to See It in the Menu Bar">
+  <meta name="twitter:image" content="https://kulaklikkontrol.github.io/assets/xm5-guide-card.png">
+  <link rel="icon" href="../../icon.png">
+  <link rel="stylesheet" href="../../style.css?v=20261116-tour">
+  <link rel="stylesheet" href="../sony-wh-1000xm5-mac/guide.css?v=20261116-xm5b">
+  <link rel="stylesheet" href="../sony-wh-1000xm4-xm5-xm6-mac/multi.css?v=20261116-b">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": "Sony WH-1000XM5 Battery Percentage on Mac: How to See It in the Menu Bar",
+  "description": "How to check Sony WH-1000XM5 battery level on a Mac: why macOS often shows no percentage, the built-in voice prompt, and a free menu bar app that shows battery % with low-battery alerts.",
+  "inLanguage": "en",
+  "datePublished": "2026-11-17",
+  "dateModified": "2026-11-17",
+  "url": "https://kulaklikkontrol.github.io/guides/sony-headphones-battery-percentage-mac/",
+  "mainEntityOfPage": "https://kulaklikkontrol.github.io/guides/sony-headphones-battery-percentage-mac/",
+  "image": "https://kulaklikkontrol.github.io/assets/xm5-guide-card.png",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Headphone Control",
+    "url": "https://kulaklikkontrol.github.io/"
+  }
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Why doesn't my Mac show the battery level of my Sony WH-1000XM5?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "macOS shows battery levels reliably for Apple and Beats headphones. For third-party headsets like Sony's, the percentage in Control Center or the Bluetooth menu is inconsistent: it may be missing, appear only sometimes, or not refresh. Sony reports detailed battery information over its own control protocol, which macOS does not read."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How can I check WH-1000XM5 battery without my phone?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Press the power button briefly while the headphones are on and the voice guidance says “Battery about XX%”. On a Mac, Headphone Control shows the percentage next to its menu bar icon and refreshes it every minute."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does Headphone Control warn me when the battery is low?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. It can send a macOS notification when the battery drops to 20%, 10% and 5%. The alert resets after the headphones are charged above 25%. You can turn alerts off in settings."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does it work with WH-1000XM4, XM6 or WF-1000XM5?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Battery reading has been verified on real hardware only with the WH-1000XM5. Other Sony models are implemented from the protocol and are marked as not yet hardware-tested."
+      }
+    }
+  ]
+}
+  </script>
+</head>
+<body class="xm5-guide">
+  <a class="skip-link" href="#guide">Skip to guide</a>
+  <header class="top">
+    <div class="wrap">
+      <img src="../../icon.png" alt="" width="28" height="28">
+      <a class="guide-brand" href="../../?lang=en">Headphone Control</a>
+      <nav aria-label="Main navigation">
+        <a href="../../?lang=en">The app</a>
+        <a href="#ways">Ways to check</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap" id="guide">
+    <article>
+      <header class="guide-intro">
+        <h1>Sony WH-1000XM5 battery percentage on Mac</h1>
+        <p>Your Mac plays audio through the XM5 all day but rarely tells you how much charge is left. Here is why, and every way to see the battery level without picking up your phone.</p>
+        <div class="cta-row">
+          <a class="btn" href="https://testflight.apple.com/join/e7S1TqA1">Join the free beta</a>
+          <a class="btn ghost" href="#ways">Jump to the options</a>
+        </div>
+      </header>
+
+      <aside class="guide-scope" aria-label="Testing status and requirements">
+        <p><strong>Honest testing status (macOS 14+ · Free · Closed source):</strong> battery reading in Headphone Control has been verified on real hardware with the <strong>Sony WH-1000XM5</strong> only. WH-1000XM4, WH-1000XM6 and WF-1000XM5 support is implemented from the protocol and <strong>not yet hardware-tested</strong>.</p>
+      </aside>
+
+      <nav class="guide-contents" aria-label="On this page">
+        <a href="#why">Why macOS shows nothing</a>
+        <a href="#ways">4 ways to check</a>
+        <a href="#menu-bar">Battery % in the menu bar</a>
+        <a href="#tips">Battery life tips</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+
+      <section id="why">
+        <h2>Why macOS often shows no battery level for Sony headphones</h2>
+        <p>Apple's own AirPods and Beats report their charge to macOS through Apple-specific channels, so their percentage shows up in Control Center and the Bluetooth menu. Third-party headphones are a different story: for Sony models the value can be missing, appear only after a reconnect, or stay stale for hours. Sony sends exact battery and charging status over its own control protocol, the one the Sony phone app uses, and macOS does not read it.</p>
+      </section>
+
+      <section id="ways">
+        <h2>4 ways to check XM5 battery while working on a Mac</h2>
+        <ol class="setup-steps">
+          <li><strong>Voice prompt.</strong> With the headphones on, briefly press the <strong>power button</strong>. The voice guidance says “Battery about XX%”. Sony notes it is a rough estimate. Free and always available, but you have to remember to do it.</li>
+          <li><strong>Control Center → Bluetooth on the Mac.</strong> Hover or open the Bluetooth module and look for a percentage next to the headphones. If it is there, good; on many setups it is not, or it is out of date.</li>
+          <li><strong>Your phone.</strong> The iPhone Batteries widget or Sony's phone app shows the level, but only if the phone is also connected (multipoint), which adds a second device fighting for the headphones.</li>
+          <li><strong>A menu bar app.</strong> <a href="../../?lang=en">Headphone Control</a> talks to the headphones over the same control channel as Sony's phone app and shows the percentage right next to its icon. Details below.</li>
+        </ol>
+      </section>
+
+      <section id="menu-bar">
+        <h2>Battery % in the Mac menu bar with Headphone Control</h2>
+        <div class="control-layout">
+          <div>
+            <ul>
+              <li><strong>Always visible:</strong> the battery percentage sits next to the headphone icon in the menu bar; the icon itself shows the current noise mode.</li>
+              <li><strong>Fresh:</strong> the level is re-read every 60 seconds while connected, with a charging indicator when the cable is in.</li>
+              <li><strong>Low-battery alerts:</strong> optional macOS notifications at <strong>20%</strong>, <strong>10%</strong> and <strong>5%</strong>, so you can charge before a call instead of during it.</li>
+              <li><strong>Same panel, more controls:</strong> Noise Canceling / Ambient / Off, ambient level, EQ presets and the multipoint device list.</li>
+            </ul>
+            <p class="small muted">No account, no network access: the app is sandboxed with only the Bluetooth entitlement.</p>
+          </div>
+          <figure class="panel-shot">
+            <a href="../../press/assets/screenshot-anc.png" aria-label="Open full-size WH-1000XM5 screenshot"><img src="../../press/assets/screenshot-anc.png" width="696" height="820" alt="Real WH-1000XM5 screenshot of Headphone Control showing Connected, battery level, Noise Canceling selected and EQ controls."></a>
+            <figcaption>Real WH-1000XM5 capture: battery ring at the top of the panel.</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section id="tips">
+        <h2>Getting more hours out of the XM5</h2>
+        <ul>
+          <li>Sony rates the WH-1000XM5 at up to <strong>30 hours</strong> over AAC (the codec a Mac uses) with noise canceling <em>or</em> Ambient Sound on, and up to <strong>40 hours</strong> with both off. At a quiet desk, <strong>Off</strong> is the mode that actually saves battery; Ambient costs the same as NC.</li>
+          <li>A short top-up goes a long way: about 1 hour of playback from 3 minutes of charging, or about 3 hours with a USB PD charger.</li>
+          <li>Disconnect devices you are not using from multipoint; fewer links means less radio work.</li>
+          <li>Keep firmware current through Sony's phone app; Headphone Control shows the firmware version but does not update it.</li>
+        </ul>
+        <p class="small muted">Figures from Sony's WH-1000XM5 Help Guide: <a href="https://helpguide.sony.net/mdr/wh1000xm5/v1/en/contents/TP1000534508.html">Available operating time</a> and <a href="https://helpguide.sony.net/mdr/wh1000xm5/v1/en/contents/TP1000534506.html">Checking the remaining battery charge</a>; real-world life depends on volume, codec and ANC use.</p>
+      </section>
+
+      <section id="faq" class="symptoms">
+        <h2>FAQ</h2>
+        <details open><summary>Why doesn't my Mac show the battery level of my Sony WH-1000XM5?</summary><p>macOS shows battery levels reliably for Apple and Beats headphones. For third-party headsets like Sony's, the percentage in Control Center or the Bluetooth menu is inconsistent: it may be missing, appear only sometimes, or not refresh. Sony reports detailed battery information over its own control protocol, which macOS does not read.</p></details>
+<details><summary>How can I check WH-1000XM5 battery without my phone?</summary><p>Press the power button briefly while the headphones are on and the voice guidance says “Battery about XX%”. On a Mac, Headphone Control shows the percentage next to its menu bar icon and refreshes it every minute.</p></details>
+<details><summary>Does Headphone Control warn me when the battery is low?</summary><p>Yes. It can send a macOS notification when the battery drops to 20%, 10% and 5%. The alert resets after the headphones are charged above 25%. You can turn alerts off in settings.</p></details>
+<details><summary>Does it work with WH-1000XM4, XM6 or WF-1000XM5?</summary><p>Battery reading has been verified on real hardware only with the WH-1000XM5. Other Sony models are implemented from the protocol and are marked as not yet hardware-tested.</p></details>
+
+        <div class="bottom-cta">
+          <h3>See your XM5 battery from the menu bar</h3>
+          <p class="muted">Free · Closed source · macOS 14+ · Tested on WH-1000XM5; hardware feedback needed for other Sony models.</p>
+          <div class="cta-row">
+            <a class="btn" href="https://testflight.apple.com/join/e7S1TqA1">Join the free beta</a>
+            <a class="btn ghost" href="https://youtu.be/uqtUES3l6HQ">Watch 88s XM5 demo</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="references" class="guide-references">
+        <h2>Related guides</h2>
+        <ul>
+          <li><a href="../sony-wh-1000xm5-mac/">WH-1000XM5 on Mac: full setup, ANC &amp; EQ walkthrough</a></li>
+          <li><a href="../sony-xm5-zoom-teams-calls-mac/">WH-1000XM5 on Zoom, Teams &amp; Meet (Mac)</a></li>
+          <li><a href="../sony-wh-1000xm4-xm5-xm6-mac/">WH-1000XM4, XM5 &amp; XM6 on Mac: multipoint and a hardware check</a></li>
+          <li><a href="../headphone-control-vs-sonybridge-open-sound-connect/">Headphone Control vs SonyBridge vs Open Sound Connect</a></li>
+        </ul>
+      </section>
+    </article>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <p>Headphone Control is not affiliated with, endorsed or sponsored by Sony Group Corporation. Sony and WH-1000XM are Sony trademarks. Mac is an Apple trademark.</p>
+      <p><a href="../../?lang=en">Headphone Control</a> · <a href="../sony-wh-1000xm5-mac/">XM5 guide</a> · <a href="../sony-wh-1000xm4-xm5-xm6-mac/">XM4/XM5/XM6 guide</a> · <a href="../headphone-control-vs-sonybridge-open-sound-connect/">Compare Mac apps</a> · <a href="../../press/?lang=en">Press kit</a> · <a href="../../privacy.html?lang=en">Privacy</a></p>
+    <!-- T64 hub --><p><a href="/guides/">Sony headphones on Mac: all guides (EN)</a> · <a href="/tr/guides/">Mac’te Sony kulaklık rehberleri (TR)</a></p><!-- /T64 hub --></div>
+  </footer>
+</body>
+</html>
