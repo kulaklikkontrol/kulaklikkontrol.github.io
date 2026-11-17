@@ -50,12 +50,14 @@
 <script src="lang.js"></script>
 </head>
 <body>
+<style id="beta-ribbon-css">.beta-ribbon{position:relative;z-index:60;background:linear-gradient(90deg,#0a66ff,#7a3cff);color:#fff;font:600 14px/1.35 -apple-system,BlinkMacSystemFont,'SF Pro Text','Helvetica Neue',sans-serif;text-align:center;padding:10px 16px}.beta-ribbon a{color:#fff;background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.55);border-radius:999px;padding:5px 14px;margin-left:10px;white-space:nowrap;display:inline-block;text-decoration:none;font-weight:700}.beta-ribbon a:hover{background:#fff;color:#0a66ff}.beta-ribbon .muted-r{opacity:.85;font-weight:500}@media(max-width:640px){.beta-ribbon{font-size:13px}.beta-ribbon a{margin:6px 0 0}}</style>
+<div class="beta-ribbon" role="region" aria-label="Beta tester">🎧 <span class="tr"><strong>Beta tester arıyoruz:</strong> <span class="muted-r">ücretsiz, 2 dakika, geri bildirimin uygulamayı şekillendiriyor.</span></span><span class="en"><strong>Beta testers wanted:</strong> <span class="muted-r">free, 2 minutes, your feedback shapes the app.</span></span><a href="https://testflight.apple.com/join/e7S1TqA1"><span class="tr">Beta Tester Ol →</span><span class="en">Become a beta tester →</span></a></div>
 <header class="top">
   <div class="wrap">
     <img src="icon.png" alt="">
     <span class="name"><span class="tr">Kulaklık Kontrol</span><span class="en">Headphone Control</span></span>
     <nav>
-      <a href="#beta">Beta</a>
+      <a href="#tester"><strong><span class="tr">Beta Tester Ol</span><span class="en">Be a tester</span></strong></a>
       <a href="#destek"><span class="tr">Destek</span><span class="en">Support</span></a>
       <a href="privacy.html"><span class="tr">Gizlilik</span><span class="en">Privacy</span></a>
       <span class="lang"><button data-set="tr">TR</button><button data-set="en">EN</button></span>
@@ -94,6 +96,21 @@
       </figcaption>
     </figure>
   </div>
+
+  <section id="tester" class="tester-call">
+    <div class="card" style="border:2px solid var(--accent);background:linear-gradient(135deg,var(--accent-soft),transparent)">
+      <h2 style="margin-top:0">🎧 <span class="tr">Beta tester ol: ilk 25 kişiyi arıyoruz</span><span class="en">Become a beta tester: we're looking for the first 25</span></h2>
+      <p class="tr">Uygulama ücretsiz ve beta aşamasında. Şu an yalnızca WH-1000XM5 gerçek cihazda test edildi; XM4, XM6, WF-1000XM5/XM4 ve diğer Sony modellerinde nasıl çalıştığını <strong>senin kulaklığınla</strong> öğrenmek istiyoruz. Hesap yok, veri toplama yok; tek istediğimiz kısa bir geri bildirim.</p>
+      <p class="en">The app is free and in beta. Only the WH-1000XM5 has been tested on real hardware so far; we want to learn how it behaves on XM4, XM6, WF-1000XM5/XM4 and other Sony models <strong>with your headphones</strong>. No account, no data collection; all we ask for is a short piece of feedback.</p>
+      <div class="grid" style="margin:18px 0">
+        <div><strong>1.</strong> <span class="tr">Mac App Store'dan ücretsiz <a href="https://apps.apple.com/app/testflight/id899247664">TestFlight</a>'ı kur.</span><span class="en">Install the free <a href="https://apps.apple.com/app/testflight/id899247664">TestFlight</a> app from the Mac App Store.</span></div>
+        <div><strong>2.</strong> <span class="tr"><a href="https://testflight.apple.com/join/e7S1TqA1">Beta bağlantısını</a> aç, “Kabul Et” → “Yükle”.</span><span class="en">Open the <a href="https://testflight.apple.com/join/e7S1TqA1">beta link</a>, click “Accept” → “Install”.</span></div>
+        <div><strong>3.</strong> <span class="tr">Kulaklığını bağla, mod/EQ/pil'i dene; TestFlight'ta “Geri Bildirim Gönder” ile modelini ve sonucu yaz.</span><span class="en">Connect your headphones, try mode/EQ/battery, then use “Send Beta Feedback” in TestFlight with your model and result.</span></div>
+      </div>
+      <a class="btn" href="https://testflight.apple.com/join/e7S1TqA1"><span class="tr">Beta Tester Ol →</span><span class="en">Become a beta tester →</span></a>
+      <p class="small muted" style="margin-top:10px"><span class="tr">macOS 14+ gerekir. Sony'den bağımsız geliştirildi.</span><span class="en">Requires macOS 14+. Independently developed, not affiliated with Sony.</span></p>
+    </div>
+  </section>
 
   <section>
     <div class="grid">
