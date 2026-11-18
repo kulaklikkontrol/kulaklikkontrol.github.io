@@ -8,14 +8,14 @@
 <link rel="canonical" href="https://kulaklikkontrol.github.io/en/"><!-- T94 hreflang --><link rel="alternate" hreflang="en" href="https://kulaklikkontrol.github.io/en/"><link rel="alternate" hreflang="tr" href="https://kulaklikkontrol.github.io/tr/"><link rel="alternate" hreflang="ja" href="https://kulaklikkontrol.github.io/ja/"><link rel="alternate" hreflang="de" href="https://kulaklikkontrol.github.io/de/"><link rel="alternate" hreflang="es" href="https://kulaklikkontrol.github.io/es/"><link rel="alternate" hreflang="fr" href="https://kulaklikkontrol.github.io/fr/"><link rel="alternate" hreflang="x-default" href="https://kulaklikkontrol.github.io/"><!-- /T94 hreflang -->
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://kulaklikkontrol.github.io/en/"><meta property="og:locale" content="en_US">
-<meta property="og:title" content="Headphone Control – Sony headphone settings on your Mac (WH-1000XM5 tested)">
-<meta property="og:description" content="Change Sony headphone settings from the Mac menu bar: noise canceling, ambient sound, EQ and battery. Only WH-1000XM5 is hardware-tested; other models are untested. Free beta for macOS 14+.">
-<meta property="og:image" content="https://kulaklikkontrol.github.io/assets/social-card.png">
-<meta property="og:image:width" content="2400">
-<meta property="og:image:height" content="1260">
-<meta property="og:image:alt" content="Headphone Control with the real WH-1000XM5 noise control panel. Free beta for macOS 14+.">
+<meta property="og:title" content="Headphone Control – AirPods-style switching for your Sony XM5 on Mac">
+<meta property="og:description" content="Phone to Mac in one click from the menu bar, or automatically when audio starts on your Mac. Noise canceling and EQ too. Free beta; tested on WH-1000XM5.">
+<meta property="og:image" content="https://kulaklikkontrol.github.io/assets/og-switching.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Before/after: macOS Bluetooth menu (~20 s) vs one click in Headphone Control (2 s). Tested on WH-1000XM5.">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://kulaklikkontrol.github.io/assets/social-card.png">
+<meta name="twitter:image" content="https://kulaklikkontrol.github.io/assets/og-switching.png">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -68,10 +68,9 @@
 <style id="join-box-css">.jbx{margin:22px 0 26px;padding:20px 22px;border:2px solid var(--accent,#0a66ff);border-radius:18px;background:linear-gradient(135deg,var(--accent-soft,#0a66ff14),transparent 70%),var(--card,#fff);color:var(--fg,#1d1d1f);font-size:16px;line-height:1.5;text-align:left}.jbx-head{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px}.jbx h2{margin:0;font-size:21px;line-height:1.25;border:0;padding:0}.jbx-sub{margin:4px 0 0;color:var(--muted,#6e6e73);font-size:14px}.jbx-btn{display:inline-block;background:var(--button-bg,#0756d4);color:var(--button-fg,#fff)!important;font-weight:700;border-radius:999px;padding:11px 20px;text-decoration:none!important;white-space:nowrap}.jbx-btn:hover{filter:brightness(1.08)}.jbx ol{list-style:none;margin:16px 0 0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:10px;counter-reset:jbx}.jbx li{counter-increment:jbx;background:var(--card,#fff);border:1px solid var(--line,#d2d2d7);border-radius:12px;padding:10px 12px 10px 44px;position:relative;font-size:15px;margin:0}.jbx li::before{content:counter(jbx);position:absolute;left:12px;top:10px;width:22px;height:22px;border-radius:50%;background:var(--accent,#0a66ff);color:#fff;font:700 13px/22px -apple-system,sans-serif;text-align:center}.jbx-models{margin:14px 0 0;font-size:14px;color:var(--muted,#6e6e73)}.jbx-models b{color:var(--fg,#1d1d1f)}.jbx-tag{display:inline-block;border-radius:999px;padding:1px 8px;margin:2px 2px 0 0;font-size:13px;font-weight:600}.jbx-ok{background:#1f9d5530;color:inherit}.jbx-user{background:#e6a10030}.jbx-m{white-space:nowrap}.jbx-try{background:var(--accent-soft,#0a66ff14)}@media(max-width:720px){.jbx ol{grid-template-columns:1fr}.jbx-btn{width:100%;text-align:center}}</style><section class="jbx" id="join" aria-label="TestFlight"><div class="jbx-head"><div><h2>🎧 Join the free beta on TestFlight — about 30 seconds</h2><p class="jbx-sub">Runs on your Mac · macOS 14 or later · free, no account, no tracking</p></div><a class="jbx-btn" href="https://testflight.apple.com/join/e7S1TqA1">Join on TestFlight →</a></div><ol><li>Install &amp; open Apple’s free <a href="https://apps.apple.com/app/testflight/id899247664">TestFlight app</a> on your Mac.</li><li>Click the <a href="https://testflight.apple.com/join/e7S1TqA1">join link</a> (or the button above).</li><li>Click <b>Accept</b>, then <b>Install</b>. Accepting alone doesn’t install the app.</li></ol><p class="jbx-models"><b>Supported models:</b> <span class="jbx-tag jbx-ok">✓ Tested: WH-1000XM5</span> <span class="jbx-tag jbx-user">User-reported: WH-CH720N</span> <span class="jbx-tag jbx-try">Try &amp; report:</span> <span class="jbx-m">WH-1000XM4</span> · <span class="jbx-m">WH-1000XM6</span> · <span class="jbx-m">WF-1000XM4</span> · <span class="jbx-m">WF-1000XM5</span> · <span class="jbx-m">WF-1000XM6</span> · <span class="jbx-m">LinkBuds S/Fit/Open</span> · <span class="jbx-m">ULT WEAR</span></p></section>
   <div class="hero">
     <img class="icon" src="/icon.png" alt="">
-    <h1><span class="en">Your headphones, on your Mac.</span></h1>
+    <h1><span class="en">AirPods-style switching for your&nbsp;Sony&nbsp;XM5.</span></h1>
     <p>
-      
-      <span class="en">Noise canceling, ambient sound, EQ and device switching for your Sony headphones, straight from the Mac menu bar.</span>
+      <span class="en">Phone playing, then you start a video on your Mac? The headphones follow it automatically, or switch with one click in the menu bar. Noise canceling, ambient sound and EQ live there too.</span>
     </p>
     <p class="small muted" style="margin-top:14px">
       
@@ -85,17 +84,16 @@
         <span class="en"><strong>Free · closed source · requires macOS 14+.</strong> Only the WH-1000XM5 has been tested on real hardware; other models are untested. First install Apple's <a href="https://apps.apple.com/app/testflight/id899247664">TestFlight</a> app, then click Accept and Install. Accepting alone does not install the app.</span>
       </p>
     </div>
-    <figure class="product-tour">
-      <video controls playsinline preload="none" poster="/assets/tour-poster.jpg" width="1270" height="760" aria-describedby="tour-caption">
-        <source src="/assets/screenshot-tour.mp4" type="video/mp4">
-        <a href="https://youtu.be/uqtUES3l6HQ">Watch the demo on YouTube</a>
+    <figure class="product-tour switch-demo">
+      <video autoplay muted loop playsinline preload="metadata" poster="/assets/before-after-poster.jpg" width="1200" height="675" style="aspect-ratio:1200/675" aria-describedby="switch-caption">
+        <source src="/assets/before-after.mp4" type="video/mp4">
+        <img src="/assets/before-after.gif" alt="Before/after demo" width="1200" height="675">
       </video>
-      <figcaption id="tour-caption" class="small muted">
-        
-        <span class="en">A short tour of real WH-1000XM5 screenshots: noise control, ambient sound and EQ. No audio.</span>
-      </figcaption>
+      <figcaption id="switch-caption" class="small muted"><span class="en">Left: the old way through the macOS Bluetooth menu (illustration, ~20 s). Right: the real app, one click, ~2 s. Tested on WH-1000XM5 only.</span></figcaption>
     </figure>
   </div>
+
+  <style id="f100-css">.f100{margin:28px 0;padding:24px;border-radius:20px;border:1px solid var(--line,#d2d2d7);background:linear-gradient(135deg,#2fd17114,transparent 60%),var(--card,#fff)}.f100 h2{margin:0 0 6px;font-size:24px;border:0;padding:0}.f100-bar{height:14px;border-radius:999px;background:var(--line,#d2d2d7);overflow:hidden;margin:16px 0 6px}.f100-bar i{display:block;height:100%;background:linear-gradient(90deg,#2fd171,#0a84ff);border-radius:999px}.f100-num{display:flex;justify-content:space-between;font-size:14px;color:var(--muted,#6e6e73)}.f100-num b{font-size:22px;color:var(--fg,#1d1d1f)}.f100 ul{list-style:none;padding:0;margin:16px 0;display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.f100 li{background:var(--bg,#fff);border:1px solid var(--line,#d2d2d7);border-radius:12px;padding:12px;font-size:15px;line-height:1.45;margin:0}.f100-names{font-size:14px;color:var(--muted,#6e6e73)}@media(max-width:720px){.f100 ul{grid-template-columns:1fr}}</style><section class="f100" id="founding-100-en"><h2>🏅 Founding 100: the first 100 testers</h2><p>We're looking for the first 100 people to try the app. The number is updated by hand from the real tester count in App Store Connect, never inflated.</p><div class="f100-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="30"><i style="width:30%"></i></div><div class="f100-num"><span><b>30</b> / 100 testers</span><span>Last updated: 19 Nov 2026, 00:21 TRT (App Store Connect)</span></div><ul><li><b>Your name on the thank-you list.</b> If you want (say so in TestFlight feedback or by email), the first 100 testers are credited by name on this site.</li><li><b>Free for life.</b> If a paid version ever ships, it stays free for the Founding 100.</li><li><b>A direct line to the developer.</b> Bugs and requests are read by the one-person team and go into the next build.</li></ul><p class="f100-names">Thank-you list: the first names appear here as people opt in.</p><p><a class="btn" href="https://testflight.apple.com/join/e7S1TqA1">Join the Founding 100 →</a></p><p class="small muted">Own an XM4 or XM6? You're especially wanted: those models haven't been tested yet.</p></section>
 
   <section id="tester" class="tester-call">
     <div class="card" style="border:2px solid var(--accent);background:linear-gradient(135deg,var(--accent-soft),transparent)">
