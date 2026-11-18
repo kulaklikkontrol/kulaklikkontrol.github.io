@@ -26,9 +26,9 @@ header.top img { width: 28px; height: 28px; border-radius: 7px; }
 header.top .name { font-weight: 650; }
 header.top nav { margin-left: auto; display: flex; gap: 18px; font-size: 15px; align-items: center; }
 .lang { display: inline-flex; border: 1px solid var(--line); border-radius: 999px; overflow: hidden; }
-.lang button { border: 0; background: transparent; color: var(--muted); font: inherit; font-size: 13px;
-  padding: 3px 10px; cursor: pointer; }
-.lang button.on { background: var(--button-bg); color: var(--button-fg); }
+.lang button, .lang a { border: 0; background: transparent; color: var(--muted); font: inherit; font-size: 13px;
+  padding: 3px 10px; cursor: pointer; text-decoration: none; }
+.lang button.on, .lang a.on { background: var(--button-bg); color: var(--button-fg); }
 
 .hero { text-align: center; padding: 64px 0 28px; }
 .hero img.icon { width: 112px; height: 112px; border-radius: 26px; box-shadow: 0 10px 30px #0003; }
