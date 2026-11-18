@@ -1,10 +1,11 @@
 HEADPHONE CONTROL
-Mac menu bar control for Sony headphones
+AirPods-style switching for your Sony WH-1000XM5
 
 Developer: Rüzgar Kurt
 Website: https://kulaklikkontrol.github.io/
 Free beta: https://testflight.apple.com/join/e7S1TqA1
 Full demo: https://youtu.be/uqtUES3l6HQ
+15-second switching demo: https://kulaklikkontrol.github.io/assets/before-after.mp4
 Press kit: https://kulaklikkontrol.github.io/press/
 Setup guide (WH-1000XM5 on Mac): https://kulaklikkontrol.github.io/guides/sony-wh-1000xm5-mac/
 Contact: ruzgarnos@gmail.com
@@ -13,10 +14,14 @@ Price: Free in beta and in the planned App Store release
 Source: Closed source
 
 SHORT DESCRIPTION
-Headphone Control puts noise canceling, ambient sound, EQ and multipoint settings for Sony headphones in your Mac's menu bar.
+Headphone Control brings your already paired WH-1000XM5 back to the Mac from the menu bar. You can also opt in to automatic switching when Mac audio starts. Noise canceling, ambient sound and EQ are in the same menu.
 
 DETAILS
 Change everyday headphone settings without reaching for a phone. The app also includes profiles, automatic rules during calls or while a selected app is open, widgets, Shortcuts actions and keyboard shortcuts. It sends settings directly over Bluetooth, requires no account and collects no analytics.
+
+FOUNDING 100
+The first 100 testers can opt in to a public thank-you. If a paid edition is ever released, those testers get lifetime access at no charge.
+Progress: https://kulaklikkontrol.github.io/en/#founding-100-en
 
 HARDWARE TESTING
 Only WH-1000XM5 has been tested on real hardware. WH-1000XM4, WH-1000XM6, WF-1000XM4/XM5/XM6, LinkBuds S/Fit/Open, WH-CH720N and ULT WEAR are implemented from the protocol but still need real hardware testing. Settings vary by model. Please do not describe these other models as hardware-verified.
@@ -25,6 +30,6 @@ FEEDBACK
 Include your headphone model, firmware if known, Mac model and macOS version. Tell us whether it connects, which settings work and what fails. TestFlight's Send Beta Feedback, the website's model report links and the contact email are available.
 
 ASSETS
-Three original WH-1000XM5 screenshots and three product images are included. The short MP4/GIF is a slideshow of screenshots, not a real-time screen recording. The full YouTube demo is linked above.
+Three original WH-1000XM5 screenshots and three product images are included. The 15-second switching MP4/GIF uses an illustrated Bluetooth workflow and a screenshot of the app. The original screenshot tour and share cards are also included.
 
 Images may be used when covering the app. Keep the UI and hardware testing status accurate. The app is independently developed and is not affiliated with, endorsed or sponsored by Sony.
