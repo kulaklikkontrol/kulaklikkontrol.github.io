@@ -173,6 +173,14 @@
           <div>
             <h3>Switching multipoint &amp; profiles without grabbing your phone</h3>
             <p>On tested WH-1000XM5 hardware, Headphone Control lets you inspect paired multipoint devices from the menu bar, pull playback over to your Mac with one click (<strong>Play on Mac</strong>, also available via a keyboard shortcut or Control Center on macOS 26), or switch automatically when the Mac starts playing audio.</p>
+            <details id="launcher-shortcuts">
+              <summary>Run Play on Mac from Raycast or Alfred</summary>
+              <p>After installing the beta, open Apple Shortcuts, create a shortcut named <strong>Headphone Control Play on Mac</strong>, and add Headphone Control’s <strong>Play on Mac</strong> action. Run it once in Shortcuts with the headphones connected.</p>
+              <ul>
+                <li><strong>Raycast:</strong> Open <strong>Create Quicklink</strong> and save <code>shortcuts://run-shortcut?name=Headphone%20Control%20Play%20on%20Mac</code>. Find the Quicklink in Raycast or assign it a hotkey. <a href="https://manual.raycast.com/quicklinks">Raycast Quicklinks manual</a></li>
+                <li><strong>Alfred:</strong> Install the Shortcuts workflow from Alfred Gallery (requires Powerpack). Enter <code>sc</code> followed by the shortcut’s name and press Return. <a href="https://alfred.app/workflows/alfredapp/shortcuts/">Alfred Shortcuts workflow</a></li>
+              </ul>
+            </details>
             <p>You can also save <strong>Profiles</strong> and add automatic rules that change noise mode or EQ during a call (reading macOS mic-in-use state without accessing the mic), while a chosen app is open, or when the screen locks. Your previous settings restore when the rule ends.</p>
             <p class="small muted">Only WH-1000XM5 screenshots are shown here. We will add XM4/XM6 notes only after real hardware testing.</p>
           </div>
