@@ -1,5 +1,8 @@
 blank_issues_enabled: true
 contact_links:
-  - name: Email support
-    url: https://kulaklikkontrol.github.io/#destek
-    about: Prefer email? The address is on the support page.
+  - name: Join the TestFlight beta
+    url: https://testflight.apple.com/join/e7S1TqA1
+    about: Free public beta for macOS 14+
+  - name: Compatibility discussion
+    url: https://github.com/kulaklikkontrol/kulaklikkontrol.github.io/discussions/2
+    about: Share results for your Sony model

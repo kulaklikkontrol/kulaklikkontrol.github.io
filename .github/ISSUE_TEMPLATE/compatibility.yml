@@ -1,0 +1,46 @@
+name: Compatibility report
+description: Tell us how Headphone Control works with your Sony model
+title: "[Compat] <model> on macOS <version>"
+labels: ["compatibility"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Only the WH-1000XM5 has been tested on real hardware so far. Your report helps confirm other models.
+        Not in the beta yet? Join free: https://testflight.apple.com/join/e7S1TqA1
+  - type: input
+    id: model
+    attributes:
+      label: Headphone model
+      placeholder: e.g. WF-1000XM5
+    validations:
+      required: true
+  - type: input
+    id: mac
+    attributes:
+      label: Mac and macOS version
+      placeholder: e.g. MacBook Air M3, macOS 15.5
+    validations:
+      required: true
+  - type: dropdown
+    id: connects
+    attributes:
+      label: Does the app connect?
+      options: ["Yes", "No", "Sometimes"]
+    validations:
+      required: true
+  - type: checkboxes
+    id: works
+    attributes:
+      label: What works
+      options:
+        - label: Noise cancelling / Ambient / Off
+        - label: Ambient level / Focus on Voice
+        - label: EQ
+        - label: Battery
+        - label: Multipoint / play on Mac
+        - label: Speak-to-Chat / DSEE / other settings
+  - type: textarea
+    id: notes
+    attributes:
+      label: What didn't work (and anything else)
