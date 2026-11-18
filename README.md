@@ -18,7 +18,7 @@ Switch Noise Cancelling / Ambient Sound / Off, set the ambient level, pick an EQ
 Sony's own app only runs on phones, so on a Mac you normally have to pick up the phone just to toggle noise cancelling. Headphone Control puts those controls in the menu bar.
 
 - **Requirements:** macOS 14 or later, a Sony headphone paired with the Mac.
-- **Tested on hardware:** WH-1000XM5 only. Other models (WH-1000XM4, WH-1000XM6, WF-1000XM4/XM5, LinkBuds, ULT Wear, WH-CH720N…) are untested; that is exactly what the beta is for.
+- **Tested on hardware:** WH-1000XM5 only. One beta tester reported the WH-CH720N works (user report, not tested by the developer). Other models (WH-1000XM4, WH-1000XM6, WF-1000XM4/XM5, LinkBuds, ULT Wear…) are untested; that is exactly what the beta is for.
 - **Cost:** free. No account, no analytics, no ads.
 
 **How to help (about 5 minutes):**
