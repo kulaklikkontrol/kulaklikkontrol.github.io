@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Talking to Sony headphones from a sandboxed macOS app | Headphone Control</title><meta name="description" content="How a native, sandboxed macOS app talks to Sony WH-1000XM headphones over Bluetooth RFCOMM: finding the channel, frame format, escaping, the ACK dance. Tested on WH-1000XM5 only.">
+<link rel="canonical" href="https://kulaklikkontrol.github.io/blog/sony-headphone-protocol-macos/">
+<meta property="og:type" content="article"><meta property="og:url" content="https://kulaklikkontrol.github.io/blog/sony-headphone-protocol-macos/">
+<meta property="og:title" content="Talking to Sony headphones from a sandboxed macOS app"><meta property="og:description" content="How a native, sandboxed macOS app talks to Sony WH-1000XM headphones over Bluetooth RFCOMM: finding the channel, frame format, escaping, the ACK dance. Tested on WH-1000XM5 only.">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://kulaklikkontrol.github.io/press/assets/screenshot-anc.png"><meta property="og:image:alt" content="Headphone Control with WH-1000XM5 on real hardware.">
+<meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Talking to Sony headphones from a sandboxed macOS app"><meta name="twitter:description" content="How a native, sandboxed macOS app talks to Sony WH-1000XM headphones over Bluetooth RFCOMM: finding the channel, frame format, escaping, the ACK dance. Tested on WH-1000XM5 only."><meta name="twitter:image" content="https://kulaklikkontrol.github.io/press/assets/screenshot-anc.png">
+<link rel="icon" href="/icon.png"><link rel="stylesheet" href="/style.css?v=t64"><link rel="stylesheet" href="/guides/sony-wh-1000xm5-mac/guide.css?v=t64"><link rel="stylesheet" href="/guides/editorial.css?v=t64"><style>.tech pre{background:#0f172a;color:#e2e8f0;border-radius:10px;padding:14px 16px;overflow-x:auto;font:13px/1.5 ui-monospace,SFMono-Regular,Menlo,monospace;overflow-wrap:normal}.tech pre code{background:none;color:inherit;padding:0}.tech code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.92em;background:rgba(10,102,255,.08);padding:1px 5px;border-radius:5px}.tech .table-scroll{overflow-x:auto}.tech table{border-collapse:collapse;margin:12px 0;width:100%}.tech th,.tech td{border:1px solid rgba(127,127,127,.3);padding:7px 10px;text-align:left}.tech figure img{max-width:100%;height:auto;border-radius:12px}</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "TechArticle", "headline": "Talking to Sony headphones from a sandboxed macOS app: RFCOMM, framing, and a two-value sequence number", "description": "How a native, sandboxed macOS app talks to Sony WH-1000XM headphones over Bluetooth RFCOMM: finding the channel, frame format, escaping, the ACK dance. Tested on WH-1000XM5 only.", "url": "https://kulaklikkontrol.github.io/blog/sony-headphone-protocol-macos/", "mainEntityOfPage": "https://kulaklikkontrol.github.io/blog/sony-headphone-protocol-macos/", "inLanguage": "en", "datePublished": "2026-11-18", "dateModified": "2026-11-18", "author": {"@type": "Organization", "name": "Headphone Control"}, "publisher": {"@type": "Organization", "name": "Headphone Control", "url": "https://kulaklikkontrol.github.io/"}, "image": "https://kulaklikkontrol.github.io/press/assets/screenshot-anc.png", "about": {"@id": "https://kulaklikkontrol.github.io/#software"}}</script></head><body class="xm5-guide seo-page">
+<style id="beta-ribbon-css">.beta-ribbon{position:relative;z-index:60;background:linear-gradient(90deg,#0a66ff,#7a3cff);color:#fff;font:600 14px/1.35 -apple-system,BlinkMacSystemFont,'SF Pro Text','Helvetica Neue',sans-serif;text-align:center;padding:10px 16px}.beta-ribbon a{color:#fff;background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.55);border-radius:999px;padding:5px 14px;margin-left:10px;white-space:nowrap;display:inline-block;text-decoration:none;font-weight:700}.beta-ribbon a:hover{background:#fff;color:#0a66ff}.beta-ribbon .muted-r{opacity:.85;font-weight:500}@media(max-width:640px){.beta-ribbon{font-size:13px}.beta-ribbon a{margin:6px 0 0}}</style>
+<div class="beta-ribbon" role="region" aria-label="Beta testers wanted">🎧 <strong>Beta testers wanted:</strong> <span class="muted-r">free Mac app for Sony headphones (macOS 14+). Tell us your model, we'll make it work.</span><a href="https://testflight.apple.com/join/e7S1TqA1">Become a beta tester →</a></div><a class="skip-link" href="#article">Skip to article</a><header class="top"><div class="wrap"><img src="/icon.png" alt="" width="28" height="28"><a class="guide-brand" href="/?lang=en">Headphone Control</a><nav aria-label="Navigation"><a href="/guides/">Guides</a><a href="/blog/why-headphone-control/">Blog</a></nav></div></header><main class="wrap tech" id="article"><article><header class="guide-intro"><h1>Talking to Sony headphones from a sandboxed macOS app</h1><p><strong>RFCOMM, framing, and a two-value sequence number.</strong> Engineering notes from building a native Sony headphone controller for the Mac menu bar. Published 18 November 2026.</p><a class="btn" href="https://testflight.apple.com/join/e7S1TqA1">Join the free beta</a></header><aside class="guide-scope" aria-label="Scope"><p><strong>Free · closed source · macOS 14+.</strong> Only the WH-1000XM5 has been tested on real hardware by the developer; one beta tester reported a WH-CH720N working. Everything else is untested. Independently developed; not affiliated with Sony.</p></aside>
+<p>Sony's WH-1000XM headphones have a lot of settings: noise cancelling levels, ambient sound, EQ, speak-to-chat, multipoint. All of them live in the Sony "Sound Connect" phone app. There's no official way to change them from a Mac. I got tired of picking up my phone to switch to ambient mode while sitting at my desk, so I wrote a small native macOS app that speaks the headphone's control protocol directly.</p>
+<p>This post covers what that protocol looks like on the wire and how to talk to it with IOBluetooth inside the App Sandbox. Everything below comes from the code that's actually shipping. <strong>Honest caveat up front:</strong> the only hardware I own is a WH-1000XM5. One beta tester has reported a WH-CH720N working. Everything else is untested.</p>
+<nav class="guide-contents" aria-label="On this page"><a href="#s1">1. Finding the channel</a><a href="#s2">2. The frame</a><a href="#s3">3. The ACK dance (this is where I lost an evening)</a><a href="#s4">4. Commands are short</a><a href="#s5">5. Shipping it through App Review</a><a href="#s6">What it does today</a></nav>
+<figure><img src="/press/assets/screenshot-tour.gif" alt="Headphone Control menu-bar panel tour on a WH-1000XM5: noise control, ambient sound, EQ." loading="lazy"><figcaption>The app on a real WH-1000XM5.</figcaption></figure>
+<section id="s1"><h2>1. Finding the channel</h2>
+<p>The headphones expose a vendor-specific RFCOMM service next to the normal A2DP/HFP profiles. You don't need to pair anything again. The Mac is already paired for audio, so you just look up the service record by UUID on the <code>IOBluetoothDevice</code>:</p>
+<pre><code class="language-swift">private static let serviceUUIDs: [[UInt8]] = [
+    uuidBytes(&quot;956C7B26-D49A-4BA8-B03F-B17D393CB6E2&quot;), // newer service, preferred
+    uuidBytes(&quot;96CC203E-5068-46AD-B32D-E316F5E069BA&quot;), // older one
+]
+
+for bytes in Self.serviceUUIDs {
+    var b = bytes
+    let uuid = IOBluetoothSDPUUID(bytes: &amp;b, length: 16)
+    guard let record = device.getServiceRecord(for: uuid) else { continue }
+    var id: BluetoothRFCOMMChannelID = 0
+    if record.getRFCOMMChannelID(&amp;id) == kIOReturnSuccess { return id }
+}</code></pre>
+<p>If the cached SDP records don't have it (this happens after a fresh pairing), <code>device.performSDPQuery(self)</code> refreshes them, and then you retry once. After that it's <code>openRFCOMMChannelAsync(&amp;ch, withChannelID: id, delegate: self)</code>, and bytes arrive in <code>rfcommChannelData(_:data:length:)</code>.</p>
+<p><strong>Sandbox note:</strong> the only entitlement this needs is <code>com.apple.security.device.bluetooth</code>. The app has no network entitlement at all, which makes "no telemetry" something the OS enforces, not just something I promise.</p>
+</section>
+<section id="s2"><h2>2. The frame</h2>
+<p>Every message, in both directions, looks like this:</p>
+<pre><code>0x3E | type | seq | length (4 bytes, big-endian) | payload | checksum | 0x3C</code></pre>
+<ul><li><code>0x3E</code> and <code>0x3C</code> are start and end markers.</li><li><code>type</code> is <code>0x01</code> for an ACK, <code>0x0C</code> for "command 1" (most settings) and <code>0x0E</code> for "command 2" (multipoint, voice guidance, paired devices).</li><li><code>checksum</code> is the low 8 bits of the sum of type, seq, the length bytes and the payload.</li></ul>
+<p>Because <code>0x3C</code>/<code>0x3D</code>/<code>0x3E</code> mark frame boundaries, those bytes are escaped when they show up inside the frame: each one becomes <code>0x3D, byte &amp; 0xEF</code>. Decoding reverses it (<code>0x3D, x</code> gives <code>x | 0x10</code>).</p>
+<p>RFCOMM is a stream, not a message transport. A single callback can deliver half a frame or three frames at once. So a small parser buffers bytes, cuts the stream at <code>0x3E…0x3C</code>, unescapes, checks the length and checksum, and drops anything that doesn't verify.</p>
+</section>
+<section id="s3"><h2>3. The ACK dance (this is where I lost an evening)</h2>
+<p>The protocol is strictly stop-and-wait. You send one command and wait for an ACK. Only then do you send the next one. The sequence number only ever takes two values, 0 and 1:</p>
+<pre><code class="language-swift">case .ack:
+    sequence = msg.sequence      // the device tells you the next seq to use
+    awaitingAck = false
+    pump()                       // send the next queued command
+case .command1, .command2:
+    // acknowledge everything the headphones send, immediately
+    link.write(SonyFrame.encode(type: .ack, sequence: 1 &amp;- msg.sequence, payload: []))</code></pre>
+<p>Two things bit me here:</p>
+<ol><li><strong>You have to ACK the headphones' notifications too.</strong> If you don't, the device keeps resending the same battery or status message and stops answering you.</li><li><strong>Never pipeline commands.</strong> If you fire three settings changes back to back, the device drops some of them without any error. I use a queue, and a 1.5 s timeout un-sticks it if an ACK never arrives.</li></ol>
+</section>
+<section id="s4"><h2>4. Commands are short</h2>
+<p>Once the session is up (<code>[0x00, 0x00]</code> is the init request, and the reply tells you the protocol version), most payloads are just a few bytes. Some real examples from the app:</p>
+<div class="table-scroll"><table><thead><tr><th>What</th><th>Payload (command 1)</th></tr></thead><tbody><tr><td>EQ preset</td><td><code>58 00 &lt;preset&gt; 00</code></td></tr><tr><td>Ask for the EQ bands</td><td><code>56 00</code></td></tr><tr><td>Speak-to-chat on/off (v2)</td><td><code>F8 0C &lt;0/1&gt; 01</code></td></tr><tr><td>Auto power-off (v2)</td><td><code>E8 01 &lt;on&gt;</code></td></tr></tbody></table></div>
+<p>The older models (WH-1000XM4 era) use a slightly different "v1" layout for many of these, so the code branches on the version reported during init. There's also a capability query (<code>50 00 00</code> returns the EQ preset list), so the UI only shows what the connected model says it supports instead of hardcoding per model.</p>
+</section>
+<section id="s5"><h2>5. Shipping it through App Review</h2>
+<p>App Review doesn't have your headphones. To give them (and anyone curious) something to look at, there's a <strong>demo mode</strong>. It's a flag on the controller that fakes a connected WH-1000XM5. The important detail is where the guard lives:</p>
+<pre><code class="language-swift">func send(_ payload: [UInt8], type: SonyMessageType = .command1, key: String? = nil) {
+    guard state == .connected, !isDemo else { return }
+    ...
+}</code></pre>
+<p>The guard is in the send path, not the views. Background timers (battery polling, the reconnect loop) also return early in demo mode. If you only hide things in the UI, the screenshots look fine while a reconnect loop keeps running underneath.</p>
+</section>
+<section id="s6"><h2>What it does today</h2>
+<p>The app is native SwiftUI, sits in the menu bar, and is free. It also has an optional tip IAP. On the XM5 it handles NC / ambient (with level), EQ presets and custom bands, speak-to-chat, multipoint and source switching, and battery.</p>
+<p>It's in public TestFlight beta right now, and the main thing I need is <strong>people with Sony models I don't own</strong> (XM4, XM6, the CH/ULT lines) to tell me what works and what doesn't:</p>
+<ul><li>Beta: <a href="https://testflight.apple.com/join/e7S1TqA1">https://testflight.apple.com/join/e7S1TqA1</a></li><li>Site: <a href="https://kulaklikkontrol.github.io">https://kulaklikkontrol.github.io</a></li><li>Compatibility reports: <a href="https://github.com/kulaklikkontrol/kulaklikkontrol.github.io/discussions/2">https://github.com/kulaklikkontrol/kulaklikkontrol.github.io/discussions/2</a></li></ul>
+<p>If you've done protocol work on other headphone brands, I'd love to hear how their framing compares.</p>
+</section>
+<section><h2>Keep reading</h2><ul><li><a href="/blog/why-headphone-control/">Why I made Headphone Control for the Mac</a></li><li><a href="/guides/sony-anc-eq-mac/">How to change Sony ANC and EQ on a Mac</a></li><li><a href="/guides/sony-headphones-mac-apps/">Sony headphone apps on Mac: five options compared</a></li></ul></section></article></main><footer><div class="wrap"><p>Independent software. Sony and model names are Sony trademarks. Mac is an Apple trademark.</p><a href="/?lang=en">Headphone Control</a> · <a href="/guides/">Guides</a> · <a href="/privacy.html?lang=en">Privacy</a> · <a href="/press/?lang=en">Press kit</a></div></footer></body></html>
