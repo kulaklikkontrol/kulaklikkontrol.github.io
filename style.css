@@ -86,3 +86,34 @@ footer { border-top: 1px solid var(--line); margin-top: 60px; padding: 24px 0 40
   .models li { flex-wrap: wrap; gap: 6px 10px; }
   .models b { min-width: 0; width: 100%; }
 }
+
+.xm5-switch-test {
+  margin: 24px 0;
+  scroll-margin-top: 72px;
+  background: linear-gradient(135deg, var(--accent-soft), transparent 65%), var(--card);
+}
+.xm5-switch-test h2 { margin: 0 0 8px; line-height: 1.22; }
+.xm5-switch-test p { margin: 8px 0; }
+.xm5-switch-test ol {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin: 16px 0;
+  padding-left: 0;
+  list-style-position: inside;
+}
+.xm5-switch-test li {
+  margin: 0;
+  padding: 10px 12px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: var(--card);
+  font-size: 15px;
+}
+.xm5-switch-test li::marker { color: var(--accent); font-weight: 700; }
+.xm5-switch-test .btn { margin: 4px 0; }
+@media (max-width: 620px) {
+  .xm5-switch-test { padding: 16px; }
+  .xm5-switch-test ol { grid-template-columns: 1fr; gap: 6px; }
+  .xm5-switch-test .btn { display: block; text-align: center; }
+}
