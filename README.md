@@ -2,32 +2,38 @@
 
 <h1 align="center">Headphone Control (Kulaklık Kontrol)</h1>
 
-<p align="center">AirPods-style switching for your Sony WH-1000XM5.<br>
-Bring audio back to your Mac from the menu bar or let it switch when Mac audio starts. Adjust noise canceling, ambient sound and EQ from the same menu.</p>
+<p align="center"><b>AirPods-style switching for your Sony headphones — Mac ↔ iPhone in one click.</b><br>
+“Play on Mac” in the menu bar brings the sound back from your iPhone, or let it switch automatically when Mac audio starts. Noise canceling, ambient sound and EQ live in the same menu.</p>
 
 <p align="center">
-  <a href="https://testflight.apple.com/join/e7S1TqA1"><b>Join the free TestFlight beta</b></a> ·
+  <a href="https://testflight.apple.com/join/e7S1TqA1"><img alt="Join the free beta on TestFlight" src="https://img.shields.io/badge/Join%20the%20free%20beta-TestFlight-0a66ff?style=for-the-badge&logo=apple&logoColor=white"></a>
+  <br>
   <a href="https://kulaklikkontrol.github.io/en/">Website</a> ·
+  <a href="https://kulaklikkontrol.github.io/en/#founding-100">Founding 100: 31/100 testers</a> ·
   <a href="https://kulaklikkontrol.github.io/privacy.html">Privacy</a>
 </p>
 
-![Switching from the Bluetooth menu compared with Play on Mac in Headphone Control](assets/before-after.gif)
+![Before: Bluetooth menus. After: one click on Play on Mac in Headphone Control](assets/before-after.gif)
 
-The 15-second demo uses an illustrated Bluetooth workflow and a screenshot of the app.
+Before: digging through Bluetooth menus. After: one click. The left side of the 15-second demo is illustrative; the right side uses real app screenshots.
+
+## Join in 3 steps (about 1 minute)
+
+1. Install Apple’s free [TestFlight](https://apps.apple.com/app/testflight/id899247664) app **on your Mac**.
+2. Open <https://testflight.apple.com/join/e7S1TqA1> and click **Accept**.
+3. Open TestFlight on your Mac and click **Install**. Accepting alone does not install the app.
+
+Accepted on your iPhone? It’s already waiting in TestFlight on your Mac under the same Apple ID — just click **Install** there.
 
 ## Founding 100
 
-The first 100 testers can opt in to a public thank-you. If a paid edition is ever released, they get lifetime access at no charge. [See live campaign progress](https://kulaklikkontrol.github.io/en/#founding-100-en).
+The real external tester count from App Store Connect is shown on the [website](https://kulaklikkontrol.github.io/en/#founding-100) (31/100 on 19 Nov 2026). The first 100 testers can opt in to a public thank-you, and if a paid edition is ever released they get it free for life.
 
 - **Requirements:** macOS 14 or later, a Sony headphone paired with the Mac.
 - **Tested on hardware:** WH-1000XM5 only. One beta tester reported the WH-CH720N works (user report, not tested by the developer). Other models (WH-1000XM4, WH-1000XM6, WF-1000XM4/XM5, LinkBuds, ULT Wear…) are untested; that is exactly what the beta is for.
 - **Cost:** free. No account, no analytics, no ads.
 
-**How to help (about 5 minutes):**
-
-1. Open <https://testflight.apple.com/join/e7S1TqA1> on your Mac and install via TestFlight.
-2. With your headphones already paired, start playback on your phone, pause it and try **Play on Mac** from the headphone menu. Try ANC, Ambient Sound and EQ too.
-3. Send feedback from TestFlight (or open an issue here) with your headphone model, firmware version, macOS version and what worked or didn't.
+**Feedback:** send it from TestFlight (or open an issue here) with your headphone model, firmware, macOS version and what worked or didn’t. Including “XM5 switch test” helps.
 
 Not affiliated with or endorsed by Sony. "Sony", "WH-1000XM5" etc. are trademarks of their respective owners.
 
