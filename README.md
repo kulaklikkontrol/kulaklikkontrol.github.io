@@ -2,7 +2,7 @@
 
 <h1 align="center">Headphone Control (Kulaklık Kontrol)</h1>
 
-<p align="center"><b>AirPods-style switching for your Sony headphones — Mac ↔ iPhone in one click.</b><br>
+<p align="center"><b>AirPods-style switching for your Sony WH-1000XM5 — Mac ↔ iPhone in one click.</b><br>
 “Play on Mac” in the menu bar brings the sound back from your iPhone, or let it switch automatically when Mac audio starts. Noise canceling, ambient sound and EQ live in the same menu.</p>
 
 <p align="center">
@@ -30,7 +30,7 @@ Accepted on your iPhone? It’s already waiting in TestFlight on your Mac under 
 The real external tester count from App Store Connect is shown on the [website](https://kulaklikkontrol.github.io/en/#founding-100) (31/100 on 19 Nov 2026). The first 100 testers can opt in to a public thank-you, and if a paid edition is ever released they get it free for life.
 
 - **Requirements:** macOS 14 or later, a Sony headphone paired with the Mac.
-- **Tested on hardware:** WH-1000XM5 only. One beta tester reported the WH-CH720N works (user report, not tested by the developer). Other models (WH-1000XM4, WH-1000XM6, WF-1000XM4/XM5, LinkBuds, ULT Wear…) are untested; that is exactly what the beta is for.
+- **Verified on hardware:** Sony WH-1000XM5 only. Sony WH-1000XM4/XM6, WF-1000XM models, LinkBuds, ULT WEAR and WH-CH720N are experimental. We have one user report for WH-CH720N. We welcome reports with the model and firmware version.
 - **Cost:** free. No account, no analytics, no ads.
 
 **Feedback:** send it from TestFlight (or open an issue here) with your headphone model, firmware, macOS version and what worked or didn’t. Including “XM5 switch test” helps.
