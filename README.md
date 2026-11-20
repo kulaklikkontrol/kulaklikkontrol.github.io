@@ -30,7 +30,7 @@ Accepted on your iPhone? It’s already waiting in TestFlight on your Mac under 
 The real external tester count from App Store Connect is shown on the [website](https://kulaklikkontrol.github.io/en/#founding-100) (31/100 on 19 Nov 2026). The first 100 testers can opt in to a public thank-you, and if a paid edition is ever released they get it free for life.
 
 - **Requirements:** macOS 14 or later, a Sony headphone paired with the Mac.
-- **Verified on hardware:** Sony WH-1000XM5 only. Sony WH-1000XM4/XM6, WF-1000XM models, LinkBuds, ULT WEAR and WH-CH720N are experimental. We have one user report for WH-CH720N. We welcome reports with the model and firmware version.
+- **Earlier hardware testing:** Sony WH-1000XM5 only. All other models are experimental, including Sony WH-1000XM4/XM6, WF-1000XM models, LinkBuds, ULT WEAR and WH-CH720N. One WH-CH720N owner reported a positive result on their setup. We welcome reports with the model and firmware version.
 - **Cost:** free. No account, no analytics, no ads.
 
 **Feedback:** send it from TestFlight (or open an issue here) with your headphone model, firmware, macOS version and what worked or didn’t. Including “XM5 switch test” helps.
