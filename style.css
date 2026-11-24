@@ -117,3 +117,14 @@ footer { border-top: 1px solid var(--line); margin-top: 60px; padding: 24px 0 40
   .xm5-switch-test ol { grid-template-columns: 1fr; gap: 6px; }
   .xm5-switch-test .btn { display: block; text-align: center; }
 }
+
+/* T303 Mac App Store badge (official artwork, unmodified; 48px high, clear space = 1/4 height) */
+.store-choice { display: flex; flex-wrap: wrap; justify-content: center; align-items: flex-start; gap: 16px 32px; margin: 8px 0 10px; }
+.store-opt { display: flex; flex-direction: column; align-items: center; max-width: 280px; text-align: center; }
+.store-opt .mas-badge { display: inline-block; padding: 12px; line-height: 0; }
+.store-opt .mas-badge img { height: 48px; width: auto; }
+.store-opt .mas-badge:hover { opacity: 1; }
+.store-opt .btn { margin: 12px 0; line-height: 24px; }
+.store-opt p { margin: 0; font-size: 13px; line-height: 1.45; color: var(--muted); }
+.store-opt p b { color: var(--fg); }
+.store-tested { margin: 6px auto 4px; font-size: 14px; }

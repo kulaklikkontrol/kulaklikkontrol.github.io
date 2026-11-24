@@ -32,7 +32,7 @@
 }
 </script>
 <link rel="icon" href="/icon.png">
-<link rel="stylesheet" href="/style.css?v=20261119-xm5">
+<link rel="stylesheet" href="/style.css?v=t303">
 <style id="hero-v2-css">.hero-v2 .kicker{margin:6px auto 4px;text-align:center;font-size:14px;font-weight:600;color:var(--muted)}.hero-v2 h1{font-size:clamp(32px,6vw,52px);line-height:1.08;letter-spacing:-.02em;margin:6px auto 12px;max-width:760px}.hero-v2 .lede{font-size:clamp(18px,2.4vw,21px);max-width:640px;margin:0 auto}.btn-xl{font-size:21px;padding:17px 38px;border-radius:999px;font-weight:700;box-shadow:0 10px 30px -10px var(--accent)}.cta-note{margin-top:12px}.steps3{list-style:none;counter-reset:s;display:grid;grid-template-columns:repeat(3,1fr);gap:12px;padding:0;margin:26px 0 10px;text-align:left}.steps3 li{counter-increment:s;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 14px 14px 50px;position:relative;font-size:15px;line-height:1.45}.steps3 li::before{content:counter(s);position:absolute;left:14px;top:14px;width:26px;height:26px;border-radius:50%;background:var(--accent);color:#fff;font:700 14px/26px -apple-system,sans-serif;text-align:center}.steps3 li>b:first-child{display:block;font-size:16px;margin-bottom:2px}.hero-v2 .phone-hint{font-size:14px;line-height:1.5;color:var(--muted);margin:6px auto 22px;max-width:680px}.f100-v2{margin:28px 0;padding:24px;border-radius:20px;border:1px solid var(--line);background:linear-gradient(135deg,#2fd17114,transparent 60%),var(--card)}.f100-v2 h2{margin:0 0 6px;font-size:24px;border:0;padding:0}.f100-v2 .f100-bar{height:14px;border-radius:999px;background:var(--line);overflow:hidden;margin:14px 0 6px}.f100-v2 .f100-bar i{display:block;height:100%;background:linear-gradient(90deg,#2fd171,#0a84ff);border-radius:999px}.f100-v2 .f100-num{display:flex;flex-wrap:wrap;gap:6px;justify-content:space-between;font-size:14px;color:var(--muted)}.f100-v2 .f100-num b{font-size:20px;color:var(--fg)}@media(max-width:720px){.steps3{grid-template-columns:1fr}.btn-xl{display:block;width:100%}}</style>
 <script>document.addEventListener('DOMContentLoaded',()=>fetch('/assets/founding.json?'+Date.now()).then(r=>r.json()).then(d=>{var n=+d.testers;if(!n)return;var tr=document.documentElement.lang==='tr';document.querySelectorAll('[data-f100-n]').forEach(e=>e.textContent=n);document.querySelectorAll('[data-f100-left]').forEach(e=>e.textContent=Math.max(0,100-n));document.querySelectorAll('[data-f100-bar]').forEach(e=>{e.style.width=Math.min(100,n)+'%';e.parentNode.setAttribute('aria-valuenow',n)});document.querySelectorAll('[data-f100-when]').forEach(e=>e.innerHTML='<span class="tr">'+d.updated_tr+'</span><span class="en">'+d.updated_en+'</span>')}).catch(()=>{}))</script>
 </head>
@@ -231,9 +231,21 @@
   <section id="join-bottom">
     <div class="card" style="text-align:center">
       <h2><span class="tr">Mac'inizde ücretsiz deneyin</span></h2>
-      <p class="muted tr" style="max-width:600px;margin:0 auto 16px">Ücretsiz · kapalı kaynak · macOS 14+. Apple TestFlight uygulamasını kurun, ardından “Kabul Et” ve “Yükle”ye tıklayın.</p>
-      
-      <a class="btn" href="https://testflight.apple.com/join/e7S1TqA1"><span class="tr">Ücretsiz betaya katıl</span></a>
+      <p class="muted tr" style="max-width:600px;margin:0 auto 8px">Ücretsiz · kapalı kaynak · macOS 14+. İki yol var: Mac App Store’daki 1.0 ya da TestFlight’taki 1.3 beta.</p>
+      <!-- T303 MAS badge -->
+      <div class="store-choice">
+        <div class="store-opt">
+          <a class="mas-badge" href="https://apps.apple.com/app/id6833635897" data-cta="mas"><img src="/assets/badges/mac-app-store-tr.svg" alt="Mac App Store’dan İndirin" width="225" height="48"></a>
+          <p><b>App Store’da sürüm 1.0 — 1.3 incelemede</b></p>
+          <p>1.0 yalnız Sony WH-1000XM kulaklıkları tanır, arayüzü Türkçe/İngilizce. Yeni özellikler 1.3’te.</p>
+        </div>
+        <div class="store-opt">
+          <a class="btn" href="https://testflight.apple.com/join/e7S1TqA1" data-cta="bottom-tf">Ücretsiz betaya katıl</a>
+          <p>TestFlight’ta 1.3 beta. Apple TestFlight uygulamasını kurun, ardından “Kabul Et” ve “Yükle”.</p>
+        </div>
+      </div>
+      <p class="small muted store-tested">Yalnız WH-1000XM5 gerçek cihazda test edildi. Diğer modeller deneysel.</p>
+      <!-- /T303 MAS badge -->
       <a class="btn ghost" href="https://youtu.be/uqtUES3l6HQ"><span class="tr">88 sn demo</span></a>
     </div>
   </section>
@@ -241,7 +253,7 @@
 
 <footer>
   <div class="wrap">
-    <p class="tr">Bu uygulama Sony Group Corporation ile bağlantılı değildir; Sony tarafından onaylanmamış veya desteklenmemektedir. Sony, WH-1000XM, WF-1000XM, LinkBuds ve ULT WEAR, Sony Group Corporation'ın ticari markalarıdır. Mac, Apple Inc.'in ticari markasıdır.</p>
+    <p class="tr">Bu uygulama Sony Group Corporation ile bağlantılı değildir; Sony tarafından onaylanmamış veya desteklenmemektedir. Sony, WH-1000XM, WF-1000XM, LinkBuds ve ULT WEAR, Sony Group Corporation'ın ticari markalarıdır. Apple, Apple logosu, Mac ve Mac App Store, Apple Inc.’in ABD’de ve diğer ülkelerde tescilli ticari markalarıdır. App Store, Apple Inc.’in hizmet markasıdır.</p>
     
     <p><a href="/privacy.html"><span class="tr">Gizlilik Politikası</span></a> · <a href="/press/"><span class="tr">Basın kiti ve ekran görüntüleri</span></a> · <a href="mailto:ruzgarnos@gmail.com">ruzgarnos@gmail.com</a></p>
     <p><a href="/guides/sony-wh-1000xm5-mac/"><span class="tr">XM5 Mac rehberi (EN)</span></a> · <a href="/guides/sony-wh-1000xm4-xm5-xm6-mac/"><span class="tr">XM4, XM5 &amp; XM6 Mac rehberi (EN)</span></a> · <a href="/guides/sony-xm5-zoom-teams-calls-mac/"><span class="tr">XM5 çağrı rehberi (EN)</span></a> · <a href="/guides/headphone-control-vs-sonybridge-open-sound-connect/"><span class="tr">Uygulama karşılaştırması (EN)</span></a></p>
