@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Kulaklık Kontrol – Sürüm notları / Release notes</title>
-<meta name="description" content="Headphone Control release notes. 1.2 (3) on TestFlight: Sony reconnect fixes, untested models labelled Experimental. Only WH-1000XM5 is verified.">
+<meta name="description" content="Headphone Control release notes. 1.3 (9) on TestFlight: “Connecting…” hang fixed, experimental recognition for other brands and switching between Macs. Only WH-1000XM5 tested.">
 <link rel="icon" href="icon.png">
 <link rel="stylesheet" href="style.css?v=20261119-xm5">
 <script src="lang.js"></script>
@@ -28,6 +28,30 @@
     <h1 style="font-size:36px;letter-spacing:-0.02em;margin:48px 0 4px"><span class="tr">Sürüm notları</span><span class="en">Release notes</span></h1>
     <p class="muted"><span class="tr">Ücretsiz TestFlight betası · macOS 14+</span><span class="en">Free TestFlight beta · macOS 14+</span></p>
   </section>
+
+  <div class="card" id="v1-3">
+    <h2 style="margin-top:0">1.3 (9) <span class="badge">TestFlight · 24.11.2026</span></h2>
+    <ul class="tr">
+      <li>“Bağlanıyor…”da takılma düzeltildi: el sıkışma 8 sn’de bitmezse yeniden dener, olmazsa nedenini yazar; “Vazgeç” düğmesi.</li>
+      <li><b>Deneysel:</b> 21 marka, 121 modellik katalog; marka ve model tanıma, marka terimleri, sol/sağ/kutu pili (macOS ya da standart Bluetooth LE bildiriyorsa). Sony dışı kulaklıklara Mac’ten ANC/EQ gönderilmez.</li>
+      <li><b>Deneysel, varsayılan kapalı:</b> Sony dışı kulaklıklar için Mac’ler arası otomatik geçiş.</li>
+      <li>Kulaklık başına ayarlar (takma ad, ses düzeyini hatırla, Mac mikrofonu), cihaz biçimine göre simge, çeviri düzeltmeleri.</li>
+      <li>Sony ANC/EQ ve kontrol sekmeleri aynen korunuyor.</li>
+    </ul>
+    <ul class="en">
+      <li>Fixed hanging on “Connecting…”: if the handshake doesn’t finish in 8 s it retries, then stops and tells you why; Cancel button.</li>
+      <li><b>Experimental:</b> a 21-brand, 121-model catalogue: brand and model recognition, brand terms, left/right/case battery (when macOS or standard Bluetooth LE reports it). No ANC/EQ is sent from the Mac to non-Sony headphones.</li>
+      <li><b>Experimental, off by default:</b> automatic switching between Macs for non-Sony headphones.</li>
+      <li>Per-headphone settings (nickname, remember volume, Mac microphone), device-form icons, translation fixes.</li>
+      <li>Sony ANC/EQ and control tabs unchanged.</li>
+    </ul>
+    <p class="tr"><b>Dürüst durum:</b> Yalnız WH-1000XM5 test edildi. 1.3 (9) 22.11.2026’da XM5 donanım testini geçti (bağlantı, pil, 4 ANC modu, 3 EQ hazır ayarı, kopma sonrası 2,5 sn’de yeniden bağlanma). Diğer Sony modelleri, diğer markalar ve Mac’ler arası geçiş donanımda test edilmedi; deneysel, raporunu bekliyoruz.</p>
+    <p class="en"><b>Honest status:</b> Only the WH-1000XM5 has been tested. 1.3 (9) passed the XM5 hardware test on 22 Nov 2026 (connect, battery, 4 ANC modes, 3 EQ presets, reconnect 2.5 s after a drop). Other Sony models, other brands and Mac switching are untested on hardware; experimental, reports welcome.</p>
+    <div class="cta">
+      <a class="btn" href="https://testflight.apple.com/join/e7S1TqA1"><span class="tr">Ücretsiz betaya katıl</span><span class="en">Join the free beta</span></a>
+      <a class="btn" href="https://github.com/kulaklikkontrol/kulaklikkontrol.github.io/issues/new?template=model-report.yml"><span class="tr">Model raporu gönder</span><span class="en">Send a model report</span></a>
+    </div>
+  </div>
 
   <div class="card" id="v1-2">
     <h2 style="margin-top:0">1.2 (3) <span class="badge">TestFlight · 20.11.2026</span></h2>
