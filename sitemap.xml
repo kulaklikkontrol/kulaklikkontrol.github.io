@@ -335,4 +335,18 @@
     <loc>https://kulaklikkontrol.github.io/releases.html</loc>
     <lastmod>2026-11-20</lastmod>
   </url>
+  <url>
+    <loc>https://kulaklikkontrol.github.io/guides/sony-headphones-mac-app/</loc>
+    <lastmod>2026-11-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kulaklikkontrol.github.io/guides/sony-headphones-mac-app/" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://kulaklikkontrol.github.io/tr/guides/sony-kulaklik-mac-uygulamasi/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kulaklikkontrol.github.io/guides/sony-headphones-mac-app/" />
+  </url>
+  <url>
+    <loc>https://kulaklikkontrol.github.io/tr/guides/sony-kulaklik-mac-uygulamasi/</loc>
+    <lastmod>2026-11-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kulaklikkontrol.github.io/guides/sony-headphones-mac-app/" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://kulaklikkontrol.github.io/tr/guides/sony-kulaklik-mac-uygulamasi/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kulaklikkontrol.github.io/guides/sony-headphones-mac-app/" />
+  </url>
 </urlset>
